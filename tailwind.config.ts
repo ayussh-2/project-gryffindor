@@ -12,6 +12,16 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+
+      keyframes: {
+        'light-cone': {
+          '0%, 100%': { transform: 'scaleY(1)' },
+          '50%': { transform: 'scaleY(1.2)' },
+        },
+      },
+      animation: {
+        'cone-haze': 'light-cone 5s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
