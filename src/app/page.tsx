@@ -23,10 +23,8 @@ export default function Home() {
           <Typewriter text="Coming Soon" />
         </div>
         <div className="sm:text-[80px] text-[24px] font-bold">
-          NIRUTSAV 2025
+          NITRUTSAV 2025
         </div>
-
-        
       </div>
     </>
   );
