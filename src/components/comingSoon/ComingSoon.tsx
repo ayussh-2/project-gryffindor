@@ -1,8 +1,7 @@
 "use client";
-
-import Typewriter from "./TypeWriter";
 import { Orbitron } from "next/font/google";
 import { useRouter } from "next/navigation";
+import Typewriter from "./TypeWriter";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
