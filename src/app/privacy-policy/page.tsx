@@ -230,10 +230,10 @@ const PrivacyPolicy: React.FC = () => {
             <p>
             If you have any questions about this Privacy Policy, please contact us by email at{" "}
             <a
-                href="mail@nitrutsav.com"
+                href="contact@nitrutsav.com"
                 className="text-[#FF6B6B] hover:underline"
             >
-                mail@nitrutsav.com
+                contact@nitrutsav.com
             </a>
             .
             </p>
