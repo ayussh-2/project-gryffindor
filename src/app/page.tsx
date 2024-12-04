@@ -1,13 +1,8 @@
-// pages/index.tsx
-import Typewriter from "../components/comingSoon/ComingSoon";
+
 import Image from "next/image";
 import bgImg from "../../public/Images/backNU.avif";
-import { Orbitron } from "next/font/google";
+import ComingSoon from "@/components/comingSoon/comingSoon";
 
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export default function Home() {
   return (
@@ -36,17 +31,7 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div
-        className={`${orbitron.className} w-screen h-screen flex justify-center items-center flex-col text-center gap-4`}
-      >
-        <div className="sm:text-[64px] text-[36px] font-bold flex">
-          <div>&#10240;</div> {/* This is an empty character. DO NOT REMOVE */}
-          <Typewriter text="Coming Soon" />
-        </div>
-        <div className="sm:text-[80px] text-[24px] font-bold">
-          NITRUTSAV 2025
-        </div>
-      </div>
+      <ComingSoon />
     </>
   );
 }
