@@ -1,6 +1,6 @@
 import Image from "next/image";
 import bgImg from "../../public/Images/backNU.avif";
-import ComingSoon from "@/components/ComingSoon/ComingSoon";
+import ComingSoon from "@/components/comingSoon/ComingSoon";
 
 
 export default function Home() {
