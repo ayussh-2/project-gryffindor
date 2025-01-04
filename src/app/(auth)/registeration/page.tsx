@@ -17,14 +17,26 @@ const Registration: React.FC = () => {
     const { user, loading } = useAuth();
 
     const onSubmit = async (data: UserInput) => {
-        console.log("Form Data:", data);
-        if (!user?.id) {
-            alert("Please login to register");
-            return;
-        }
+        try {
+            if (!user?.id) {
+                alert("Please login to register");
+                return;
+            }
 
-        const result = await registerUser(data, user.id);
-        console.log("Registration Result:", result);
+            const result = await registerUser(data, user.id);
+            console.log("Registration Result:", result);
+            alert("Registration Successful");
+        } catch (error) {
+            console.error(error);
+            const err = (error as Error).message;
+            if (
+                err.includes("Document with the requested ID already exists.")
+            ) {
+                alert("User already registered");
+                return;
+            }
+            alert("Registration Failed. Please try again");
+        }
     };
 
     if (loading) {

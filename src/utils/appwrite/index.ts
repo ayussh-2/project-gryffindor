@@ -18,7 +18,7 @@ export async function registerUser(userDetails: UserInput, userId: string) {
         );
         return response;
     } catch (error) {
-        console.log(error);
+        throw new Error(String(error));
     }
 }
 
