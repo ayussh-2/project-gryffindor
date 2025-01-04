@@ -49,7 +49,11 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     const checkSession = async () => {
         try {
             const currentUser = await account.get();
-            setUser({ name: currentUser.name, email: currentUser.email });
+            setUser({
+                name: currentUser.name,
+                email: currentUser.email,
+                id: currentUser.$id,
+            });
         } catch (err) {
             console.error("Session check error:", err);
             setUser(null);
@@ -62,7 +66,11 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         try {
             await account.createEmailPasswordSession(email, password);
             const loggedInUser = await account.get();
-            setUser({ name: loggedInUser.name, email: loggedInUser.email });
+            setUser({
+                name: loggedInUser.name,
+                email: loggedInUser.email,
+                id: loggedInUser.$id,
+            });
             setError("");
         } catch (err) {
             console.error("Login error:", err);
