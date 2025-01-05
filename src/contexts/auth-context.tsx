@@ -36,12 +36,17 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     }, []);
 
     const setUserFromAccount = async () => {
-        const currentUser = await account.get();
-        setUser({
-            name: currentUser.name,
-            email: currentUser.email,
-            id: currentUser.$id,
-        });
+        try {
+            const currentUser = await account.get();
+            setUser({
+                name: currentUser.name,
+                email: currentUser.email,
+                id: currentUser.$id,
+            });
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        } catch (err) {
+            setUser(null);
+        }
     };
 
     const checkSession = async () => {
@@ -49,7 +54,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
             await setUserFromAccount();
         } catch (err) {
             const message = handleError(err, "Failed to fetch user session.");
-            setError(message);
+            setError(message?.data || "");
             setUser(null);
         } finally {
             setLoading(false);
@@ -63,7 +68,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
             setError("");
         } catch (err) {
             const message = handleError(err, "Invalid email or password.");
-            setError(message);
+            setError(message?.data || "");
         }
     };
 
@@ -80,7 +85,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
                 err,
                 "Registration failed. Please check your details."
             );
-            setError(message);
+            setError(message?.data || "");
         }
     };
 
@@ -91,7 +96,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
             setError("");
         } catch (err) {
             const message = handleError(err, "Failed to log out.");
-            setError(message);
+            setError(message?.data || "");
         }
     };
 
