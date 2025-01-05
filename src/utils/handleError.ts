@@ -14,28 +14,26 @@ export function handleError(
 ) {
     console.error(err);
 
-    if (isAppwriteError(err)) {
-        if (commonErrors.includes(err.message)) return null;
-
-        const customError = customErrors.find(
-            (error) => error.code === err.code
-        );
-        if (customError) {
-            return {
-                status: "error",
-                data: customError.message,
-            };
-        }
-
+    if (!isAppwriteError(err)) {
         return {
             status: "error",
-            data: err.message,
+            data: defaultMessage,
+        };
+    }
+
+    if (commonErrors.includes(err.message)) return null;
+
+    const customError = customErrors.find((error) => error.code === err.code);
+    if (customError) {
+        return {
+            status: "error",
+            data: customError.message,
         };
     }
 
     return {
         status: "error",
-        data: defaultMessage,
+        data: err.message,
     };
 }
 

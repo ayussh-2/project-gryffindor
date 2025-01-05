@@ -24,6 +24,11 @@ const Registration: React.FC = () => {
             return;
         }
 
+        const { referralCode } = userDetails;
+        if (!referralCode) {
+            userDetails.referralCode = "NU25";
+        }
+
         const result = await registerUser(userDetails, user.id);
 
         const { status, data } = result!;
@@ -62,6 +67,13 @@ const Registration: React.FC = () => {
                                 })}
                                 placeholder={placeholder}
                                 className="border p-2 w-full rounded-md"
+                                value={
+                                    name === "email"
+                                        ? user?.email
+                                        : name === "name"
+                                        ? user?.name
+                                        : ""
+                                }
                             />
                             {errors[name as keyof UserInput] && (
                                 <p className="text-red-500 text-sm">
