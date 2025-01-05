@@ -15,3 +15,9 @@ export interface RegisterResponse {
     data?: Models.Document;
     error?: string;
 }
+
+export interface AppwriteError {
+    code: number;
+    message: string;
+    type: string;
+}

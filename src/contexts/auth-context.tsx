@@ -9,20 +9,9 @@ import React, {
 } from "react";
 
 import { account, ID } from "@/lib/appwrite";
+import { AuthContextType } from "@/types/auth-context";
 import { User } from "@/types/user";
-
-interface AuthContextType {
-    user: User | null;
-    error: string;
-    loading: boolean;
-    login: (email: string, password: string) => Promise<void>;
-    createAccount: (
-        email: string,
-        password: string,
-        name: string
-    ) => Promise<void>;
-    logout: () => Promise<void>;
-}
+import { handleError } from "@/utils/handleError";
 
 const defaultAuthContext: AuthContextType = {
     user: null,
@@ -46,16 +35,21 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         checkSession();
     }, []);
 
+    const setUserFromAccount = async () => {
+        const currentUser = await account.get();
+        setUser({
+            name: currentUser.name,
+            email: currentUser.email,
+            id: currentUser.$id,
+        });
+    };
+
     const checkSession = async () => {
         try {
-            const currentUser = await account.get();
-            setUser({
-                name: currentUser.name,
-                email: currentUser.email,
-                id: currentUser.$id,
-            });
+            await setUserFromAccount();
         } catch (err) {
-            console.error("Session check error:", err);
+            const message = handleError(err, "Failed to fetch user session.");
+            setError(message);
             setUser(null);
         } finally {
             setLoading(false);
@@ -65,16 +59,11 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     const login = async (email: string, password: string) => {
         try {
             await account.createEmailPasswordSession(email, password);
-            const loggedInUser = await account.get();
-            setUser({
-                name: loggedInUser.name,
-                email: loggedInUser.email,
-                id: loggedInUser.$id,
-            });
+            await setUserFromAccount();
             setError("");
         } catch (err) {
-            console.error("Login error:", err);
-            setError("Invalid email or password.");
+            const message = handleError(err, "Invalid email or password.");
+            setError(message);
         }
     };
 
@@ -87,8 +76,11 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
             await account.create(ID.unique(), email, password, name);
             await login(email, password);
         } catch (err) {
-            console.error("Registration error:", err);
-            setError("Registration failed. Please check your details.");
+            const message = handleError(
+                err,
+                "Registration failed. Please check your details."
+            );
+            setError(message);
         }
     };
 
@@ -98,8 +90,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
             setUser(null);
             setError("");
         } catch (err) {
-            console.error("Logout error:", err);
-            setError("Failed to log out.");
+            const message = handleError(err, "Failed to log out.");
+            setError(message);
         }
     };
 
