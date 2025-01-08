@@ -1,7 +1,7 @@
 import axios from "axios";
 import crypto from "crypto";
+import { nanoid } from "nanoid";
 import { NextResponse } from "next/server";
-import { v4 as uuidv4 } from "uuid";
 
 const MERCHANT_KEY = process.env.MERCHANT_KEY;
 const MERCHANT_ID = process.env.MERCHANT_ID;
@@ -10,7 +10,7 @@ const REDIRECT_URL = process.env.PAYMENT_REDIRECT_URI;
 
 export async function POST(request) {
     const { name, mobileNumber, amount, userId } = await request.json();
-    const orderId = uuidv4();
+    const orderId = nanoid();
 
     const paymentPayload = {
         merchantId: MERCHANT_ID,
