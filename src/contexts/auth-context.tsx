@@ -42,7 +42,9 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
                 name: currentUser.name,
                 email: currentUser.email,
                 id: currentUser.$id,
+                phoneNumber: currentUser.phone,
             });
+
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (err) {
             setUser(null);

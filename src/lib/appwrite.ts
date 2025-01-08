@@ -12,14 +12,13 @@ export { ID };
 
 export async function createDocument<T extends Omit<Document, keyof Document>>(
     collectionId: string,
-    data: T,
-    documentId?: string
+    data: T
 ) {
     try {
         return await database.createDocument(
             process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID!,
             collectionId,
-            documentId ? documentId : ID.unique(),
+            ID.unique(),
             data
         );
     } catch (error) {

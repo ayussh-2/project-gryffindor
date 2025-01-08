@@ -21,3 +21,12 @@ export interface AppwriteError {
     message: string;
     type: string;
 }
+
+export interface PaymentDetails {
+    userId: string;
+    amount: string;
+    transactionId: string;
+    merchantTransactionId: string;
+    merchantId: string;
+    state: string;
+}

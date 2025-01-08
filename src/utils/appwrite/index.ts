@@ -4,7 +4,7 @@ import {
     getDocument,
     updateDocument,
 } from "@/lib/appwrite";
-import { UserInput } from "@/types/appwrite";
+import { PaymentDetails, UserInput } from "@/types/appwrite";
 
 import { handleError } from "../handleError";
 import { handleResponse } from "../handleResponse";
@@ -14,11 +14,10 @@ const USERS_COLLECTION_ID =
 
 export async function registerUser(userDetails: UserInput, userId: string) {
     try {
-        const response = await createDocument(
-            USERS_COLLECTION_ID,
-            userDetails,
-            userId
-        );
+        const response = await createDocument(USERS_COLLECTION_ID, {
+            ...userDetails,
+            userId,
+        });
         return handleResponse(response);
     } catch (error) {
         return handleError(error);
@@ -58,3 +57,18 @@ export async function deleteUser(userId: string) {
         return handleError(error);
     }
 }
+
+export async function handleUserPayment(paymentDetails: PaymentDetails) {
+    console.log(paymentDetails);
+    try {
+        const response = await createDocument(
+            process.env.NEXT_PUBLIC_APPWRITE_PAYMENT_COLLECTION_ID!,
+            paymentDetails
+        );
+        return handleResponse(response);
+    } catch (error) {
+        return handleError(error);
+    }
+}
+
+export async function getLoggedInUser() {}
