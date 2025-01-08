@@ -4,7 +4,7 @@ import {
     getDocument,
     updateDocument,
 } from "@/lib/appwrite";
-import { UserInput } from "@/types/appwrite";
+import { PaymentDetails, UserInput } from "@/types/appwrite";
 
 import { handleError } from "../handleError";
 import { handleResponse } from "../handleResponse";
@@ -58,3 +58,17 @@ export async function deleteUser(userId: string) {
         return handleError(error);
     }
 }
+
+export async function handleUserPayment(paymentDetails: PaymentDetails) {
+    try {
+        const response = await createDocument(
+            process.env.NEXT_PUBLIC_APPWRITE_PAYMENT_COLLECTION_ID!,
+            paymentDetails
+        );
+        return handleResponse(response);
+    } catch (error) {
+        return handleError(error);
+    }
+}
+
+export async function getLoggedInUser() {}
