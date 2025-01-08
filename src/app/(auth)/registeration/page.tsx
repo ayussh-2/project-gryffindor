@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
@@ -13,10 +13,18 @@ const Registration: React.FC = () => {
     const {
         register,
         handleSubmit,
+        setValue,
         formState: { errors },
     } = useForm<UserInput>();
 
     const { user, loading } = useAuth();
+
+    useEffect(() => {
+        if (user) {
+            setValue("email", user.email || "");
+            setValue("name", user.name || "");
+        }
+    }, [user, setValue]);
 
     const onSubmit = async (userDetails: UserInput) => {
         if (!user?.id) {
@@ -38,8 +46,47 @@ const Registration: React.FC = () => {
             return;
         }
 
-        toast.success("User registered successfully.");
+        initiatePayment(userDetails.name, userDetails.phoneNumber, user?.id);
     };
+
+    async function initiatePayment(
+        name: string,
+        mobileNumber: string,
+        userId: string
+    ) {
+        if (!name || !mobileNumber || !userId) {
+            toast.error("Can't initiate payment!");
+            console.log(name, mobileNumber, userId);
+            return;
+        }
+        const amount = 1;
+        if (!amount || !user) {
+            toast("Please login again!");
+            return;
+        }
+        try {
+            const response = await fetch("/api/payment/initiate", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name,
+                    mobileNumber,
+                    amount,
+                    userId,
+                }),
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                window.location.href = data.url;
+            } else {
+                alert(data.error || "Failed to initiate payment");
+            }
+        } catch (error) {
+            toast.error("Some error occurred!");
+            console.error(error);
+        }
+    }
 
     if (loading) {
         return <div>Loading...</div>;
@@ -67,23 +114,10 @@ const Registration: React.FC = () => {
                                 })}
                                 placeholder={placeholder}
                                 className="border p-2 w-full rounded-md"
-                                value={
-                                    name === "email"
-                                        ? user?.email
-                                        : name === "name"
-                                        ? user?.name
-                                        : ""
-                                }
                             />
                             {errors[name as keyof UserInput] && (
                                 <p className="text-red-500 text-sm">
-                                    {
-                                        (
-                                            errors[name as keyof UserInput] as {
-                                                message?: string;
-                                            }
-                                        )?.message
-                                    }
+                                    {errors[name as keyof UserInput]?.message}
                                 </p>
                             )}
                         </div>

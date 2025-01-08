@@ -11,7 +11,7 @@ export default function Page() {
         const name = user?.name;
         const mobileNumber = "9876543210";
         const amount = 100;
-
+        const userId = user?.id;
         if (!amount || !user) {
             toast("Please login again!");
             return;
@@ -20,7 +20,7 @@ export default function Page() {
             const response = await fetch("/api/payment/initiate", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name, mobileNumber, amount }),
+                body: JSON.stringify({ name, mobileNumber, amount, userId }),
             });
 
             const data = await response.json();

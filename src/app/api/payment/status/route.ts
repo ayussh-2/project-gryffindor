@@ -2,16 +2,17 @@ import axios from "axios";
 import crypto from "crypto";
 import { NextResponse } from "next/server";
 
-import { account } from "@/lib/appwrite";
 import { handleUserPayment } from "@/utils/appwrite";
 
 const MERCHANT_KEY = process.env.MERCHANT_KEY;
 const MERCHANT_ID = process.env.MERCHANT_ID;
 const MERCHANT_STATUS_URL = process.env.MERCHANT_STATUS_URL;
+const CLIENT_URL = process.env.CLIENT_URL;
 
 export async function POST(request) {
     const { searchParams } = new URL(request.url);
     const merchantTransactionId = searchParams.get("id");
+    const userId = searchParams.get("userId");
 
     const keyIndex = 1;
     const string =
@@ -32,34 +33,41 @@ export async function POST(request) {
 
     try {
         const response = await axios.request(option);
-        console.log(response);
-        if (response?.code === "PAYMENT_SUCCESS") {
-            const user = await account.get();
+        if (response?.data?.code === "PAYMENT_SUCCESS") {
+            const paymentDetails = response.data;
             const dbUpdate = await handleUserPayment({
-                userId: user.$id,
-                amount: response.data.amount,
-                transactionId: response.data.transactionId,
-                merchantTransactionId: response.data.merchantTransactionId,
-                merchantId: response.data.merchantId,
-                state: response.data.state,
+                userId: userId!,
+                amount: paymentDetails.data.amount,
+                transactionId: paymentDetails.data.transactionId,
+                merchantTransactionId:
+                    paymentDetails.data.merchantTransactionId,
+                merchantId: paymentDetails.data.merchantId,
+                state: paymentDetails.data.state,
             });
 
             if (dbUpdate?.status == "error") {
                 console.error("Error saving details to APPWRITE ", dbUpdate);
-                NextResponse.redirect("/payment/failed?details=unableToSave");
+                const redirectUrl = new URL("/payment/failed", CLIENT_URL);
+                redirectUrl.searchParams.set("details", "unableToSave");
+                return NextResponse.redirect(redirectUrl.toString(), {
+                    status: 303,
+                });
             }
 
-            return NextResponse.redirect("/payment/success");
+            const successUrl = new URL("/payment/success", CLIENT_URL);
+            return NextResponse.redirect(successUrl.toString(), {
+                status: 303,
+            });
         }
-        return NextResponse.redirect("/payment/failed");
+        const failedUrl = new URL("/payment/failed", CLIENT_URL);
+        return NextResponse.redirect(failedUrl.toString(), { status: 303 });
     } catch (error) {
-        console.error("error in payment status", {
-            message: error.message,
-            response: error.response ? error.response.data : null,
-            request: error.request ? error.request : null,
-        });
+        console.error("error in payment status", error);
         return NextResponse.json(
-            { error: "Failed to fetch payment status", details: error.message },
+            {
+                error: "Failed to fetch payment status",
+                details: (error as Error)?.message,
+            },
             { status: 500 }
         );
     }
