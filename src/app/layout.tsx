@@ -1,10 +1,25 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
 
 import Footer from "@/components/Footer/footer";
 import { AuthProvider } from "@/contexts/auth-context";
+import { ReactLenis } from "@/providers/LenisProvider";
+
+const Cattedrale = localFont({
+    src: "./fonts/Cattedrale-Demo-Regular.ttf",
+    variable: "--font-cattedrale",
+});
+// const Sholp = localFont({
+//   src: "./fonts/sholprg.otf",
+//   variable: "--font-sholp",
+// });
+const Spirits = localFont({
+    src: "./fonts/spirits-sharp-light.otf",
+    variable: "--font-spirits",
+});
 
 export const metadata: Metadata = {
     title: {
@@ -58,13 +73,18 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`antialiased`}>
-                <Toaster />
-                <AuthProvider>
-                    {children}
-                    <Footer />
-                </AuthProvider>
-            </body>
+            <ReactLenis root>
+                <body
+                    suppressHydrationWarning={true}
+                    className={` ${Cattedrale.variable}  ${Spirits.variable} overflow-x-hidden  antialiased`}
+                >
+                    <Toaster />
+                    <AuthProvider>
+                        {children}
+                        <Footer />
+                    </AuthProvider>
+                </body>
+            </ReactLenis>
         </html>
     );
 }

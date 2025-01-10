@@ -22,7 +22,7 @@ export default function EventCard({ event }) {
 
     return (
         <div
-            className={`event-card   ${flipped ? "flipped" : ""}`}
+            className={`event-card ml-[2.5rem]  ${flipped ? "flipped" : ""}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
@@ -33,7 +33,7 @@ export default function EventCard({ event }) {
                         alt={`${event.title} Front`}
                         className="event-card-image rounded-[1rem]"
                     />
-                    <div className="event-card-title  left-[5%] ">
+                    <div className="event-card-title font-Spirits text-[1.5rem] md:text-[1.75rem] bottom-2 font-extrabold ">
                         <h3>{event.title}</h3>
                     </div>
                 </div>
@@ -41,12 +41,12 @@ export default function EventCard({ event }) {
                     <div className="relative rounded-[1rem] overflow-hidden">
                         <img
                             src={event.imageBack}
-                            alt={`${event.title} Back`}
+                            alt={`${event.title} Back `}
                             className="w-full h-full object-cover opacity-30 bg-blend-overlay"
                         />
                         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 rounded-[1rem]"></div> {/* Overlay */}
                     </div>
-                    <div className="event-card-details top-10">
+                    <div className="event-card-details font-Spirits text-white text-[1rem] top-10">
                         <p>{event.details}</p>
                     </div>
                 </div>

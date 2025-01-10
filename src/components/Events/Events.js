@@ -14,7 +14,7 @@ export default function Events() {
     }, []);
 
     return (
-        <div className="bg-[#1E1E1E] relative min-h-screen  z-50" >
+        <div className="bg-[#040D17] relative min-h-screen  z-50" >
             <Heading>
                 <div className="text-[#CBFFFF] text-5xl flex items-center justify-center py-[3rem]">
                     Events
@@ -24,7 +24,7 @@ export default function Events() {
 
 
 
-            <div className="flex flex-wrap bg-[#1E1E1E] flex-row gap-[3rem] justify-center">
+            <div className="flex flex-wrap bg-[#040D17] flex-row gap-[3rem] justify-center">
 
                 {events.map((event) => (
 

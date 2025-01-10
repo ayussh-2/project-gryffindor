@@ -1,26 +1,26 @@
 [
     {
         "id": 1,
-        "title": "Hackathon 2024",
-        "imageFront": "/Images/first.png",
+        "title": "Experience the Thrill of Creativity and Competition!  ",
+        "imageFront": "/Images/4.svg",
         "imageHover": "/Images/war.jpg",
-        "imageBack": "/Images/first.png",
-        "details": "Join us for an exciting hackathon filled with learning and fun!"
+        "imageBack": "/Images/4.svg",
+        "details": "Dive into a diverse range of events that challenge your skills, ignite your creativity, and bring out the best in you. From high-energy competitions to immersive workshops, NITRUTSAV offers something for everyone. Explore, engage, and excel!"
     },
     {
         "id": 2,
-        "title": "AI Summit",
-        "imageFront": "/Images/third.jpg",
+        "title": "Inspiring Minds, Shaping Futures!",
+        "imageFront": "/Images/2.svg",
         "imageHover": "/Images/satun.jpg",
-        "imageBack": "/Images/third.jpg",
-        "details": "Explore the future of AI with industry leaders."
+        "imageBack": "/Images/2.svg",
+        "details": "Get ready to be enlightened by visionaries and pioneers from various fields. Our guest lectures bring you closer to the world of innovation, inspiration, and insight. Learn from the best and broaden your horizons at NITRUTSAV 2025."
     },
     {
         "id": 3,
-        "title": "AI Summit",
-        "imageFront": "/Images/first.png",
+        "title": "Unwind Under the Stars with Electrifying Performances! ",
+        "imageFront": "/Images/3.svg",
         "imageHover": "/Images/devil.jpg",
-        "imageBack": "/Images/first.png",
-        "details": "Explore the future of AI with industry leaders."
+        "imageBack": "/Images/3.svg",
+        "details": "Celebrate the nights of NITRUTSAV with show-stopping performances, sensational music, and unforgettable moments. From renowned artists to vibrant cultural showcases, our Pronites promise a grand spectacle that will leave you mesmerized. "
     }
 ]

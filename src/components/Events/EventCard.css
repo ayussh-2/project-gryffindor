@@ -10,7 +10,7 @@
 
 }
 .events-container{
-    background-color: #1E1E1E;
+    background-color: #040D17;
     padding-top: 10rem;
 }
 
@@ -63,12 +63,12 @@
     position: absolute;
     padding: 10px;
     color: #fff;
-    bottom: 20%;
+    
     
 }
 
 .event-card-details {
     position: absolute;
     padding: 20px;
-    color: #333;
+    
 }
