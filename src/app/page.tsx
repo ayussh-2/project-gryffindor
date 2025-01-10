@@ -21,9 +21,10 @@ export default function Home() {
   return (
     <>
       {isLoading ? (
-        <Loader /> 
+        <Loader /> // Display the loader while the page is loading
       ) : (
         <>
+          {/* Background */}
           <ParallaxScene />
           <Faq />
         </>
