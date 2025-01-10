@@ -15,6 +15,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+
       fontFamily: {
         Cattedrale: ["var(--font-cattedrale)", ...fontFamily.sans],
         Sholp: ["var(--font-sholp)", ...fontFamily.sans],
