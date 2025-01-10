@@ -39,6 +39,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .bg-reg {
     background: url("https://res.cloudinary.com/dmvdbpyqk/image/upload/v1736533824/bg-moon_vrzugt.png");
     background-size: cover;
@@ -49,4 +50,9 @@ body {
 .input-field {
     @apply font-Spirits w-full px-4 py-3 rounded-lg bg-[#003955]/10
     text-xl text-[#003955] placeholder-gray-500 border border-[#fff]/30 focus:outline-none focus:border-[#003955] focus:ring-1 focus:ring-[#003955] transition backdrop-blur-md focus:brightness-110;
+}
+
+.magic-cursor {
+    cursor: url("https://res.cloudinary.com/dmvdbpyqk/image/upload/v1736543438/cursor_wifxox.png"),
+        auto;
 }
