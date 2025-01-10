@@ -17,7 +17,7 @@ const Registration: React.FC = () => {
         formState: { errors },
     } = useForm<UserInput>();
 
-    const { user, loading } = useAuth();
+    const { user } = useAuth();
     const [userStatus, setUserStatus] = useState({
         isRegistered: false,
         hasPaid: false,
@@ -28,6 +28,7 @@ const Registration: React.FC = () => {
     useEffect(() => {
         async function getUserStatus() {
             if (!user?.id) {
+                setLoadingStatus(false);
                 return;
             }
             const userRegStatus = await getUser(user.id);
@@ -120,10 +121,6 @@ const Registration: React.FC = () => {
         }
     }
 
-    if (loading || loadingStatus) {
-        return <div>Loading...</div>;
-    }
-
     async function handleStartRePayment() {
         if (!user?.id) {
             toast.error("Please login to register.");
@@ -137,12 +134,24 @@ const Registration: React.FC = () => {
         );
     }
 
+    if (loadingStatus) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div className="max-w-6xl mx-auto p-6 rounded-lg min-h-screen flex flex-col items-center justify-center">
             <h1 className="text-2xl font-bold text-center mb-4">
                 User Registration
             </h1>
-            {userStatus.isRegistered && !userStatus.hasPaid && (
+
+            {!user && (
+                <p>
+                    Please login to register. If you don&apos;t have an account,
+                    you can create one.
+                </p>
+            )}
+
+            {userStatus.isRegistered && !userStatus.hasPaid && user && (
                 <button
                     className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition w-52"
                     onClick={handleStartRePayment}
@@ -151,11 +160,11 @@ const Registration: React.FC = () => {
                 </button>
             )}
 
-            {userStatus.isRegistered && userStatus.hasPaid && (
+            {userStatus.isRegistered && userStatus.hasPaid && user && (
                 <p>You have already registered and paid!</p>
             )}
 
-            {!userStatus.isRegistered && !userStatus.hasPaid && (
+            {!userStatus.isRegistered && !userStatus.hasPaid && user && (
                 <form
                     onSubmit={handleSubmit(onSubmit)}
                     className="space-y-4 w-full max-w-lg"

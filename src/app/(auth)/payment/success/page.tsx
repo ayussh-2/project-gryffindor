@@ -1,10 +1,83 @@
-import React from "react";
+"use client";
 
-export default function Page() {
+import React, { useEffect, useState } from "react";
+
+import toast from "react-hot-toast";
+
+import { useAuth } from "@/contexts/auth-context";
+import { getUserPaymentStatus } from "@/utils/appwrite";
+
+export default function PaymentStatusPage() {
+    const { user } = useAuth();
+    const [paymentStatus, setPaymentStatus] = useState({
+        hasPaid: false,
+        loading: true,
+    });
+
+    useEffect(() => {
+        const checkPaymentStatus = async () => {
+            if (!user?.id) {
+                setPaymentStatus((prev) => ({ ...prev, loading: false }));
+                return;
+            }
+
+            try {
+                const response = await getUserPaymentStatus(user.id);
+
+                if (response?.status === "error") {
+                    throw new Error("Failed to fetch payment status");
+                }
+
+                const hasPaid = Boolean(response?.data?.documents?.length);
+                setPaymentStatus({
+                    hasPaid,
+                    loading: false,
+                });
+            } catch (error: unknown) {
+                toast.error(
+                    "Failed to fetch payment status. Please try again later."
+                );
+                console.error(error);
+                setPaymentStatus({
+                    hasPaid: false,
+                    loading: false,
+                });
+            }
+        };
+
+        checkPaymentStatus();
+    }, [user?.id]);
+
+    if (paymentStatus.loading) {
+        return (
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="text-center">
+                    <h1 className="text-2xl font-bold">Loading...</h1>
+                    <p className="mt-4">
+                        Please wait while we fetch your details.
+                    </p>
+                </div>
+            </div>
+        );
+    }
+
     return (
-        <div>
-            Yipee Payment successful you are now eligible to register for
-            events!
+        <div className="min-h-screen flex items-center justify-center">
+            {paymentStatus.hasPaid ? (
+                <div className="text-center">
+                    <h1 className="text-2xl font-bold text-green-600">
+                        Payment Successful!
+                    </h1>
+                    <p className="mt-4">Thank you for your payment.</p>
+                </div>
+            ) : (
+                <div className="text-center">
+                    <h1 className="text-2xl font-bold">
+                        Payment Details Not Found
+                    </h1>
+                    <p className="mt-4">Please try again later.</p>
+                </div>
+            )}
         </div>
     );
 }
