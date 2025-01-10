@@ -16,7 +16,7 @@ export async function POST(request) {
         merchantId: MERCHANT_ID,
         merchantUserId: name,
         mobileNumber: mobileNumber,
-        amount: amount,
+        amount: amount*100,
         merchantTransactionId: orderId,
         redirectUrl: `${REDIRECT_URL}/?id=${orderId}&userId=${userId}`,
         redirectMode: "POST",
