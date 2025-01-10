@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 import Footer from "@/components/Footer/footer";
 import { AuthProvider } from "@/contexts/auth-context";
+import Navbar from "@/components/Navbar/navbar";
 
 export const metadata: Metadata = {
     title: {
@@ -58,11 +59,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`antialiased`}>
+            <body className={`antialiased `}>
                 <Toaster />
                 <AuthProvider>
+                    <Navbar />
                     {children}
-                    <Footer />
+                    {/* <Footer /> */}
                 </AuthProvider>
             </body>
         </html>

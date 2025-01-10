@@ -13,7 +13,7 @@ const Typography = ({ children, variant, className, style }: Props) => {
   if (variant === "sm") {
     textStyles = "";
   } else if (variant == "lg") {
-    textStyles = "text-xl sm:text-2xl lg:text-3xl font-bold";
+    textStyles = "text-sm sm:text-sm lg:text-sm font-bold";
   } else if (variant == "faq") {
     textStyles = "text-sm lg:text-base font-semibold sm:font-medium";
   } else if(variant == "eventMob"){
@@ -25,7 +25,7 @@ const Typography = ({ children, variant, className, style }: Props) => {
 
   return (
     <p
-      className={`${spirits.className} ${textStyles} ${className}`}
+      className={`${spirits.className} ${textStyles} ${className} text-md sm:text-sm lg:text-md`}
       style={style}
     >
       {children}

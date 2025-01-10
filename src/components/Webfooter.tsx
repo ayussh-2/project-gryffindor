@@ -1,9 +1,27 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
   className?: HTMLDivElement["className"];
 };
-
+const extraLinks = [
+  {
+    name: "Privacy Policy",
+    link: "/privacy-policy",
+  },
+  {
+    name: "Terms and Conditions",
+    link: "/terms-and-conditions",
+  },
+  {
+    name: "Refund Policy",
+    link: "/refund-policy",
+  },
+  {
+    name: "Code of Conduct",
+    link: "/code-of-conduct",
+  },
+];
 const WebFooter = (props: Props) => {
   return (
     <div
@@ -12,7 +30,7 @@ const WebFooter = (props: Props) => {
         props.className
       }
     >
-      <div>
+      <div className="flex flex-col gap-2">
         <p>
           Magically molded with 🤍 and a sprinkle of{" "}
           <a
@@ -39,10 +57,23 @@ const WebFooter = (props: Props) => {
             </span>
           </a>
         </p>
+        <div className="bottomlinks">
+        <div className="sm:flex hidden justify-around items-center gap-36 py-4 w-[full] mx-auto">
+        {extraLinks.map((item) => (
+              <Link
+                href={item.link}
+                className="hover:underline underline-offset-2 opacity-80 hover:opacity-100 text-[#FFF] text-[0.7rem] sm:text-[0.75rem] md:text-[0.75rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]"
+                key={item.link}
+              >
+                {item.name}
+              </Link>
+            ))}
+        </div>
+      </div>
       </div>
       <div className="hover:border hover:border-white p-2 rounded-3xl transition-all ease-in hover:bg-white/5">
         <Image
-          src={"/nuxww.svg"}
+          src={"/nuxww.png"}
           alt="nu x webwiz"
           width={80}
           height={80}

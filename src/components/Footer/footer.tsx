@@ -7,19 +7,19 @@ import Image from "next/image";
 const extraLinks = [
   {
     name: "Privacy Policy",
-    link: "/privacy-policy",
+    link: "/",
   },
   {
-    name: "Terms & Conditions",
-    link: "/terms-and-conditions",
+    name: "Terms and Conditions",
+    link: "/",
   },
   {
-    name: "Payment Policy",
-    link: "/payment-policy",
+    name: "Refund Policy",
+    link: "/",
   },
   {
-    name: "Code Of Conduct",
-    link: "/code-of-conduct",
+    name: "Code of Conduct",
+    link: "/",
   },
 ];
 
@@ -28,9 +28,14 @@ export default function Footer() {
     <div className="bg-[#000] pt-4 sm:pt-14 relative z-40">
       <div className="start grid grid-cols-1 sm:grid-cols-5  gap-4 sm:w-[90%] w-screen mx-auto border-b-2 border-[#E5E7EB] p-4">
         <div className="flex flex-col items-center sm:items-start pr-3 mb-4 ">
-          <Heading className="text-[#AB916D] text-[1.2rem] sm:text-[0.9rem] md:text-[1.1rem] lg:text-[1.32rem] xl:text-[1.6rem]">
-            NITRUTSAV 2K24
-          </Heading>
+          <Image
+            src="https://res.cloudinary.com/dgtdkqfsx/image/upload/v1736520354/Branding_yt0agf.png"
+            alt="Top Image"
+            width={106}
+            height={106}
+            sizes="(max-width: 768px)106px, 212px"
+            className=" w-1/6 sm:w-1/2 h-auto max-w-xs  "
+          />
           <Typography
             className="text-[#FFF] font-normal leading-5 text-[0.75rem]"
             variant="sm"
@@ -45,7 +50,7 @@ export default function Footer() {
 
         <div className=" sm:flex flex-1 align-sub mb-4 hidden">
           <div className="pl-11 sm:pl-10">
-            <Heading className="text-[#AB916D]  font-normal text-[1rem] sm:text-[0.76rem] md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+            <Heading className="text-[#CBFFFF]  font-normal text-[1rem] sm:text-[0.76rem] md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
               Quick Links
             </Heading>
             <div className="links mt-3 text-[#FFF] text-[0.7rem] sm:text-[0.75rem] md:text-[0.75rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
@@ -53,7 +58,7 @@ export default function Footer() {
                 <Link
                   href={item.link}
                   className="pb-[0.27rem] block hover:underline underline-offset-2 "
-                  key={item.link}
+                  key={item.name}
                 >
                   {item.name}
                 </Link>
@@ -64,7 +69,7 @@ export default function Footer() {
 
         <div className="flex justify-between w-[90%] mx-auto gap-4 sm:hidden">
           <div className="flex-1  mb-4 max-w-[200px] ">
-            <Heading className="text-[#AB916D] text-[1.25rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+            <Heading className="text-[#CBFFFF] text-[1.25rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
               Contact Us:
             </Heading>
             <div className="mt-3 text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
@@ -95,7 +100,7 @@ export default function Footer() {
           </div>
 
           <div className="flex-1 mb-4  sm:pl-0 max-w-[200px]">
-            <Heading className="text-[#AB916D] text-[1.25rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+            <Heading className="text-[#CBFFFF] text-[1.25rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
               Opening Hours
             </Heading>
             <div className="mt-3  text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
@@ -124,25 +129,25 @@ export default function Footer() {
 
         <div className="flex sm:flex-col items-start xl:items-center justify-center gap-8 ">
           <Image
-            src="https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Sponsors/SAC-Logo-NU.webp"
+            src="https://res.cloudinary.com/dgtdkqfsx/image/upload/v1736522339/Frame_36878_y7onca.png"
             alt="Top Image"
             width={106}
             height={106}
             sizes="(max-width: 768px)106px, 212px"
             className=" mx-auto w-1/6 sm:w-1/2 h-auto max-w-xs  "
           />
-          <Image
+          {/* <Image
             width={422}
             height={96}
             sizes="(max-width: 768px)211px, 422px"
             src="https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Sponsors/BRANDING-small.png"
             alt="Bottom Image"
             className=" w-1/2 sm:w-full h-auto mx-auto sm:mt-0 mt-4"
-          />
+          /> */}
         </div>
 
         <div className="flex-col mb-4 pl-12 sm:pl-0 hidden sm:flex">
-          <Heading className="text-[#AB916D] text-[1rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+          <Heading className="text-[#CBFFFF] text-[1rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
             Opening Hours
           </Heading>
           <div className="mt-3  text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
@@ -165,7 +170,7 @@ export default function Footer() {
           id="contact"
           className="flex-col pl-12 sm:pl-6 mb-4 hidden sm:flex"
         >
-          <Heading className="text-[#AB916D] text-[1rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+          <Heading className="text-[#CBFFFF] text-[1rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
             Contact Us:
           </Heading>
           <div className="mt-3 text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
@@ -201,7 +206,7 @@ export default function Footer() {
               <Link
                 href={item.link}
                 className="hover:underline underline-offset-2  opacity-80 hover:opacity-100 "
-                key={item.link}
+                key={item.name}
               >
                 {item.name}
               </Link>
@@ -209,7 +214,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
       <WebFooter className=" sm:w-[90%] w-screen px-4 sm:px-0 mx-auto py-4"></WebFooter>
     </div>
   );

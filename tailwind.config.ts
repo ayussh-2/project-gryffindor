@@ -9,11 +9,13 @@ export default {
   ],
   theme: {
     extend: {
+      cursor: {
+        magical: "url(/9515.png), auto",
+      },      
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--background)", // Fallback can be added
+        foreground: "var(--foreground)", // Fallback can be added
       },
-
       keyframes: {
         'light-cone': {
           '0%, 100%': { transform: 'scaleY(1)' },
