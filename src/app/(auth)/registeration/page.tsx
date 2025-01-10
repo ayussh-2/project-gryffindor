@@ -59,7 +59,7 @@ const Registration: React.FC = () => {
             console.log(name, mobileNumber, userId);
             return;
         }
-        const amount = 1;
+        const amount = 10;
         if (!amount || !user) {
             toast("Please login again!");
             return;
