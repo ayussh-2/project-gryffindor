@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Hackathon 2024",
+        "imageFront": "/Images/first.png",
+        "imageHover": "/Images/war.jpg",
+        "imageBack": "/Images/first.png",
+        "details": "Join us for an exciting hackathon filled with learning and fun!"
+    },
+    {
+        "id": 2,
+        "title": "AI Summit",
+        "imageFront": "/Images/third.jpg",
+        "imageHover": "/Images/satun.jpg",
+        "imageBack": "/Images/third.jpg",
+        "details": "Explore the future of AI with industry leaders."
+    },
+    {
+        "id": 3,
+        "title": "AI Summit",
+        "imageFront": "/Images/first.png",
+        "imageHover": "/Images/devil.jpg",
+        "imageBack": "/Images/first.png",
+        "details": "Explore the future of AI with industry leaders."
+    }
+]

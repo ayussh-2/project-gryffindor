@@ -3,6 +3,7 @@ import bgImg from "../../public/Images/backNU.avif";
 import ComingSoon from "@/components/comingSoon/ComingSoon";
 
 import Faq from "@/components/FAQ/Faq";
+import Events from "@/components/Events/Events"
 
 import Footer from "@/components/Footer/footer";
 
@@ -37,6 +38,7 @@ export default function Home() {
       {/* Content */}
       <ComingSoon />
       <Faq />
+      <Events />
 
     </>
   );
