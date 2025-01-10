@@ -1,12 +1,16 @@
 import Image from "next/image";
 import bgImg from "../../public/Images/backNU.avif";
 import ComingSoon from "@/components/comingSoon/ComingSoon";
+
 import Faq from "@/components/FAQ/Faq";
+
+import Footer from "@/components/Footer/footer";
 
 
 export default function Home() {
   return (
     <>
+
       {/* Background */}
       <div className="fixed inset-0 -z-30">
         {/* Background Image */}
@@ -33,6 +37,7 @@ export default function Home() {
       {/* Content */}
       <ComingSoon />
       <Faq />
+
     </>
   );
 }
