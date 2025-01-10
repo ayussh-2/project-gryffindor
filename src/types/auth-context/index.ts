@@ -9,6 +9,6 @@ export interface AuthContextType {
         email: string,
         password: string,
         name: string
-    ) => Promise<void>;
+    ) => Promise<boolean>;
     logout: () => Promise<boolean>;
 }

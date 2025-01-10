@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 
+import Loader from "@/components/loader/loader";
 import { formFields, notAllowedInstitutes } from "@/config/register";
 import { useAuth } from "@/contexts/auth-context";
 import { UserInput } from "@/types/appwrite";
@@ -24,6 +25,7 @@ const Registration: React.FC = () => {
     });
     const [isLoading, setIsLoading] = useState(true);
     const [existingUser, setExistingUser] = useState<UserInput | null>(null);
+    const [submitLoading, setSubmitLoading] = useState(false);
 
     useEffect(() => {
         if (!user?.id) {
@@ -105,6 +107,7 @@ const Registration: React.FC = () => {
             toast.error("Please login to register.");
             return;
         }
+        setSubmitLoading(true);
 
         if (notAllowedInstitutes.includes(userDetails.institute)) {
             toast.error("Sorry your institute is not allowed to register");
@@ -130,6 +133,8 @@ const Registration: React.FC = () => {
                 error instanceof Error ? error.message : "Registration failed"
             );
             console.error(error);
+        } finally {
+            setSubmitLoading(false);
         }
     };
 
@@ -146,27 +151,30 @@ const Registration: React.FC = () => {
         );
     };
 
-    if (isLoading) {
-        return (
-            <div className="flex justify-center items-center min-h-screen">
-                Loading...
-            </div>
-        );
-    }
-
     const renderContent = () => {
+        if (isLoading) {
+            return (
+                <div className="flex justify-center items-center scale-150 mt-10">
+                    <Loader />
+                </div>
+            );
+        }
         if (!user) {
             return (
-                <p className="text-center">
-                    Please login to register. If you don&apos;t have an account,
-                    you can create one.
-                </p>
+                <button>
+                    <a
+                        href="/login"
+                        className="flex items-center justify-center h-full font-Spirits w-full py-3 text-xl rounded-lg bg-[#003955] text-white font-semibold transition-all px-5"
+                    >
+                        Login to Register
+                    </a>
+                </button>
             );
         }
 
         if (isRegistered && hasPaid) {
             return (
-                <p className="text-center">
+                <p className="text-center font-Spirits">
                     You have already registered and paid!
                 </p>
             );
@@ -176,7 +184,7 @@ const Registration: React.FC = () => {
             return (
                 <button
                     onClick={handleStartRePayment}
-                    className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition w-52"
+                    className="flex items-center justify-center h-full font-Spirits w-fit px-5 py-3 text-xl rounded-lg bg-[#003955] text-white font-semibold transition-all "
                 >
                     Complete Payment
                 </button>
@@ -184,51 +192,67 @@ const Registration: React.FC = () => {
         }
 
         return (
-            <form
-                onSubmit={handleSubmit(onSubmit)}
-                className="space-y-4 w-full max-w-lg"
-            >
-                {formFields.map(
-                    ({ name, label, placeholder, type, required, pattern }) => (
-                        <div key={name}>
-                            <label className="block font-semibold text-sm">
-                                {label}
-                            </label>
-                            <input
-                                type={type}
-                                {...register(name as keyof UserInput, {
-                                    required: required
-                                        ? `${label} is required`
-                                        : false,
-                                    pattern,
-                                })}
-                                placeholder={placeholder}
-                                className="border p-2 w-full rounded-md"
-                            />
-                            {errors[name as keyof UserInput] && (
-                                <p className="text-red-500 text-sm">
-                                    {errors[name as keyof UserInput]?.message}
-                                </p>
-                            )}
-                        </div>
-                    )
-                )}
-
-                <button
-                    type="submit"
-                    className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition"
+            <>
+                <p className="text-center font-Spirits text-xl mb-2">
+                    Early bird registration offer{" "}
+                    <span className="mx-2 ">₹799</span>{" "}
+                    <span className="line-through">₹999</span>
+                </p>
+                <form
+                    onSubmit={handleSubmit(onSubmit)}
+                    className="space-y-4 w-full max-w-lg px-3"
                 >
-                    Submit
-                </button>
-            </form>
+                    {formFields.map(
+                        ({
+                            name,
+                            label,
+                            placeholder,
+                            type,
+                            required,
+                            pattern,
+                        }) => (
+                            <div key={name}>
+                                <input
+                                    type={type}
+                                    {...register(name as keyof UserInput, {
+                                        required: required
+                                            ? `${label} is required`
+                                            : false,
+                                        pattern,
+                                    })}
+                                    placeholder={placeholder}
+                                    className="input-field"
+                                />
+                                {errors[name as keyof UserInput] && (
+                                    <p className="text-red-500 text-sm">
+                                        {
+                                            errors[name as keyof UserInput]
+                                                ?.message
+                                        }
+                                    </p>
+                                )}
+                            </div>
+                        )
+                    )}
+
+                    <button
+                        type="submit"
+                        className="flex items-center justify-center h-full font-Spirits w-full py-3 text-xl rounded-lg bg-[#003955] text-white font-semibold transition-all "
+                    >
+                        {submitLoading ? <Loader /> : "Register"}
+                    </button>
+                </form>
+            </>
         );
     };
 
     return (
-        <div className="max-w-6xl mx-auto p-6 rounded-lg min-h-screen flex flex-col items-center justify-center">
-            <h1 className="text-2xl font-bold text-center mb-4">
+        <div className="min-h-screen flex flex-col items-center justify-center md:px-4 bg-reg relative">
+            <h1 className="text-5xl md:text-7xl font-bold text-center mb-8 text-[#003955] font-Cattedrale">
                 User Registration
             </h1>
+            {/* <Bats /> */}
+
             {renderContent()}
         </div>
     );

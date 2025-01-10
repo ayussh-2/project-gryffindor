@@ -15,9 +15,10 @@ export default function Page() {
         handleLogout();
     }, []);
     return (
-        <div>
-            <h1>Logout</h1>
-            <p>Logging out...</p>
+        <div className="bg-reg min-h-screen flex items-center justify-center">
+            <p className="text-4xl md:text-5xl font-bold text-center mb-8 text-[#003955] font-Spirits">
+                Logging out...
+            </p>
         </div>
     );
 }
