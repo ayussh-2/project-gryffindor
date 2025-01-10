@@ -18,6 +18,16 @@ const PAYMENTS_COLLECTION_ID =
 
 export async function registerUser(userDetails: UserInput, userId: string) {
     try {
+        const alreadyRegisteredUser = await getDocumentByQuery(
+            USERS_COLLECTION_ID,
+            [Query.equal("phoneNumber", userDetails.phoneNumber)]
+        );
+        if (alreadyRegisteredUser.documents.length > 0) {
+            return {
+                status: "error",
+                data: "User already registered",
+            };
+        }
         const response = await createDocument(USERS_COLLECTION_ID, {
             ...userDetails,
             userId,

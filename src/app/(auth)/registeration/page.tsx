@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 
-import { formFields } from "@/config/register";
+import { formFields, notAllowedInstitutes } from "@/config/register";
 import { useAuth } from "@/contexts/auth-context";
 import { UserInput } from "@/types/appwrite";
 import { getUser, getUserPaymentStatus, registerUser } from "@/utils/appwrite";
@@ -106,12 +106,18 @@ const Registration: React.FC = () => {
             return;
         }
 
+        if (notAllowedInstitutes.includes(userDetails.institute)) {
+            toast.error("Sorry your institute is not allowed to register");
+            return;
+        }
+
         try {
             userDetails.referralCode = userDetails.referralCode || "NU25";
             const result = await registerUser(userDetails, user.id);
 
             if (result?.status === "error") {
-                throw new Error(result.data);
+                toast.error(result?.data || "Registration failed");
+                return;
             }
 
             await initiatePayment(
