@@ -23,9 +23,7 @@ const ComingSoon = () => {
         <div>&#10240;</div> {/* This is an empty character. DO NOT REMOVE */}
         <Typewriter text="Coming Soon" />
       </div>
-      <div className="sm:text-[80px] text-[24px] font-bold">
-        NITRUTSAV 2025
-      </div>
+      <div className="sm:text-[80px] text-[24px] font-bold">NITRUTSAV 2025</div>
       {/* Register Now Button */}
       <button
         className="mt-6 px-6 py-3 text-lg font-bold text-white bg-[#FF0000] hover:bg-[#950101] rounded-lg transition"

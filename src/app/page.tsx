@@ -1,17 +1,16 @@
+"use client";
 import Image from "next/image";
-
-import ComingSoon from "@/components/comingSoon/ComingSoon";
 import Faq from "@/components/FAQ/Faq";
-
-import bgImg from "../../public/Images/backNU.avif";
 import ParallaxScene from "@/components/Herosection/HeroSection";
+import AboutUs from "@/components/About Us/AboutUs";
+import PastSponsors from "@/components/PastSponsor/PastSponsors";
 
 export default function Home() {
   return (
     <>
-      {/* Background */}
-      
       <ParallaxScene />
+      <AboutUs />
+      <PastSponsors />
       <Faq />
     </>
   );
