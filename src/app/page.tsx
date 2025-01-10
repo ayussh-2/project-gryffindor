@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bgImg from "../../public/Images/backNU.avif";
 import ComingSoon from "@/components/comingSoon/ComingSoon";
+import Faq from "@/components/FAQ/Faq";
 
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
 
       {/* Content */}
       <ComingSoon />
+      <Faq />
     </>
   );
 }
