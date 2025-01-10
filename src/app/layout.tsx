@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
 
-import Footer from "@/components/Footer/footer";
 import { AuthProvider } from "@/contexts/auth-context";
 import { ReactLenis } from "@/providers/LenisProvider";
 
@@ -79,10 +78,7 @@ export default function RootLayout({
                     className={` ${Cattedrale.variable}  ${Spirits.variable} overflow-x-hidden  antialiased`}
                 >
                     <Toaster />
-                    <AuthProvider>
-                        {children}
-                        <Footer />
-                    </AuthProvider>
+                    <AuthProvider>{children}</AuthProvider>
                 </body>
             </ReactLenis>
         </html>
