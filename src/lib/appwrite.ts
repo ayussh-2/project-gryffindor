@@ -64,3 +64,18 @@ export async function deleteDocument(collectionId: string, documentId: string) {
         throw error;
     }
 }
+
+export async function getDocumentByQuery(
+    collectionId: string,
+    queries: unknown[]
+) {
+    try {
+        return await database.listDocuments(
+            process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID!,
+            collectionId,
+            queries
+        );
+    } catch (error) {
+        throw error;
+    }
+}

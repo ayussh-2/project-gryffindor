@@ -60,6 +60,7 @@ export async function POST(request) {
             });
         }
         const failedUrl = new URL("/payment/failed", CLIENT_URL);
+        failedUrl.searchParams.set("details", "paymentFailed");
         return NextResponse.redirect(failedUrl.toString(), { status: 303 });
     } catch (error) {
         console.error("error in payment status", error);
