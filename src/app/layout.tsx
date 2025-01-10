@@ -75,6 +75,7 @@ export default function RootLayout({
         <html lang="en">
             <ReactLenis root>
                 <body
+                    suppressHydrationWarning={true}
                     className={` ${Cattedrale.variable}  ${Spirits.variable} overflow-x-hidden  antialiased `}
                 >
                     <Toaster />
