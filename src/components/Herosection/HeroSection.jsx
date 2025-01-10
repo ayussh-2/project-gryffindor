@@ -44,6 +44,10 @@ const ParallaxScene = () => {
           "relative md:h-[100vh] h-[60vh] overflow-hidden bg-[url('/hero/moon.svg')] bg-center bg-contain bg-no-repeat w-screen flex justify-center items-center"
         }
       >
+        <audio autoPlay loop style={{ display: "none" }}>
+          <source src="/hero/horror.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
         {/* Witch Animation */}
         <motion.div
           className="absolute z-50"
@@ -117,8 +121,8 @@ const ParallaxScene = () => {
             height={100}
             width={1000}
             alt="bottom"
-            className="absolute lg:h-64 w-full bottom-0"
-            objectFit="contain"
+            className="absolute lg:h-60 object-cover w-full bottom-0"
+            // objectFit="contain"
             src="/hero/bottom.svg"
           />
         </motion.div>
