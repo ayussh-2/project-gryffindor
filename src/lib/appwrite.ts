@@ -65,10 +65,8 @@ export async function deleteDocument(collectionId: string, documentId: string) {
     }
 }
 
-export async function getDocumentByQuery(
-    collectionId: string,
-    queries: unknown[]
-) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function getDocumentByQuery(collectionId: string, queries: any[]) {
     try {
         return await database.listDocuments(
             process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID!,
