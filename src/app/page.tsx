@@ -10,8 +10,8 @@ import PastSponsors from "@/components/PastSponsor/PastSponsors";
 import ScaryLoader from "@/components/scary-loader/ScaryLoader";
 
 export default function Home() {
-    const [isLoading, setIsLoading] = useState(true);
-
+    const isMobile = window.innerWidth < 768;
+    const [isLoading, setIsLoading] = useState(!isMobile);
     useEffect(() => {
         const timer = setTimeout(() => setIsLoading(false), 500);
         return () => clearTimeout(timer);
@@ -23,7 +23,6 @@ export default function Home() {
                 <ScaryLoader />
             ) : (
                 <>
-                    {/* Background */}
                     <ParallaxScene />
                     <AboutUs />
                     <Events />
