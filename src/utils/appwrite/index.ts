@@ -1,7 +1,9 @@
+import { Query } from "appwrite";
+
 import {
     createDocument,
     deleteDocument,
-    getDocument,
+    getDocumentByQuery,
     updateDocument,
 } from "@/lib/appwrite";
 import { PaymentDetails, UserInput } from "@/types/appwrite";
@@ -11,9 +13,21 @@ import { handleResponse } from "../handleResponse";
 
 const USERS_COLLECTION_ID =
     process.env.NEXT_PUBLIC_APPWRITE_USERS_COLLECTION_ID!;
+const PAYMENTS_COLLECTION_ID =
+    process.env.NEXT_PUBLIC_APPWRITE_PAYMENT_COLLECTION_ID!;
 
 export async function registerUser(userDetails: UserInput, userId: string) {
     try {
+        const alreadyRegisteredUser = await getDocumentByQuery(
+            USERS_COLLECTION_ID,
+            [Query.equal("phoneNumber", userDetails.phoneNumber)]
+        );
+        if (alreadyRegisteredUser.documents.length > 0) {
+            return {
+                status: "error",
+                data: "User already registered",
+            };
+        }
         const response = await createDocument(USERS_COLLECTION_ID, {
             ...userDetails,
             userId,
@@ -26,7 +40,10 @@ export async function registerUser(userDetails: UserInput, userId: string) {
 
 export async function getUser(userId: string) {
     try {
-        const response = await getDocument(USERS_COLLECTION_ID, userId);
+        const response = await getDocumentByQuery(USERS_COLLECTION_ID, [
+            Query.equal("userId", userId),
+        ]);
+
         return handleResponse(response);
     } catch (error) {
         return handleError(error);
@@ -59,7 +76,6 @@ export async function deleteUser(userId: string) {
 }
 
 export async function handleUserPayment(paymentDetails: PaymentDetails) {
-    console.log(paymentDetails);
     try {
         const response = await createDocument(
             process.env.NEXT_PUBLIC_APPWRITE_PAYMENT_COLLECTION_ID!,
@@ -71,4 +87,14 @@ export async function handleUserPayment(paymentDetails: PaymentDetails) {
     }
 }
 
-export async function getLoggedInUser() {}
+export async function getUserPaymentStatus(userId: string) {
+    try {
+        const response = await getDocumentByQuery(PAYMENTS_COLLECTION_ID!, [
+            Query.equal("userId", userId),
+            Query.equal("state", "COMPLETED"),
+        ]);
+        return handleResponse(response);
+    } catch (error) {
+        return handleError(error);
+    }
+}

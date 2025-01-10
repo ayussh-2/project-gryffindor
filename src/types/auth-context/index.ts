@@ -10,5 +10,5 @@ export interface AuthContextType {
         password: string,
         name: string
     ) => Promise<void>;
-    logout: () => Promise<void>;
+    logout: () => Promise<boolean>;
 }
