@@ -27,7 +27,7 @@ export default {
                 },
             },
             screens: {
-                smd: "463px",
+                smd: "485px",
             },
             animation: {
                 "cone-haze": "light-cone 5s ease-in-out infinite",
