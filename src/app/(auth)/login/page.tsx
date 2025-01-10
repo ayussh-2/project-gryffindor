@@ -4,26 +4,14 @@ import React, { useState } from "react";
 import { useAuth } from "@/contexts/auth-context";
 
 const LoginPage: React.FC = () => {
-    const { user, login, createAccount, logout, error, loading } = useAuth();
+    const { user, login, createAccount, error, loading } = useAuth();
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [name, setName] = useState<string>("");
 
     if (user) {
-        return (
-            <div className="flex flex-col items-center justify-center min-h-screen">
-                <p className="text-xl font-medium mb-4">
-                    Logged in as {user.name}
-                </p>
-                <button
-                    type="button"
-                    onClick={logout}
-                    className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
-                >
-                    Logout
-                </button>
-            </div>
-        );
+        window.location.href = "/register";
+        return null;
     }
 
     return (
