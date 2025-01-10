@@ -54,7 +54,7 @@ const ParallaxScene = () => {
             const newPosition = getRandomAlignedPosition();
             setWitchPosition(newPosition);
         };
-
+        moveWitch();
         const interval = setInterval(moveWitch, Math.random() * 2000 + 3000);
 
         return () => clearInterval(interval);
