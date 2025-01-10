@@ -14,11 +14,17 @@ export default function Page() {
         return null;
     }
     return (
-        <div className="min-h-screen flex items-center justify-center flex-col font-sans">
-            <h1>Payment Failed</h1>
-            {ERR_DETAILS.find((err) => err.id === details) && (
-                <p>{ERR_DETAILS.find((err) => err.id === details)?.message}</p>
-            )}
+        <div className="bg-reg min-h-screen flex items-center justify-center">
+            <div className="flex flex-col items-center max-w-lg">
+                <h1 className="text-2xl font-bold font-Spirits">
+                    Payment Failed
+                </h1>
+                {ERR_DETAILS.find((err) => err.id === details) && (
+                    <p className="text-xl font-Spirits text-center mt-4">
+                        {ERR_DETAILS.find((err) => err.id === details)?.message}
+                    </p>
+                )}
+            </div>
         </div>
     );
 }

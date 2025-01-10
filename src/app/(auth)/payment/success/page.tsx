@@ -62,20 +62,22 @@ export default function PaymentStatusPage() {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="bg-reg min-h-screen flex items-center justify-center">
             {paymentStatus.hasPaid ? (
                 <div className="text-center">
-                    <h1 className="text-2xl font-bold text-green-600">
+                    <h1 className="text-2xl font-bold text-green-600 font-Spirits">
                         Payment Successful!
                     </h1>
-                    <p className="mt-4">Thank you for your payment.</p>
+                    <p className="mt-4 font-Spirits">
+                        Thank you for your payment.
+                    </p>
                 </div>
             ) : (
                 <div className="text-center">
-                    <h1 className="text-2xl font-bold">
+                    <h1 className="text-2xl font-bold font-Spirits">
                         Payment Details Not Found
                     </h1>
-                    <p className="mt-4">Please try again later.</p>
+                    <p className="mt-4 font-Spirits">Please try again later.</p>
                 </div>
             )}
         </div>

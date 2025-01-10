@@ -1,70 +1,145 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
+import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+
+import Bats from "@/components/login/Bats";
+import { formFields } from "@/config/auth";
 import { useAuth } from "@/contexts/auth-context";
 
-const LoginPage: React.FC = () => {
+const LoginPage = () => {
     const { user, login, createAccount, error, loading } = useAuth();
-    const [email, setEmail] = useState<string>("");
-    const [password, setPassword] = useState<string>("");
-    const [name, setName] = useState<string>("");
+    const router = useRouter();
+    const [isLogin, setIsLogin] = useState(true);
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+        name: "",
+    });
 
-    if (user) {
-        window.location.href = "/register";
-        return null;
-    }
+    useEffect(() => {
+        if (user) {
+            router.push("/register");
+        }
+    }, [user]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const { email, password, name } = formData;
+            if (isLogin) {
+                await login(email, password);
+            } else {
+                await createAccount(email, password, name);
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    const handleInputChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const renderFormField = (field, index) => {
+        if (!field.showAlways && isLogin) return null;
+
+        return (
+            <motion.div
+                key={field.name}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.1 * (index + 1) }}
+            >
+                <input
+                    type={field.type}
+                    name={field.name}
+                    placeholder={field.placeholder}
+                    value={formData[field.name]}
+                    onChange={handleInputChange}
+                    required={field.required}
+                    className="input-field"
+                    disabled={loading}
+                />
+            </motion.div>
+        );
+    };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen ">
-            <div className="w-full max-w-sm rounded-lg shadow-lg p-6">
-                <h1 className="text-2xl font-bold text-center mb-6">
-                    Login / Create Account
-                </h1>
-                {error && (
-                    <p className="text-red-500 text-center mb-4">{error}</p>
-                )}
-                <form className="space-y-4">
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300"
-                    />
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300"
-                    />
-                    <input
-                        type="text"
-                        placeholder="Name (for registration)"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        className="w-full px-4 py-2 border rounded focus:outline-none focus:ring focus:ring-blue-300"
-                    />
-                    <div className="flex justify-between">
-                        <button
-                            type="button"
-                            onClick={() => login(email, password)}
-                            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
-                            disabled={loading}
-                        >
-                            {loading ? "Loading..." : "Login"}
-                        </button>
-                        <button
-                            type="button"
-                            onClick={() => createAccount(email, password, name)}
-                            className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
-                            disabled={loading}
-                        >
-                            {loading ? "Loading..." : "Create Account"}
-                        </button>
-                    </div>
-                </form>
-            </div>
+        <div className="min-h-screen flex items-center justify-center md:px-4 bg-reg relative">
+            <Bats />
+            <AnimatePresence mode="wait">
+                <motion.div
+                    className="w-full max-w-lg"
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                >
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="p-3 md:p-8 relative overflow-hidden"
+                    >
+                        <h1 className="text-6xl md:text-7xl font-bold text-center mb-8 text-[#003955] font-Cattedrale">
+                            {isLogin ? "Login" : "Create Account"}
+                        </h1>
+
+                        <AnimatePresence>
+                            {error && (
+                                <motion.div
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: "auto" }}
+                                    exit={{ opacity: 0, height: 0 }}
+                                    className="bg-red-500/10 text-red-500 p-3 rounded-lg mb-4 text-center font-Spirits"
+                                >
+                                    {error}
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            {formFields.map(renderFormField)}
+                            <button
+                                className={`flex items-center justify-center h-full font-Spirits w-full py-3 text-xl rounded-lg bg-[#003955] text-white font-semibold transition-all ${
+                                    loading ? "opacity-70" : "opacity-100"
+                                }`}
+                                disabled={loading}
+                            >
+                                {loading ? (
+                                    <motion.div
+                                        animate={{ rotate: 360 }}
+                                        transition={{
+                                            duration: 1,
+                                            repeat: Infinity,
+                                            ease: "linear",
+                                        }}
+                                        className="w-6 h-6 border-2 border-white border-t-transparent rounded-full"
+                                    />
+                                ) : isLogin ? (
+                                    "Login"
+                                ) : (
+                                    "Create Account"
+                                )}
+                            </button>
+
+                            <button
+                                type="button"
+                                onClick={() => setIsLogin(!isLogin)}
+                                className="text-[#000]/50 w-full text-center hover:text-[#003955] transition-colors font-Spirits"
+                                disabled={loading}
+                            >
+                                {isLogin
+                                    ? "Need an account? Register"
+                                    : "Already have an account? Login"}
+                            </button>
+                        </form>
+                    </motion.div>
+                </motion.div>
+            </AnimatePresence>
         </div>
     );
 };
