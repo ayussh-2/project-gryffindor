@@ -64,6 +64,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     };
 
     const login = async (email: string, password: string) => {
+        setLoading(true);
         try {
             await account.createEmailPasswordSession(email, password);
             await setUserFromAccount();
@@ -71,6 +72,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         } catch (err) {
             const message = handleError(err, "Invalid email or password.");
             setError(message?.data || "");
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -79,6 +82,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         password: string,
         name: string
     ) => {
+        setLoading(true);
         try {
             await account.create(ID.unique(), email, password, name);
             await login(email, password);
@@ -88,6 +92,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
                 "Registration failed. Please check your details."
             );
             setError(message?.data || "");
+        } finally {
+            setLoading(false);
         }
     };
 
