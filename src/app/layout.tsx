@@ -11,10 +11,10 @@ const Cattedrale = localFont({
   src: "./fonts/Cattedrale-Demo-Regular.ttf",
   variable: "--font-cattedrale",
 });
-const Sholp = localFont({
-  src: "./fonts/sholprg.otf",
-  variable: "--font-sholp",
-});
+// const Sholp = localFont({
+//   src: "./fonts/sholprg.otf",
+//   variable: "--font-sholp",
+// });
 const Spirits = localFont({
   src: "./fonts/spirits-sharp-light.otf",
   variable: "--font-spirits",
@@ -73,7 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${Cattedrale.variable} ${Sholp.variable} ${Spirits.variable}  antialiased `}
+        className={` ${Cattedrale.variable}  ${Spirits.variable} overflow-x-hidden  antialiased `}
       >
         <Toaster />
         <AuthProvider>
