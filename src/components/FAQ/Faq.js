@@ -23,9 +23,9 @@ export default function Faq() {
                 <div className="accordion w-full flex flex-col">
                     <div className="flex justify-center items-center font-bold text-[#CBFFFF] leading-normal text-[16px] sm:text-[40px] md:text-[40px] text-center space-x-4">
                         <Heading>
-                            <h1 className="w-auto h-full text-[#CBFFFF] flex items-center mt-[3rem] mb-[3rem]">
+                            <span className=" w-auto h-full text-[#CBFFFF] flex items-center mt-[3rem] mb-[3rem]">
                                 FAQ
-                            </h1>
+                            </span>
                         </Heading>
                     </div>
 

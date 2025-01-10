@@ -13,6 +13,7 @@ export default function PaymentStatusPage() {
         hasPaid: false,
         loading: true,
     });
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const checkPaymentStatus = async () => {
@@ -20,7 +21,7 @@ export default function PaymentStatusPage() {
                 setPaymentStatus((prev) => ({ ...prev, loading: false }));
                 return;
             }
-
+            setLoading(true);
             try {
                 const response = await getUserPaymentStatus(user.id);
 
@@ -42,28 +43,26 @@ export default function PaymentStatusPage() {
                     hasPaid: false,
                     loading: false,
                 });
+            } finally {
+                setLoading(false);
             }
         };
 
         checkPaymentStatus();
     }, [user?.id]);
 
-    if (paymentStatus.loading) {
-        return (
-            <div className="min-h-screen flex items-center justify-center">
+    return (
+        <div className="bg-reg min-h-screen flex items-center justify-center">
+            {loading || paymentStatus.loading ? (
                 <div className="text-center">
-                    <h1 className="text-2xl font-bold">Loading...</h1>
-                    <p className="mt-4">
+                    <h1 className="text-2xl font-bold font-Spirits">
+                        Loading...
+                    </h1>
+                    <p className="mt-4 font-Spirits">
                         Please wait while we fetch your details.
                     </p>
                 </div>
-            </div>
-        );
-    }
-
-    return (
-        <div className="bg-reg min-h-screen flex items-center justify-center">
-            {paymentStatus.hasPaid ? (
+            ) : paymentStatus.hasPaid ? (
                 <div className="text-center">
                     <h1 className="text-2xl font-bold text-green-600 font-Spirits">
                         Payment Successful!

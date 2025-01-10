@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
+import Loader from "@/components/loader/loader";
 import Bats from "@/components/login/Bats";
 import { formFields } from "@/config/auth";
 import { useAuth } from "@/contexts/auth-context";
@@ -31,7 +32,10 @@ const LoginPage = () => {
             if (isLogin) {
                 await login(email, password);
             } else {
-                await createAccount(email, password, name);
+                const res = await createAccount(email, password, name);
+                if (res) {
+                    router.push("/register");
+                }
             }
         } catch (error) {
             console.error(error);
@@ -110,15 +114,7 @@ const LoginPage = () => {
                                 disabled={loading}
                             >
                                 {loading ? (
-                                    <motion.div
-                                        animate={{ rotate: 360 }}
-                                        transition={{
-                                            duration: 1,
-                                            repeat: Infinity,
-                                            ease: "linear",
-                                        }}
-                                        className="w-6 h-6 border-2 border-white border-t-transparent rounded-full"
-                                    />
+                                    <Loader />
                                 ) : isLogin ? (
                                     "Login"
                                 ) : (

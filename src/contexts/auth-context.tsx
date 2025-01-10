@@ -8,6 +8,8 @@ import React, {
     useState,
 } from "react";
 
+import toast from "react-hot-toast";
+
 import { account, ID } from "@/lib/appwrite";
 import { AuthContextType } from "@/types/auth-context";
 import { User } from "@/types/user";
@@ -18,7 +20,7 @@ const defaultAuthContext: AuthContextType = {
     error: "",
     loading: true,
     login: async () => {},
-    createAccount: async () => {},
+    createAccount: async () => true,
     logout: async () => false,
 };
 
@@ -86,12 +88,15 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         try {
             await account.create(ID.unique(), email, password, name);
             await login(email, password);
+            toast.success("Account created successfully.");
+            return true;
         } catch (err) {
             const message = handleError(
                 err,
                 "Registration failed. Please check your details."
             );
             setError(message?.data || "");
+            return false;
         } finally {
             setLoading(false);
         }
