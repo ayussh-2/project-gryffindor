@@ -49,6 +49,7 @@ export async function POST(request) {
                 console.error("Error saving details to APPWRITE ", dbUpdate);
                 const redirectUrl = new URL("/payment/failed", CLIENT_URL);
                 redirectUrl.searchParams.set("details", "unableToSave");
+                redirectUrl.searchParams.set("error", "true");
                 return NextResponse.redirect(redirectUrl.toString(), {
                     status: 303,
                 });
@@ -60,6 +61,8 @@ export async function POST(request) {
             });
         }
         const failedUrl = new URL("/payment/failed", CLIENT_URL);
+        failedUrl.searchParams.set("details", "paymentFailed");
+        failedUrl.searchParams.set("error", "true");
         return NextResponse.redirect(failedUrl.toString(), { status: 303 });
     } catch (error) {
         console.error("error in payment status", error);

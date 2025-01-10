@@ -19,7 +19,7 @@ const defaultAuthContext: AuthContextType = {
     loading: true,
     login: async () => {},
     createAccount: async () => {},
-    logout: async () => {},
+    logout: async () => false,
 };
 
 const AuthContext = createContext<AuthContextType>(defaultAuthContext);
@@ -91,14 +91,16 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         }
     };
 
-    const logout = async () => {
+    const logout = async (): Promise<boolean> => {
         try {
             await account.deleteSession("current");
             setUser(null);
             setError("");
+            return true;
         } catch (err) {
             const message = handleError(err, "Failed to log out.");
             setError(message?.data || "");
+            return false;
         }
     };
 
