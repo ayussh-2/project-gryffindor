@@ -1,39 +1,37 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react";
-import ComingSoon from "@/components/comingSoon/ComingSoon";
+import { useEffect, useState } from "react";
+
+import AboutUs from "@/components/About Us/AboutUs";
+import Events from "@/components/Events/Events";
 import Faq from "@/components/FAQ/Faq";
 import ParallaxScene from "@/components/Herosection/HeroSection";
-import Loader from "@/components/loader/loader";
-import AboutUs from "@/components/About Us/AboutUs";
 import PastSponsors from "@/components/PastSponsor/PastSponsors";
-import Events from "@/components/Events/Events"
+import ScaryLoader from "@/components/scary-loader/ScaryLoader";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate loading state for 3 seconds, adjust as needed
-    const timer = setTimeout(() => setIsLoading(false), 500); // You can adjust this timeout
-    return () => clearTimeout(timer); // Cleanup on component unmount
-  }, []);
+    useEffect(() => {
+        const timer = setTimeout(() => setIsLoading(false), 500);
+        return () => clearTimeout(timer);
+    }, []);
 
-  return (
-    <>
-      {isLoading ? (
-        <Loader /> 
-      ) : (
+    return (
         <>
-          {/* Background */}
-          <ParallaxScene />
-      <AboutUs />
-      <Events />
-      <PastSponsors />
-          
-          <Faq />
+            {isLoading ? (
+                <ScaryLoader />
+            ) : (
+                <>
+                    {/* Background */}
+                    <ParallaxScene />
+                    <AboutUs />
+                    <Events />
+                    <PastSponsors />
+
+                    <Faq />
+                </>
+            )}
         </>
-      )}
-     
-    </>
-  );
+    );
 }

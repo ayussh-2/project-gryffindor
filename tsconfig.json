@@ -28,7 +28,8 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
-        "src/components/Herosection/HeroSection.jsx"
+        "src/components/Herosection/HeroSection.jsx",
+        "src/components/scary-loader/ScaryLoader.jsx"
     ],
     "exclude": ["node_modules"]
 }

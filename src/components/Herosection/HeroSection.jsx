@@ -72,8 +72,8 @@ const ParallaxScene = () => {
                     className="absolute z-50"
                     animate={witchPosition}
                     transition={{
-                        duration: 4, // Slightly longer duration for smoother motion
-                        ease: "easeInOut", // Smooth transitions
+                        duration: 4,
+                        ease: "easeInOut",
                     }}
                 >
                     <Image
@@ -84,7 +84,6 @@ const ParallaxScene = () => {
                         src="/hero/witch.png"
                     />
                 </motion.div>
-                {/* NITRUTSAV Text */}
                 <motion.div
                     style={{ y: textY }}
                     className="relative py-10 parallax-element"
@@ -97,7 +96,7 @@ const ParallaxScene = () => {
                     </p>
                     <div className="flex items-center flex-col md:flex-row justify-center space-x-4 font-Cattedrale lg:gap-10 gap-3 md:text-2xl lg:mt-5 mt-8">
                         <button className="flex items-center justify-between bg-transparent border-[2px] border-black text-black font-semibold lg:px-4 lg:py-2 px-4 rounded-full shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105">
-                            View Picture
+                            View Brochure
                         </button>
                         <button className="flex items-center bg-black text-white font-semibold lg:px-8 lg:py-2 px-4 rounded-full shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105">
                             Register
