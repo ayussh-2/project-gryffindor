@@ -14,11 +14,7 @@
     }
 }
 
-body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 .clip-cone {
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
