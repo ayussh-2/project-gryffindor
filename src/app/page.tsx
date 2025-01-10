@@ -1,13 +1,13 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import ComingSoon from "@/components/comingSoon/ComingSoon";
 import Faq from "@/components/FAQ/Faq";
-
-import bgImg from "../../public/Images/backNU.avif";
 import ParallaxScene from "@/components/Herosection/HeroSection";
 import Loader from "@/components/loader/loader";
+import AboutUs from "@/components/About Us/AboutUs";
+import PastSponsors from "@/components/PastSponsor/PastSponsors";
+import Events from "@/components/Events/Events"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,14 +21,19 @@ export default function Home() {
   return (
     <>
       {isLoading ? (
-        <Loader /> // Display the loader while the page is loading
+        <Loader /> 
       ) : (
         <>
           {/* Background */}
           <ParallaxScene />
+      <AboutUs />
+      <Events />
+      <PastSponsors />
+          
           <Faq />
         </>
       )}
+     
     </>
   );
 }
