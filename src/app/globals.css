@@ -53,6 +53,5 @@ body {
 }
 
 .magic-cursor {
-    cursor: url("https://res.cloudinary.com/dmvdbpyqk/image/upload/v1736543438/cursor_wifxox.png"),
-        auto;
+    cursor: url("/Images/9515.png"),auto;
 }
