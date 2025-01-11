@@ -145,7 +145,7 @@ const ParallaxScene = () => {
             height={100}
             width={1000}
             alt="bottom"
-            className="absolute md:max-h-60 xl:max-h-96 object-cover w-full bottom-0"
+            className="absolute md:max-h-60 xl:max-h-60 object-cover  object-top w-full bottom-0"
             src="/hero/bottom.svg"
             priority
           />
