@@ -25,7 +25,7 @@ const extraLinks = [
 
 export default function Footer() {
   return (
-    <div className="bg-[#000] pt-4 sm:pt-14 relative z-40">
+    <div id="contact-us" className="bg-[#040D17] pt-4 sm:pt-14 relative z-40">
       <div className="start grid grid-cols-1 sm:grid-cols-5  gap-4 sm:w-[90%] w-screen mx-auto border-b-2 border-[#E5E7EB] p-4">
         <div className="flex flex-col items-center sm:items-start pr-3 mb-4 ">
           <Image
@@ -53,16 +53,16 @@ export default function Footer() {
             <Heading className="text-[#CBFFFF]  font-normal text-[1rem] sm:text-[0.76rem] md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
               Quick Links
             </Heading>
-            <div className="links mt-3 text-[#FFF] text-[0.7rem] sm:text-[0.75rem] md:text-[0.75rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
-              {extraLinks.map((item) => (
-                <Link
-                  href={item.link}
-                  className="pb-[0.27rem] block hover:underline underline-offset-2 "
-                  key={item.name}
-                >
-                  {item.name}
-                </Link>
-              ))}
+            <div className="links mt-3 text-[#FFF] flex flex-col items-start text-[0.7rem] sm:text-[0.75rem] md:text-[0.75rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
+            {['About us', 'Events', 'Sponsors', 'FAQs', 'Contact Us'].map((item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase().replace(' ', '-')}`}
+                    className="text-white hover:text-[#CBFFFF] transition-colors tracking-wide duration-200 font-medium text-lg"
+                  >
+                    {item}
+                  </a>
+                ))}
             </div>
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function Footer() {
             {extraLinks.map((item) => (
               <Link
                 href={item.link}
-                className="hover:underline underline-offset-2  opacity-80 hover:opacity-100 "
+                className="hover:underline underline-offset-2 text-white opacity-80 hover:opacity-100 "
                 key={item.name}
               >
                 {item.name}

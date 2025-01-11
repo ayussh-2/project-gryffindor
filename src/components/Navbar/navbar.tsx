@@ -7,18 +7,17 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="w-full flex justify-center px-4 mt-6">
-      <nav className="w-[50%] max-w-6xl hidden md:block bg-white/70 backdrop-blur-lg rounded-full shadow-lg">
-        <div className="mx-auto px-6 sm:max-w-full">
+      <nav className="w-[55%] hidden md:block backdrop-blur-xl bg-black/40 font-Cattedrale fixed top-3 z-50 rounded-full shadow-lg">
+        <div className="mx-auto px-12 sm:max-w-full">
           <div className="h-14 flex items-center w-full">
             {/* Desktop Navigation */}
-            <div className="hidden md:block min-w-full">
-              <div className="flex items-center justify-between">
-                {['About us', 'Events', 'Sponsors', 'Contact Us'].map((item) => (
+            <div className="hidden md:block min-w-full ">
+              <div className="flex items-center justify-between w-full">
+                {['About us', 'Events', 'Sponsors', 'FAQs', 'Contact Us'].map((item) => (
                   <a
                     key={item}
                     href={`#${item.toLowerCase().replace(' ', '-')}`}
-                    className="text-gray-700 hover:text-indigo-600 transition-colors duration-200 font-medium text-sm"
+                    className="text-white hover:text-[#CBFFFF] transition-colors tracking-wide duration-200 font-medium text-lg"
                   >
                     {item}
                   </a>
@@ -28,10 +27,8 @@ const Navbar = () => {
       </div>
         </div>
       </nav>
-    </div>
-    <nav className="text-white w-full">
-    <div className="max-w-7xl mx-auto pr-4 absolute right-0 sm:pr-0 lg:pr-3 2xl:pr-0 h-20">
-    <div className="md:hidden">
+      <div className="max-w-7xl mt-4 mx-auto pr-4 absolute right-0 sm:pr-0 lg:pr-3 2xl:pr-0 h-20">
+        <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-white focus:outline-none"
@@ -57,8 +54,7 @@ const Navbar = () => {
           </button>
         </div>
         <Mobilenavbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-    </div>
-    </nav>
+      </div>
     </>
   );
 };
