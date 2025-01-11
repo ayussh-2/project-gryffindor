@@ -71,18 +71,18 @@ export default function Footer() {
 
         <div className="flex justify-between w-[90%] mx-auto gap-4 sm:hidden">
           <div className="flex-1  mb-4 max-w-[200px] ">
-            <Heading className="text-[#AB916D] text-[1.25rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+            <Heading className="text-[#CBFFFF] text-[1.25rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
               Contact Us:
             </Heading>
             <div className="mt-3 text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
               <div className="inline-flex  justify-between items-center gap-4 w-full ">
-                <h6 className="text-[#AE4A43] text-sm ">Somya:</h6>
+                <h6 className="text-[#FFFCFC] text-sm ">Somya:</h6>
                 <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
                   7205688219
                 </h6>
               </div>
               <div className="inline-flex  justify-between items-center gap-4 w-full">
-                <h6 className="text-[#AE4A43] text-sm">Sahasrabda:</h6>
+                <h6 className="text-[#FFFCFC] text-sm">Sahasrabda:</h6>
                 <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
                   7605997468
                 </h6>
@@ -92,7 +92,7 @@ export default function Footer() {
                   href={"mailto:contact@nitrutsav.com"}
                   className="inline-flex  justify-between items-center w-full"
                 >
-                  <h6 className="text-[#AE4A43] text-sm">Mail:</h6>
+                  <h6 className="text-[#FFFCFC] text-sm">Mail:</h6>
                   <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
                     contact@nitrutsav.com
                   </h6>
@@ -107,13 +107,13 @@ export default function Footer() {
             </Heading>
             <div className="mt-3  text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
               <div className="inline-flex  justify-between items-center gap-4 w-full">
-                <h6 className="text-[#AE4A43]  text-sm "> Weekdays:</h6>
+                <h6 className="text-[#FFFCFC]  text-sm "> Weekdays:</h6>
                 <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
                   09:00-22:00
                 </h6>
               </div>
               <div className="inline-flex  justify-between items-center gap-4 w-full">
-                <h6 className="text-[#AE4A43] leading-3 text-sm "> Weekend:</h6>
+                <h6 className="text-[#FFFCFC] leading-3 text-sm "> Weekend:</h6>
                 <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1  leading-loose w-fit break-before-column">
                   {"09:00-23:00"}
                 </h6>
@@ -139,10 +139,10 @@ export default function Footer() {
             className=" mx-auto w-1/6 sm:w-1/2 h-auto max-w-xs  "
           />
           {/* <Image
-            width={422}
-            height={96}
+            width={42}
+            height={56}
             sizes="(max-width: 768px)211px, 422px"
-            src="https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Sponsors/BRANDING-small.png"
+            src="/nitrlogo.svg"
             alt="Bottom Image"
             className=" w-1/2 sm:w-full h-auto mx-auto sm:mt-0 mt-4"
           /> */}
@@ -209,7 +209,7 @@ export default function Footer() {
                         {extraLinks.map((item) => (
                             <Link
                                 href={item.link}
-                                className="hover:underline underline-offset-2  opacity-80 hover:opacity-100 "
+                                className="hover:underline underline-offset-2 text-[#FFFCFC]  opacity-80 hover:opacity-100 "
                                 key={item.name}
                             >
                                 {item.name}
