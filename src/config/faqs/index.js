@@ -1,37 +1,46 @@
 export const ACCORDIAN_DATA = [
-    {
-        serial: "01",
-        question: "What is a hackathon?",
-        answer: "A hackathon is an invention marathon where you can work with people around the globe to build a project related to technology! It isn't about hacking into a system, it's instead about hacking something together and learning a great deal in the process.",
-    },
-    {
-        serial: "02",
-        question: "Can we work on old or ongoing projects?",
-        answer: "No, you have to start from scratch. You can use open source libraries and frameworks.",
-    },
-    {
-        serial: "03",
-        question: "How many members do we need in a team?",
-        answer: "You can submit solo as well a team with at max 4 members can be formed.",
-    },
-    {
-        serial: "04",
-        question: "Registration costs?",
-        answer: "Nada",
-    },
-    {
-        serial: "05",
-        question: "Can I apply for multiple tracks?",
-        answer: "Sure thing! Apply for all the tracks you want, like a kid in a candy store! 🏃🍭😄. Just make sure to be relevant.",
-    },
-    {
-        serial: "06",
-        question: "Who can participate?",
-        answer: "Everyone is welcome to participate, be it, students, professionals, or aliens from different planets!",
-    },
-    {
-        serial: "07",
-        question: "Is physical presence required, or can we hack remotely?",
-        answer: "Nah, no need for pants, go remote! 🏠😄",
-    },
+  {
+    question: "What is NITRUTSAV?",
+    answer:
+      "NITRUTSAV is the annual cultural fest of NIT Rourkela, showcasing a diverse range of cultural, literary, and artistic events.",
+  },
+  {
+    question: "When does NITRUTSAV`24 take place?",
+    answer:
+      "The festival typically takes place annually, and the dates may vary each year. This year it is from 9th-11th February.",
+  },
+  {
+    question:
+      "Can students from other colleges participate in NITRUTSAV events?",
+    answer:
+      "Yes, NITRUTSAV is open to participants from other colleges, promoting cultural exchange and collaboration.",
+  },
+  {
+    question: "How can I register for events during NITRUTSAV?",
+    answer:
+      "Event registrations are usually available on the official NITRUTSAV website. Follow the provided guidelines for registration details.",
+  },
+  {
+    question:
+      "Are there any registration fees for participating in NITRUTSAV events?",
+    answer:
+      "Yes, a small registration fee is there. Check the event details on the website for specific information.",
+  },
+  {
+    question:
+      "Can I attend NITRUTSAV even if I'm not participating in any events?",
+    answer:
+      "Absolutely! NITRUTSAV welcomes everyone to join the festivities, enjoy performances, and experience the vibrant atmosphere.",
+  },
+  {
+    question: "Are there accommodation facilities for participants traveling from other cities?",
+    answer:
+      "Information about accommodation facilities will be shared on the official NITRUTSAV website. Participants are encouraged to plan accordingly.",
+  },
+  {
+    question: "Are there specific dress codes for certain events?",
+    answer:
+      "Some events may have themed dress codes. Check the event details for any specific requirements mentioned. This year we encourage you to wear anime themed attires.",
+  },
 ];
+
