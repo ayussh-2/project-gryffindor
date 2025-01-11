@@ -14,23 +14,17 @@ export default function Events() {
     }, []);
 
     return (
-        <div className="bg-[#040D17] relative min-h-screen  z-50" >
-            <Heading>
-                <div className="text-[#CBFFFF] text-5xl flex items-center justify-center py-[3rem]">
-                    Events
-                </div>
-
-            </Heading>
-
-
-
-            <div className="flex flex-wrap bg-[#040D17] flex-row gap-[3rem] justify-center">
-
-                {events.map((event) => (
-
-                    <EventCard key={event.id} event={event} />
-                ))}
-            </div>
+      <div className="bg-[#040D17] relative min-h-screen  z-50">
+        <Heading>
+          <div className="text-[#CBFFFF] text-4xl md:text-6xl lg:text-7xl flex items-center justify-center py-[3rem]">
+            Events
+          </div>
+        </Heading>
+        <div className="flex flex-wrap bg-[#040D17] flex-row gap-[3rem] justify-center">
+          {events.map((event) => (
+            <EventCard key={event.id} event={event} />
+          ))}
         </div>
+      </div>
     );
 }

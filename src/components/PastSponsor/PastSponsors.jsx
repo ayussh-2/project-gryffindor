@@ -36,7 +36,7 @@ const PastSponsors = () => {
     >
       <div className="text-center mb-8">
         <h2
-          className="text-5xl font-bold font-Cattedrale tracking-wide lg:text-6xl md:text-6xl"
+          className=" font-bold font-Cattedrale tracking-wide text-4xl md:text-6xl lg:text-7xl"
           style={{
             color: "#CBFFFF",
           }}
