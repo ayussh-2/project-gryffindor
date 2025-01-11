@@ -33,10 +33,11 @@ const PastSponsors = () => {
       style={{
         background: "linear-gradient(0deg, #040D17 0%, #040D17 100%), #000",
       }}
+      id="sponsors"
     >
       <div className="text-center mb-8">
         <h2
-          className="text-5xl font-bold font-Cattedrale tracking-wide lg:text-6xl md:text-6xl"
+          className=" font-bold font-Cattedrale tracking-wide text-4xl md:text-6xl lg:text-7xl"
           style={{
             color: "#CBFFFF",
           }}

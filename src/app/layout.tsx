@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
 
-import Footer from "@/components/Footer/footer";
 import { AuthProvider } from "@/contexts/auth-context";
 import { ReactLenis } from "@/providers/LenisProvider";
 
@@ -80,8 +79,8 @@ export default function RootLayout({
                 >
                     <Toaster />
                     <AuthProvider>
+                        {/* <Navbar /> */}
                         {children}
-                        <Footer />
                     </AuthProvider>
                 </body>
             </ReactLenis>

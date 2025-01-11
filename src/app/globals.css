@@ -13,7 +13,9 @@
         --foreground: #ededed;
     }
 }
-
+* {
+    scroll-behavior: smooth !important;
+  }
 .clip-cone {
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }

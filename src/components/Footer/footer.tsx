@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
+
 import Heading from "@/components/ui/Heading";
 import Typography from "@/components/ui/Typography";
+
 import WebFooter from "../Webfooter";
-import Image from "next/image";
 
 const extraLinks = [
   {
@@ -25,12 +27,17 @@ const extraLinks = [
 
 export default function Footer() {
   return (
-    <div className="bg-[#000] pt-4 sm:pt-14 relative z-40">
+    <div id="contact-us" className="bg-[#040D17] pt-4 sm:pt-14 relative z-40">
       <div className="start grid grid-cols-1 sm:grid-cols-5  gap-4 sm:w-[90%] w-screen mx-auto border-b-2 border-[#E5E7EB] p-4">
         <div className="flex flex-col items-center sm:items-start pr-3 mb-4 ">
-          <Heading className="text-[#AB916D] text-[1.2rem] sm:text-[0.9rem] md:text-[1.1rem] lg:text-[1.32rem] xl:text-[1.6rem]">
-            NITRUTSAV 2K24
-          </Heading>
+          <Image
+            src="https://res.cloudinary.com/dgtdkqfsx/image/upload/v1736520354/Branding_yt0agf.png"
+            alt="Top Image"
+            width={106}
+            height={106}
+            sizes="(max-width: 768px)106px, 212px"
+            className=" w-1/6 sm:w-1/2 h-auto max-w-xs  "
+          />
           <Typography
             className="text-[#FFF] font-normal leading-5 text-[0.75rem]"
             variant="sm"
@@ -45,19 +52,19 @@ export default function Footer() {
 
         <div className=" sm:flex flex-1 align-sub mb-4 hidden">
           <div className="pl-11 sm:pl-10">
-            <Heading className="text-[#AB916D]  font-normal text-[1rem] sm:text-[0.76rem] md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+            <Heading className="text-[#CBFFFF]  font-normal text-[1rem] sm:text-[0.76rem] md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
               Quick Links
             </Heading>
-            <div className="links mt-3 text-[#FFF] text-[0.7rem] sm:text-[0.75rem] md:text-[0.75rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
-              {extraLinks.map((item) => (
-                <Link
-                  href={item.link}
-                  className="pb-[0.27rem] block hover:underline underline-offset-2 "
-                  key={item.link}
-                >
-                  {item.name}
-                </Link>
-              ))}
+            <div className="links mt-3 text-[#FFF] flex flex-col items-start text-[0.7rem] sm:text-[0.75rem] md:text-[0.75rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
+            {['About us', 'Events', 'Sponsors', 'FAQs', 'Contact Us'].map((item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase().replace(' ', '-')}`}
+                    className="text-white hover:text-[#CBFFFF] transition-colors tracking-wide duration-200 font-medium text-lg"
+                  >
+                    {item}
+                  </a>
+                ))}
             </div>
           </div>
         </div>
@@ -95,7 +102,7 @@ export default function Footer() {
           </div>
 
           <div className="flex-1 mb-4  sm:pl-0 max-w-[200px]">
-            <Heading className="text-[#AB916D] text-[1.25rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+            <Heading className="text-[#CBFFFF] text-[1.25rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
               Opening Hours
             </Heading>
             <div className="mt-3  text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
@@ -124,25 +131,25 @@ export default function Footer() {
 
         <div className="flex sm:flex-col items-start xl:items-center justify-center gap-8 ">
           <Image
-            src="https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Sponsors/SAC-Logo-NU.webp"
+            src="https://res.cloudinary.com/dgtdkqfsx/image/upload/v1736522339/Frame_36878_y7onca.png"
             alt="Top Image"
             width={106}
             height={106}
             sizes="(max-width: 768px)106px, 212px"
             className=" mx-auto w-1/6 sm:w-1/2 h-auto max-w-xs  "
           />
-          <Image
+          {/* <Image
             width={422}
             height={96}
             sizes="(max-width: 768px)211px, 422px"
             src="https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Sponsors/BRANDING-small.png"
             alt="Bottom Image"
             className=" w-1/2 sm:w-full h-auto mx-auto sm:mt-0 mt-4"
-          />
-        </div>
+          /> */}
+                </div>
 
         <div className="flex-col mb-4 pl-12 sm:pl-0 hidden sm:flex">
-          <Heading className="text-[#AB916D] text-[1rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+          <Heading className="text-[#CBFFFF] text-[1rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
             Opening Hours
           </Heading>
           <div className="mt-3  text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
@@ -161,56 +168,57 @@ export default function Footer() {
           </div>
         </div>
 
-        <div
-          id="contact"
-          className="flex-col pl-12 sm:pl-6 mb-4 hidden sm:flex"
-        >
-          <Heading className="text-[#AB916D] text-[1rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
-            Contact Us:
-          </Heading>
-          <div className="mt-3 text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
-            <div className="div sm:inline-flex block pl-0 justify-end items-center sm:gap-4 gap-1">
-              <h6 className="text-[#FFF] "> Somya:</h6>
-              <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
-                7205688219
-              </h6>
+                <div
+                    id="contact"
+                    className="flex-col pl-12 sm:pl-6 mb-4 hidden sm:flex"
+                >
+                    <Heading className="text-[#CBFFFF] text-[1rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+                        Contact Us:
+                    </Heading>
+                    <div className="mt-3 text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
+                        <div className="div sm:inline-flex block pl-0 justify-end items-center sm:gap-4 gap-1">
+                            <h6 className="text-[#FFF] "> Somya:</h6>
+                            <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
+                                7205688219
+                            </h6>
+                        </div>
+                        <div className="div sm:inline-flex block pl-0 sm:mt-1 mt-3 justify-end items-center  sm:gap-4 gap-1">
+                            <h6 className="text-[#FFF]">Sahasrabda:</h6>
+                            <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
+                                7605997468
+                            </h6>
+                        </div>
+                        <div className="div sm:inline-flex block pl-0 sm:mt-1 mt-3 justify-end items-center  sm:gap-4 gap-1">
+                            <Link href={"mailto:contact@nitrutsav.com"}>
+                                <h6 className="text-[#FFF]">
+                                    contact@nitrutsav.com
+                                </h6>
+                            </Link>
+                        </div>
+                        <Typography
+                            className="text-[#FFF] font-normal mt-4 leading-5 text-[0.75rem]"
+                            variant="sm"
+                        >
+                            Address: SAC, National Institute of Technology,
+                            Rourkela, Odisha, India, 769008
+                        </Typography>
+                    </div>
+                </div>
+                <div className="sm:hidden w-full col-span-full flex px-2 text-xs  mt-4  sm:justify-end border-t sm:border-none border-white/40  pt-2 ">
+                    <div className="sm:w-1/2 flex flex-wrap gap-2 justify-between ">
+                        {extraLinks.map((item) => (
+                            <Link
+                                href={item.link}
+                                className="hover:underline underline-offset-2  opacity-80 hover:opacity-100 "
+                                key={item.name}
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
             </div>
-            <div className="div sm:inline-flex block pl-0 sm:mt-1 mt-3 justify-end items-center  sm:gap-4 gap-1">
-              <h6 className="text-[#FFF]">Sahasrabda:</h6>
-              <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
-                7605997468
-              </h6>
-            </div>
-            <div className="div sm:inline-flex block pl-0 sm:mt-1 mt-3 justify-end items-center  sm:gap-4 gap-1">
-              <Link href={"mailto:contact@nitrutsav.com"}>
-                <h6 className="text-[#FFF]">contact@nitrutsav.com</h6>
-              </Link>
-            </div>
-            <Typography
-              className="text-[#FFF] font-normal mt-4 leading-5 text-[0.75rem]"
-              variant="sm"
-            >
-              Address: SAC, National Institute of Technology, Rourkela, Odisha,
-              India, 769008
-            </Typography>
-          </div>
+            <WebFooter className=" sm:w-[90%] w-screen px-4 sm:px-0 mx-auto py-4"></WebFooter>
         </div>
-        <div className="sm:hidden w-full col-span-full flex px-2 text-xs  mt-4  sm:justify-end border-t sm:border-none border-white/40  pt-2 ">
-          <div className="sm:w-1/2 flex flex-wrap gap-2 justify-between ">
-            {extraLinks.map((item) => (
-              <Link
-                href={item.link}
-                className="hover:underline underline-offset-2  opacity-80 hover:opacity-100 "
-                key={item.link}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <WebFooter className=" sm:w-[90%] w-screen px-4 sm:px-0 mx-auto py-4"></WebFooter>
-    </div>
-  );
+    );
 }
