@@ -86,7 +86,7 @@ export default function Footer() {
               <div className="inline-flex  justify-between items-center gap-4 w-full">
                 <h6 className="text-[#FFFCFC] text-sm">Swastik:</h6>
                 <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
-                  7605997468
+                  7205548190
                 </h6>
               </div>
               <div className="inline-flex  justify-between items-center w-full">
@@ -187,7 +187,7 @@ export default function Footer() {
             <div className="div sm:inline-flex block pl-0 sm:mt-1 mt-3 justify-end items-center  sm:gap-4 gap-1">
               <h6 className="text-[#FFF]">Swastik:</h6>
               <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
-                7605997468
+                7205548190
               </h6>
             </div>
             <div className="div sm:inline-flex block pl-0 sm:mt-1 mt-3 justify-end items-center  sm:gap-4 gap-1">
