@@ -8,17 +8,15 @@ import PastSponsors from "@/components/PastSponsor/PastSponsors";
 import Footer from "@/components/Footer/footer";
 
 export default function Home() {
-    return (
-        <>
-          {/* Background */}
-          <ParallaxScene />
+  return (
+    <>
+      {/* Background */}
+      <ParallaxScene />
       <AboutUs />
       <Events />
       <PastSponsors />
-          <Faq />
-          <Footer />
-        </>
-      )
-    }
-     
-   
+      <Faq />
+      <Footer />
+    </>
+  );
+}

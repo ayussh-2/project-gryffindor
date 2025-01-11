@@ -15,13 +15,13 @@ const Mobilenavbar = ({
   return (
     <>
       <div
-        className={`fixed top-0 left-0 z-40 w-3/5 md:hidden h-screen bg-black text-white transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 z-40 w-3/5 md:hidden h-screen  bg-black text-white transform transition-transform duration-300 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex flex-col items-center justify-between h-full p-4">
           {/* Menu Links */}
-          <ul className="flex flex-col items-center gap-4 font-bold mt-10">
+          <ul className="flex flex-col items-center font-Cattedrale tracking-wider gap-4 font-bold mt-10">
             {["About us", "Events", "Sponsors", "FAQs", "Contact Us"].map(
               (section, index) => (
                 <li key={index}>

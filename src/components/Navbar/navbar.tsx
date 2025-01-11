@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-[55%] hidden md:block backdrop-blur-xl bg-black/40 font-Cattedrale fixed top-3 z-50 rounded-full shadow-lg">
+      <nav className="w-[55%] hidden md:block backdrop-blur-xl bg-black/40 font-Cattedrale fixed top-7 z-50 rounded-full shadow-lg">
         <div className="mx-auto px-12 sm:max-w-full">
           <div className="h-14 flex items-center w-full">
             {/* Desktop Navigation */}
