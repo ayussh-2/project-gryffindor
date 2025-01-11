@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import Navbar from "@/components/Navbar/navbar";
 
 const ParallaxScene = () => {
   const containerRef = useRef(null);
@@ -61,55 +61,50 @@ const ParallaxScene = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return (
-    <section className="bg" ref={containerRef}>
-      <div className="relative md:h-[100vh] h-[60vh] overflow-hidden bg-[url('/hero/moon.svg')] bg-center bg-contain bg-no-repeat w-screen flex justify-center items-center">
-        <audio autoPlay loop style={{ display: "none" }}>
-          <source src="/hero/horror.mp3" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-
-        <motion.div
-          className="absolute z-50"
-          animate={witchPosition}
-          transition={{
-            duration: 4,
-            ease: "easeInOut",
-          }}
-        >
-          <Image
-            height={100}
-            width={100}
-            alt="witch"
-            objectFit="contain"
-            src="/hero/witch.png"
-          />
-        </motion.div>
-        <motion.div
-          style={{ y: textY }}
-          className="relative py-10 parallax-element"
-        >
-          <h1 className="text-[#003955] font-Cattedrale text-[60px] md:text-[150px] text-center leading-none">
-            NITRUTSAV
-          </h1>
-          <p className="absolute lg:top-[0%] tracking-wider font-Cattedrale text-[16px] md:text-[35px] right-4 top-2 lg:right-[0%] text-[#003955] font-semibold">
-            7-9 FEB
-          </p>
-          <div className="flex items-center flex-col md:flex-row justify-center space-x-4 font-Cattedrale lg:gap-10 gap-3 md:text-2xl lg:mt-5 mt-8 lg:mb-5 xl:mb-10">
-            <button
-              className="flex items-center justify-between bg-transparent border-[2px] border-black text-black font-semibold lg:px-4 
-            lg:py-2 px-4 rounded-full shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105"
-            >
-              View Brochure
-            </button>
-            <Link
-              className="flex items-center cursor-pointer bg-black text-white font-semibold lg:px-8 lg:py-2 px-4 rounded-full shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105"
-              href="/register"
-            >
-              Register
-            </Link>
-          </div>
-        </motion.div>
+    return (
+        <section className="bg flex flex-col items-center" ref={containerRef}>
+            <Navbar />
+            <div className="relative md:h-[100vh] h-[60vh] overflow-hidden bg-[url('/hero/moon.svg')] bg-center bg-contain bg-no-repeat w-screen flex justify-center items-center">
+                <audio autoPlay loop style={{ display: "none" }}>
+                    <source src="/hero/horror.mp3" type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
+                <motion.div
+                    className="absolute z-50"
+                    animate={witchPosition}
+                    transition={{
+                        duration: 4, // Slightly longer duration for smoother motion
+                        ease: "easeInOut", // Smooth transitions
+                    }}
+                >
+                    <Image
+                        height={100}
+                        width={100}
+                        alt="witch"
+                        objectFit="contain"
+                        src="/hero/witch.png"
+                    />
+                </motion.div>
+                {/* NITRUTSAV Text */}
+                <motion.div
+                    style={{ y: textY }}
+                    className="relative py-10 parallax-element"
+                >
+                    <h1 className="text-[#003955] font-Cattedrale text-[60px] md:text-[150px] text-center leading-none">
+                        NITRUTSAV
+                    </h1>
+                    <p className="absolute lg:top-[0%] tracking-wider font-Cattedrale text-[16px] md:text-[35px] right-4 top-2 lg:right-[0%] text-[#003955] font-semibold">
+                        7-9 FEB
+                    </p>
+                    <div className="flex items-center flex-col md:flex-row justify-center space-x-4 font-Cattedrale lg:gap-10 gap-3 md:text-2xl lg:mt-5 mt-8">
+                        <button className="flex items-center justify-between bg-transparent border-[2px] border-black text-black font-semibold lg:px-4 lg:py-2 px-4 rounded-full shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105">
+                            View Picture
+                        </button>
+                        <button className="flex items-center bg-black text-white font-semibold lg:px-8 lg:py-2 px-4 rounded-full shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105">
+                            Register
+                        </button>
+                    </div>
+                </motion.div>
 
         {/* Right Image */}
         <motion.div

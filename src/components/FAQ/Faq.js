@@ -19,7 +19,7 @@ export default function Faq() {
 
   return (
     <>
-      <div className="w-full relative bg-[#040102] h-full flex flex-col pb-[10rem] ">
+      <div id="faqs" className="w-full relative bg-[#040D17] h-full flex flex-col pb-[10rem] ">
         <div className="accordion w-full flex flex-col">
           <div className="flex justify-center items-center font-bold text-[#CBFFFF] leading-normal text-[16px] sm:text-[40px] md:text-[40px] text-center space-x-4">
             <span className=" w-auto text-4xl md:text-6xl lg:text-7xl font-Cattedrale tracking-wider h-full text-[#CBFFFF] flex items-center mt-[3rem] mb-[3rem]">

@@ -78,7 +78,10 @@ export default function RootLayout({
                     className={` ${Cattedrale.variable}  ${Spirits.variable} overflow-x-hidden  antialiased`}
                 >
                     <Toaster />
-                    <AuthProvider>{children}</AuthProvider>
+                    <AuthProvider>
+                        {/* <Navbar /> */}
+                        {children}
+                    </AuthProvider>
                 </body>
             </ReactLenis>
         </html>

@@ -33,6 +33,7 @@ const PastSponsors = () => {
       style={{
         background: "linear-gradient(0deg, #040D17 0%, #040D17 100%), #000",
       }}
+      id="sponsors"
     >
       <div className="text-center mb-8">
         <h2

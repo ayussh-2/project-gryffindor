@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
     return (
-      <div className="relative min-h-screen bg-gradient-to-b from-[#040D17] to-[#040D17] text-white px-4 py-12 md:py-16 overflow-hidden">
+      <div id="about-us" className="relative min-h-screen bg-gradient-to-b from-[#040D17] to-[#040D17] text-white px-4 py-12 md:py-16 overflow-hidden">
         {/* Background Images */}
         <div className="absolute inset-0 pointer-events-none">
           {/* Tombstone - back to original position */}
