@@ -19,8 +19,10 @@ export default function Home() {
       <Faq />
       <Footer />
     </>
+
   )
 }
+
 
 
 

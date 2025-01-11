@@ -10,7 +10,7 @@ const PrivacyPolicy: React.FC = () => {
         </h1>
 
         <p className="mb-4 text-gray-400 text-sm text-center">
-          Last updated: 1st December, 2024
+          Last updated: 1st December, 2025
         </p>
 
         <p className="mb-6">
