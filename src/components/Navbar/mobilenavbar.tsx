@@ -6,11 +6,12 @@ const Mobilenavbar = ({
   setIsMenuOpen,
 }: {
   isMenuOpen: boolean;
-  setIsMenuOpen: any;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   const closeNavbar = () => {
     setIsMenuOpen(false);
   };
+
   return (
     <>
       <div
@@ -21,16 +22,18 @@ const Mobilenavbar = ({
         <div className="flex flex-col items-center justify-between h-full p-4">
           {/* Menu Links */}
           <ul className="flex flex-col items-center gap-4 font-bold mt-10">
-            {['About us', 'Events', 'Sponsors', 'FAQs', 'Contact Us'].map((section, index) => (
-              <li key={index}>
-                <Link
-                  href={`#${section.toLowerCase().replace(' ', '-')}`}
-                  className="block px-4 py-2 mt-2 text-sm text-white transition duration-300 hover:text-[#FF0000] font-bunk cursor-pointer"
-                >
-                  {section}
-                </Link>
-              </li>
-            ))}
+            {["About us", "Events", "Sponsors", "FAQs", "Contact Us"].map(
+              (section, index) => (
+                <li key={index}>
+                  <Link
+                    href={`#${section.toLowerCase().replace(" ", "-")}`}
+                    className="block px-4 py-2 mt-2 text-sm text-white transition duration-300 hover:text-[#FF0000] font-bunk cursor-pointer"
+                  >
+                    {section}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
         </div>
       </div>
