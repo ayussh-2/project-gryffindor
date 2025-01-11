@@ -1,25 +1,27 @@
+import Image from "next/image";
 import Link from "next/link";
+
 import Heading from "@/components/ui/Heading";
 import Typography from "@/components/ui/Typography";
+
 import WebFooter from "../Webfooter";
-import Image from "next/image";
 
 const extraLinks = [
   {
     name: "Privacy Policy",
-    link: "/",
+    link: "/privacy-policy",
   },
   {
-    name: "Terms and Conditions",
-    link: "/",
+    name: "Terms & Conditions",
+    link: "/terms-and-conditions",
   },
   {
-    name: "Refund Policy",
-    link: "/",
+    name: "Payment Policy",
+    link: "/payment-policy",
   },
   {
-    name: "Code of Conduct",
-    link: "/",
+    name: "Code Of Conduct",
+    link: "/code-of-conduct",
   },
 ];
 
@@ -69,7 +71,7 @@ export default function Footer() {
 
         <div className="flex justify-between w-[90%] mx-auto gap-4 sm:hidden">
           <div className="flex-1  mb-4 max-w-[200px] ">
-            <Heading className="text-[#CBFFFF] text-[1.25rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+            <Heading className="text-[#AB916D] text-[1.25rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
               Contact Us:
             </Heading>
             <div className="mt-3 text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
@@ -144,7 +146,7 @@ export default function Footer() {
             alt="Bottom Image"
             className=" w-1/2 sm:w-full h-auto mx-auto sm:mt-0 mt-4"
           /> */}
-        </div>
+                </div>
 
         <div className="flex-col mb-4 pl-12 sm:pl-0 hidden sm:flex">
           <Heading className="text-[#CBFFFF] text-[1rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
@@ -166,55 +168,57 @@ export default function Footer() {
           </div>
         </div>
 
-        <div
-          id="contact"
-          className="flex-col pl-12 sm:pl-6 mb-4 hidden sm:flex"
-        >
-          <Heading className="text-[#CBFFFF] text-[1rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
-            Contact Us:
-          </Heading>
-          <div className="mt-3 text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
-            <div className="div sm:inline-flex block pl-0 justify-end items-center sm:gap-4 gap-1">
-              <h6 className="text-[#FFF] "> Somya:</h6>
-              <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
-                7205688219
-              </h6>
+                <div
+                    id="contact"
+                    className="flex-col pl-12 sm:pl-6 mb-4 hidden sm:flex"
+                >
+                    <Heading className="text-[#CBFFFF] text-[1rem] sm:text-[0.76rem] font-[open-sans-hebrew-condensed] font-normal md:text-[0.88rem] lg:text-[1.02rem] xl:text-[1.3rem]">
+                        Contact Us:
+                    </Heading>
+                    <div className="mt-3 text-[0.7rem] sm:text-[0.63rem] md:text-[0.68rem] lg:text-[0.7rem] xl:text-[1rem] md:leading-[1rem] sm:leading-[0.7rem] leading-[0.54rem]">
+                        <div className="div sm:inline-flex block pl-0 justify-end items-center sm:gap-4 gap-1">
+                            <h6 className="text-[#FFF] "> Somya:</h6>
+                            <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
+                                7205688219
+                            </h6>
+                        </div>
+                        <div className="div sm:inline-flex block pl-0 sm:mt-1 mt-3 justify-end items-center  sm:gap-4 gap-1">
+                            <h6 className="text-[#FFF]">Sahasrabda:</h6>
+                            <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
+                                7605997468
+                            </h6>
+                        </div>
+                        <div className="div sm:inline-flex block pl-0 sm:mt-1 mt-3 justify-end items-center  sm:gap-4 gap-1">
+                            <Link href={"mailto:contact@nitrutsav.com"}>
+                                <h6 className="text-[#FFF]">
+                                    contact@nitrutsav.com
+                                </h6>
+                            </Link>
+                        </div>
+                        <Typography
+                            className="text-[#FFF] font-normal mt-4 leading-5 text-[0.75rem]"
+                            variant="sm"
+                        >
+                            Address: SAC, National Institute of Technology,
+                            Rourkela, Odisha, India, 769008
+                        </Typography>
+                    </div>
+                </div>
+                <div className="sm:hidden w-full col-span-full flex px-2 text-xs  mt-4  sm:justify-end border-t sm:border-none border-white/40  pt-2 ">
+                    <div className="sm:w-1/2 flex flex-wrap gap-2 justify-between ">
+                        {extraLinks.map((item) => (
+                            <Link
+                                href={item.link}
+                                className="hover:underline underline-offset-2  opacity-80 hover:opacity-100 "
+                                key={item.name}
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
             </div>
-            <div className="div sm:inline-flex block pl-0 sm:mt-1 mt-3 justify-end items-center  sm:gap-4 gap-1">
-              <h6 className="text-[#FFF]">Sahasrabda:</h6>
-              <h6 className="text-[#FFFCFC] sm:blur-[0.35px] blur-[0.15px] sm:mt-0 mt-1">
-                7605997468
-              </h6>
-            </div>
-            <div className="div sm:inline-flex block pl-0 sm:mt-1 mt-3 justify-end items-center  sm:gap-4 gap-1">
-              <Link href={"mailto:contact@nitrutsav.com"}>
-                <h6 className="text-[#FFF]">contact@nitrutsav.com</h6>
-              </Link>
-            </div>
-            <Typography
-              className="text-[#FFF] font-normal mt-4 leading-5 text-[0.75rem]"
-              variant="sm"
-            >
-              Address: SAC, National Institute of Technology, Rourkela, Odisha,
-              India, 769008
-            </Typography>
-          </div>
+            <WebFooter className=" sm:w-[90%] w-screen px-4 sm:px-0 mx-auto py-4"></WebFooter>
         </div>
-        <div className="sm:hidden w-full col-span-full flex px-2 text-xs  mt-4  sm:justify-end border-t sm:border-none border-white/40  pt-2 ">
-          <div className="sm:w-1/2 flex flex-wrap gap-2 justify-between ">
-            {extraLinks.map((item) => (
-              <Link
-                href={item.link}
-                className="hover:underline underline-offset-2 text-white opacity-80 hover:opacity-100 "
-                key={item.name}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-      <WebFooter className=" sm:w-[90%] w-screen px-4 sm:px-0 mx-auto py-4"></WebFooter>
-    </div>
-  );
+    );
 }

@@ -3,8 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
-import Navbar from "@/components/Navbar/navbar";
-import Footer from "@/components/Footer/footer";
+
 import { AuthProvider } from "@/contexts/auth-context";
 import { ReactLenis } from "@/providers/LenisProvider";
 

@@ -8,58 +8,58 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar/navbar";
 
 const ParallaxScene = () => {
-    const containerRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start start", "end start"],
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const smoothProgress = useSpring(scrollYProgress, {
+    damping: 20,
+    stiffness: 100,
+    mass: 0.5,
+  });
+
+  const textY = useTransform(smoothProgress, [0, 1], ["0%", "20%"]);
+  const leftImageX = useTransform(smoothProgress, [0, 1], ["0%", "-15%"]);
+  const rightImageX = useTransform(smoothProgress, [0, 1], ["0%", "15%"]);
+  const bottomY = useTransform(smoothProgress, [0, 1], ["0%", "-50%"]);
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".parallax-element");
+    elements.forEach((element) => {
+      element.style.willChange = "transform";
     });
 
-    const smoothProgress = useSpring(scrollYProgress, {
-        damping: 20,
-        stiffness: 100,
-        mass: 0.5,
-    });
+    return () => {
+      elements.forEach((element) => {
+        element.style.willChange = "auto";
+      });
+    };
+  }, []);
 
-    const textY = useTransform(smoothProgress, [0, 1], ["0%", "20%"]);
-    const leftImageX = useTransform(smoothProgress, [0, 1], ["0%", "-15%"]);
-    const rightImageX = useTransform(smoothProgress, [0, 1], ["0%", "15%"]);
-    const bottomY = useTransform(smoothProgress, [0, 1], ["0%", "-50%"]);
+  const [witchPosition, setWitchPosition] = useState({
+    x: 0,
+    y: 0,
+    rotate: 0,
+  });
 
-    useEffect(() => {
-        const elements = document.querySelectorAll(".parallax-element");
-        elements.forEach((element) => {
-            element.style.willChange = "transform";
-        });
+  const getRandomAlignedPosition = () => ({
+    x: Math.random() * window.innerWidth - window.innerWidth / 2,
+    y: Math.random() * window.innerHeight - window.innerHeight / 2,
+    rotate: Math.random() * 20 - 10,
+  });
 
-        return () => {
-            elements.forEach((element) => {
-                element.style.willChange = "auto";
-            });
-        };
-    }, []);
+  useEffect(() => {
+    const moveWitch = () => {
+      const newPosition = getRandomAlignedPosition();
+      setWitchPosition(newPosition);
+    };
+    moveWitch();
+    const interval = setInterval(moveWitch, Math.random() * 2000 + 3000);
 
-    const [witchPosition, setWitchPosition] = useState({
-        x: 0,
-        y: 0,
-        rotate: 0,
-    });
-
-    const getRandomAlignedPosition = () => ({
-        x: Math.random() * window.innerWidth - window.innerWidth / 2,
-        y: Math.random() * window.innerHeight - window.innerHeight / 2,
-        rotate: Math.random() * 20 - 10,
-    });
-
-    useEffect(() => {
-        const moveWitch = () => {
-            const newPosition = getRandomAlignedPosition();
-            setWitchPosition(newPosition);
-        };
-        moveWitch();
-        const interval = setInterval(moveWitch, Math.random() * 2000 + 3000);
-
-        return () => clearInterval(interval);
-    }, []);
+    return () => clearInterval(interval);
+  }, []);
 
     return (
         <section className="bg flex flex-col items-center" ref={containerRef}>
@@ -106,53 +106,53 @@ const ParallaxScene = () => {
                     </div>
                 </motion.div>
 
-                {/* Right Image */}
-                <motion.div
-                    style={{ x: rightImageX }}
-                    className="absolute hidden lg:block right-0 parallax-element"
-                >
-                    <Image
-                        height={400}
-                        width={500}
-                        alt="right"
-                        objectFit="contain"
-                        src="/hero/right.png"
-                        priority
-                    />
-                </motion.div>
+        {/* Right Image */}
+        <motion.div
+          style={{ x: rightImageX }}
+          className="absolute hidden lg:block right-0 parallax-element"
+        >
+          <Image
+            height={400}
+            width={500}
+            alt="right"
+            objectFit="contain"
+            src="/hero/right.png"
+            priority
+          />
+        </motion.div>
 
-                {/* Left Image */}
-                <motion.div
-                    style={{ x: leftImageX }}
-                    className="absolute hidden lg:block left-0 parallax-element"
-                >
-                    <Image
-                        height={300}
-                        width={500}
-                        alt="left"
-                        objectFit="contain"
-                        src="/hero/left.png"
-                        priority
-                    />
-                </motion.div>
+        {/* Left Image */}
+        <motion.div
+          style={{ x: leftImageX }}
+          className="absolute hidden lg:block left-0 parallax-element"
+        >
+          <Image
+            height={300}
+            width={500}
+            alt="left"
+            objectFit="contain"
+            src="/hero/left.png"
+            priority
+          />
+        </motion.div>
 
-                {/* Bottom Image */}
-                <motion.div
-                    style={{ y: bottomY }}
-                    className="w-screen absolute bottom-0 parallax-element"
-                >
-                    <Image
-                        height={100}
-                        width={1000}
-                        alt="bottom"
-                        className="absolute lg:h-60 object-cover w-full bottom-0"
-                        src="/hero/bottom.svg"
-                        priority
-                    />
-                </motion.div>
-            </div>
-        </section>
-    );
+        {/* Bottom Image */}
+        <motion.div
+          style={{ y: bottomY }}
+          className="w-screen absolute bottom-0 parallax-element"
+        >
+          <Image
+            height={100}
+            width={1000}
+            alt="bottom"
+            className="absolute md:max-h-60 xl:max-h-96 object-cover w-full bottom-0"
+            src="/hero/bottom.svg"
+            priority
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
 };
 
 export default ParallaxScene;
