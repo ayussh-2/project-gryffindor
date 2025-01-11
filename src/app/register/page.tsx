@@ -84,7 +84,7 @@ const Registration: React.FC = () => {
                 body: JSON.stringify({
                     name,
                     mobileNumber,
-                    amount: 10,
+                    amount: 799,
                     userId,
                 }),
             });
