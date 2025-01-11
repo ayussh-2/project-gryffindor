@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
+import { redirect } from 'next/navigation';
 
 import Loader from "@/components/loader/loader";
 import { formFields, notAllowedInstitutes } from "@/config/register";
@@ -173,11 +174,13 @@ const Registration: React.FC = () => {
         }
 
         if (isRegistered && hasPaid) {
-            return (
-                <p className="text-center font-Spirits">
-                    You have already registered and paid!
-                </p>
-            );
+            redirect('/profile');
+            // return (
+            //     <p className="text-center font-Spirits">
+            //         You have already registered and paid!
+            //     </p>
+
+            // );
         }
 
         if (isRegistered && !hasPaid) {

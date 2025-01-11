@@ -8,6 +8,7 @@ import PastSponsors from "@/components/PastSponsor/PastSponsors";
 import Footer from "@/components/Footer/footer";
 
 export default function Home() {
+
   return (
     <>
       {/* Background */}
@@ -18,5 +19,10 @@ export default function Home() {
       <Faq />
       <Footer />
     </>
-  );
+
+  )
 }
+
+
+
+
