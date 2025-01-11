@@ -1,9 +1,10 @@
-'use client';
-import React, { useState } from 'react';
-import Mobilenavbar from './mobilenavbar';
+"use client";
+import React, { useState } from "react";
+import Mobilenavbar from "./mobilenavbar";
+import Link from "next/link";
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
@@ -13,48 +14,54 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:block min-w-full ">
               <div className="flex items-center justify-between w-full">
-                {['About us', 'Events', 'Sponsors', 'FAQs', 'Contact Us'].map((item) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase().replace(' ', '-')}`}
-                    className="text-white hover:text-[#CBFFFF] transition-colors tracking-wide duration-200 font-medium text-lg"
-                  >
-                    {item}
-                  </a>
-                ))}
+                {["About us", "Events", "Sponsors", "FAQs", "Contact Us"].map(
+                  (item) => (
+                    <Link
+                      key={item}
+                      href={`#${item.toLowerCase().replace(" ", "-")}`}
+                      className="text-white hover:text-[#CBFFFF] transition-colors tracking-wider duration-200 font-medium text-xl"
+                    >
+                      {item}
+                    </Link>
+                  )
+                )}
               </div>
             </div>
-      </div>
+          </div>
         </div>
       </nav>
-      <div className="max-w-7xl mt-4 mx-auto pr-4 absolute right-0 sm:pr-0 lg:pr-3 2xl:pr-0 h-20">
-        <div className="md:hidden">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white focus:outline-none"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-8 h-8"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+      <section className="relative flex justify-between items-center w-full px-4 py-4 md:px-12 md:py-6">
+        <div className="absolute z-[1000] right-5 mt-10">
+          <div className="md:hidden">
+            <button
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+              }}
+              className="text-white  "
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={
-                  isMenuOpen
-                    ? "M6 18L18 6M6 6l12 12"
-                    : "M4 6h16M4 12h16M4 18h16"
-                }
-              />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-12 h-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d={
+                    isMenuOpen
+                      ? "M6 18L18 6M6 6l12 12"
+                      : "M4 6h16M4 12h16M4 18h16"
+                  }
+                />
+              </svg>
+            </button>
+          </div>
+          <Mobilenavbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         </div>
-        <Mobilenavbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      </div>
+      </section>
     </>
   );
 };

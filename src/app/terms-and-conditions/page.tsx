@@ -10,9 +10,9 @@ const PrivacyPolicy: React.FC = () => {
         </h1>
 
         <p className="mb-4 text-gray-400 text-sm text-center">
-          Last updated: 1st December, 2024
+          Last updated: 1st December, 2025
         </p>
-        <h1 className="text-3xl font-bold mb-6">Welcome to Nitrutsav 2024!</h1>
+        <h1 className="text-3xl font-bold mb-6">Welcome to Nitrutsav 2025!</h1>
 
       <p className="mb-6">
         The website linked gives you the outline of our protocols. If you agree to the set of terms and conditions, you are welcomed as an entrant and will be redirected to proceed further.
@@ -25,9 +25,9 @@ const PrivacyPolicy: React.FC = () => {
             Unless otherwise stated, Nitrutsav and/or its licensors own the intellectual property rights for all material on Nitrutsav 2024. All intellectual property rights are reserved. You may access this from Nitrutsav 2024 for your personal use subject to restrictions set in these terms and conditions.
           </p>
           <ul className="list-disc pl-6 mt-4 space-y-2">
-            <li>Copy or republish material from Nitrutsav 2024</li>
-            <li>Sell, rent, or sub-license material from Nitrutsav 2024</li>
-            <li>Reproduce, duplicate or copy material from Nitrutsav 2024</li>
+            <li>Copy or republish material from Nitrutsav 2025</li>
+            <li>Sell, rent, or sub-license material from Nitrutsav 2025</li>
+            <li>Reproduce, duplicate or copy material from Nitrutsav 2025</li>
             <li>Redistribute content from Nitrutsav 2024</li>
           </ul>
           <p className="mt-4">This Agreement shall begin on the date hereof.</p>
