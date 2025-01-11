@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function AboutUs() {
     return (
-      <div id="about-us" className="relative min-h-screen bg-gradient-to-b from-[#040D17] to-[#040D17] text-white px-4 py-12 md:py-16 overflow-hidden">
+      <div
+        id="about-us"
+        className="relative min-h-screen bg-gradient-to-b from-[#040D17] to-[#040D17] text-white px-4 py-12 md:py-16 overflow-hidden"
+      >
         {/* Background Images */}
         <div className="absolute inset-0 pointer-events-none">
           {/* Tombstone - back to original position */}
@@ -50,11 +53,11 @@ export default function AboutUs() {
               and cultural festival of Odisha, scheduled from 9th to 11th
               February, 2024 in the abyss of National Institute of Technology,
               Rourkela. With endless suzume energies and kakkoi showdowns on
-              offer, we are all geared up to unveil the charisma. Let's prepare
-              for the journey that aims to unravel the matrix of imagination and
-              rediscover the code of storytelling. Join us on this enthralling
-              anime dynamism that awaits and pace up to the spirits of
-              exploration!
+              offer, we are all geared up to unveil the charisma. Let&apos;s
+              prepare for the journey that aims to unravel the matrix of
+              imagination and rediscover the code of storytelling. Join us on
+              this enthralling anime dynamism that awaits and pace up to the
+              spirits of exploration!
             </p>
           </div>
         </div>

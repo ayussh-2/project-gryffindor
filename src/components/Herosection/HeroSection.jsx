@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/navbar";
+import Link from "next/link";
 
 const ParallaxScene = () => {
   const containerRef = useRef(null);
@@ -100,9 +101,11 @@ const ParallaxScene = () => {
                         <button className="flex items-center justify-between bg-transparent border-[2px] border-black text-black font-semibold lg:px-4 lg:py-2 px-4 rounded-full shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105">
                             View Picture
                         </button>
-                        <button className="flex items-center bg-black text-white font-semibold lg:px-8 lg:py-2 px-4 rounded-full shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105">
+                        <Link
+                        href={"/register"}
+                        className="flex items-center bg-black text-white font-semibold lg:px-8 lg:py-2 px-4 rounded-full shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105">
                             Register
-                        </button>
+                        </Link>
                     </div>
                 </motion.div>
 
