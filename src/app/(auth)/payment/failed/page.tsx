@@ -1,6 +1,7 @@
 "use client";
 import React, { Suspense, useEffect } from "react";
 
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { ERR_DETAILS } from "@/config/payment";
@@ -32,6 +33,14 @@ function PaymentFailedContent() {
                         {ERR_DETAILS.find((err) => err.id === details)?.message}
                     </p>
                 )}
+                <Link
+                    className="flex items-center px-5 py-3 text-white font-semibold 
+            bg-[#003955]
+          rounded-lg shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105 font-Spirits mt-10"
+                    href="/"
+                >
+                    Go To Home
+                </Link>
             </div>
         </div>
     );
