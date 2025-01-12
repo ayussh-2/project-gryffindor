@@ -49,7 +49,7 @@ export default function AboutUs() {
             className="text-lg md:text-xl font-Spirits leading-relaxed md:leading-loose text-left  p-6 rounded-lg "
             style={{ color: "#a6a9ad" }}
           >
-            NITRUTSAV 2025 is the largest and the most fascinating literary and
+            {/* NITRUTSAV 2025 is the largest and the most fascinating literary and
             cultural festival of Odisha, scheduled from 7th to 9th February,
             2025 in the abyss of National Institute of Technology, Rourkela.
             With endless suzume energies and kakkoi showdowns on offer, we are
@@ -57,7 +57,17 @@ export default function AboutUs() {
             journey that aims to unravel the matrix of imagination and
             rediscover the code of storytelling. Join us on this enthralling
             anime dynamism that awaits and pace up to the spirits of
-            exploration!
+            exploration! */}
+            NITRUTSAV 2025: Odisha&apos;s grandest literary and cultural
+            spectacle returns with an eerie twist—&quot;Mythica: Shadows of the
+            Past and Magic of the Future.&quot; From 7th to 9th February, 2025,
+            the National Institute of Technology, Rourkela, becomes a portal to
+            a realm where ancient secrets collide with forbidden magic. Unravel
+            the mysteries of long-forgotten legends, venture into the shadows of
+            the unknown, and awaken the arcane forces that blur the line between
+            past and future. Prepare for a spine-chilling journey through myth
+            and mystery—where every whisper hides a story, and every shadow
+            holds a secret. Dare to join us ?
           </p>
         </div>
       </div>
