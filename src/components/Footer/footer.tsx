@@ -232,7 +232,7 @@ export default function Footer() {
                         {extraLinks.map((item) => (
                             <Link
                                 href={item.link}
-                                className="hover:underline underline-offset-2  opacity-80 hover:opacity-100 "
+                                className="hover:underline underline-offset-2  opacity-80 hover:opacity-100 text-white"
                                 key={item.name}
                             >
                                 {item.name}
