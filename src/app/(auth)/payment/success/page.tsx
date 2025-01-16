@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
+import Link from "next/link";
 import toast from "react-hot-toast";
 
 import { useAuth } from "@/contexts/auth-context";
@@ -52,7 +53,7 @@ export default function PaymentStatusPage() {
     }, [user?.id]);
 
     return (
-        <div className="bg-reg min-h-screen flex items-center justify-center">
+        <div className="bg-reg min-h-screen flex items-center justify-center flex-col">
             {loading || paymentStatus.loading ? (
                 <div className="text-center">
                     <h1 className="text-2xl font-bold font-Spirits">
@@ -78,6 +79,16 @@ export default function PaymentStatusPage() {
                     </h1>
                     <p className="mt-4 font-Spirits">Please try again later.</p>
                 </div>
+            )}
+            {!loading && !paymentStatus.loading && (
+                <Link
+                    className="flex items-center px-5 py-3 text-white font-semibold 
+            bg-[#003955]
+          rounded-lg shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105 font-Spirits mt-10"
+                    href="/"
+                >
+                    Go To Home
+                </Link>
             )}
         </div>
     );
