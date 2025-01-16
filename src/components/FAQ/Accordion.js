@@ -5,8 +5,8 @@ import { Collapse } from "react-collapse";
 export default function Accordion(props) {
     return (
         <div className=" ml-8 z-50 mr-8 mt-4 mb-1 text-[#CBFFFF] ">
-            <div className="container flex w-auto  ">
-                <div className="border border-[#CBFFFF] rounded-xl bg-black/50 relative  m-auto w-[80%] h-full">
+            <div className=" flex w-full  ">
+                <div className="border border-[#CBFFFF] rounded-xl bg-black/50 relative  m-auto w-full md:w-[80%] h-full">
                     <div
                         className="title bg-transparent flex justify-between items-center cursor-pointer p-4 pl-8"
                         onClick={props.toggleAccordion}
