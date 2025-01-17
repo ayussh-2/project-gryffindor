@@ -27,7 +27,6 @@ const Navbar = () => {
                                 {[
                                     "Home",
                                     "About us",
-                                    "Events",
                                     "Sponsors",
                                     "FAQs",
                                 ].map((item, index) => (
@@ -45,6 +44,11 @@ const Navbar = () => {
                                         {item}
                                     </Link>
                                 ))}
+                                <Link
+                                    href={'/events'}
+                                    className="text-white hover:text-[#CBFFFF] transition-colors tracking-wide duration-200 font-medium text-lg">
+                                        Events
+                                </Link>
                                 <Link
                                     href={user ? "/profile" : "/login"}
                                     className="text-white hover:text-[#CBFFFF] transition-colors tracking-wide duration-200 font-medium text-lg"

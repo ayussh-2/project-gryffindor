@@ -336,24 +336,16 @@ const mainEvents = [
       image:
         "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/hunkaar-pantomime.webp",
       content:
-        "The city vibrates with vitality, giving rise to Hunkaar, an enthralling theatrical experience. Illuminate the open stage with your narratives and let the magic of street theater spark conversations and inspire change. Incorporate yourself into the spellbinding narrative as we spotlight society's diverse shades, ignite revolutions with dramatic words. Join us to show your storytelling prowess at Hunkaar : The Nukkad Natak competition!",
-      eventName: "Hunkaar | Pantomime",
+        "Day 2: 9am-12 Exciting Pictionary Competition with prizes and talkshow. Day 2) 9am -12 . Brainstorming Quiz and Guesstimate with exciting prizes followed by a talkshow . Topic for all will be SDG3 , Good Health & Well-Being. ",
+      eventName: "SDG Carnival | SDG Campus Club",
       rules: [
-        "Each team must consist of 10-25 members (including acoustic music accompanists).",
-        "Teams are expected to perform at the open-air venue (circular, with audience on all sides).",
-        "The time limit of the play is 20 minutes. Teams will be penalised if they exceed the time limit.",
-        "Performance should be only in Hindi. However, short sub-passages in other languages are allowed.",
-        "Use of any props other than dupatta, posters, sticks and non-electric instruments is not allowed.",
-        "Any kind of fluid, live animals, flame, heavy object or any material which has the possibility of damaging the performance area is not allowed. No electronic gadgets are allowed. Use of any prop should be pre-informed.",
-        "Plays can be based on any theme but any content directed against a certain political group or religious community is strictly prohibited.",
-        "Use of abusive language is prohibited. Obscenity (at the discretion of judges) of any kind is not allowed and may lead to disqualification.",
-        "If we notice anything offensive in the performance, the respective team will be asked to exit the stage.",
-        "The decision of the judges will be final and binding.",
-        "Judging Criteria: The performances will be judged based on the following criteria:",
-        "Script theme and originality (40 points)",
-        "Acting, direction and gimmicks (40 points)",
-        "Audience interaction and improvisation (20 points)",
-      ],
+    "Proctoring will be done for all competitions.",
+    "No cheating or electronic devices are allowed.",
+    "Individual participation is only allowed.",
+    "There'll be star marked questions in all competitions.",
+    "Winners will be decided from star marked questions in case of a draw.",
+    "QM's decision will be final."
+  ],
       Registerurl: "#",
     },
     {
@@ -362,22 +354,16 @@ const mainEvents = [
       image:
         "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/fusion-nu-poster.webp",
       content:
-        "Dive into the enchanting world of anime-inspired fashion show at Fashionista, a thrilling team competition where creativity takes center stage. Teams of up to 25 members will showcase their style prowess within a 20-minute time frame, featuring mesmerizing costumes and unique walking stances. Join us for an unforgettable experience, where the runway becomes a canvas for anime magic, and only the most imaginative reign supreme!",
-      eventName: "Fashionista | Fusion",
+        "This competition has two exciting levels! In the first, participants upload a PDF showcasing their original content. The top talents will move on to the grand stage for a live performance, where they’ll compete for exclusive goodies awarded to the top 3. To make it even more special, a renowned poet will judge the finalists. ",
+      eventName: "Poetry Slam | Kalaam - Poetry Club",
       rules: [
-        "It's a team competition. Size of team can be up to 25 members.",
-        "Each team would have a 20 minutes time limit (including setup and performance).",
-        "If the participant exceeds the time restriction, they will receive a negative grade.",
-        "Theme of the fashion show is Anime.",
-        "Tracks should be carried on a pendrive or similar device.",
-        "Vulgarity is strictly prohibited. Any sort of obscenity will result in the debarment of the team.",
-        "Cigarette, alcohol and use of any sort of unethical is strictly prohibited.",
-        "Costume, theme, walking stance and attitude will be used to evaluate teams.",
-        "Teams should bring their own props.",
-        "The judges' decision will be final and binding.",
-        "During the contest, the organizing committee reserves the right to make rule amendments.",
-        "Register your team through the provided google form link",
-      ],
+    "There will be 2 rounds. The poem can be in Hindi or English.",
+    "In the first round, participants need to upload their original content in a PDF/DOC format. The writing should be in the exact dialect of the language (Hindi/English).",
+    "In the second round, the top performers will be invited to perform on stage on our campus. The number of performers to be shortlisted is at the discretion of the judge strictly.",
+    "The top 3 performers will be given goodies.",
+    "Judges' decision shall be final.",
+    "Plagiarism is strictly prohibited and will result in disqualification."
+  ],
       Registerurl: "#",
     },
     {
@@ -386,8 +372,8 @@ const mainEvents = [
       image:
         "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/maktub-heartbeats.webp",
       content:
-        "Heartbeats unveils MAKTUB, the flagship event that promises a musical night of passion and jubilation. Don your finest anime-inspired attire and submerge yourself in an evening of enchanting soundtracks and diverse tunes performed by Heartbeats. Let the live band set the stage on fire while you gear up to the spirits of celebration. Join us in DTS for an unforgettable night of music, culture, and pure emotion!",
-      eventName: "Maktub-Musical Night | Heartbeats",
+        "Join Kalaam for a poetic extravaganza on the final day of Nitrutsav! Featuring captivating performances in Hindi, Urdu, and English, this two-hour event explores diverse themes with soulful expression. Guided by our talented hosts, it promises a vibrant celebration of creativity, language, and artistry. Don’t miss this unforgettable journey of words and emotions!",
+      eventName: "Kaarvaan 3.0 | Kalaam - Poetry Club",
       Registerurl: "#",
     },
     {
@@ -396,14 +382,15 @@ const mainEvents = [
       image:
         "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/clarion-nuj.webp",
       content:
-        "From the world of Death Note, Jujutsu Kaisen, My Hero Academia, and many more, characters have emerged straight out of the screen to take you on an adventurous ride of twists and turns! The shadow of a murder looms over their vibrant world, and no one knows who did it. Alliances crumble apart and a web of lies unravels.",
-      eventName: "NU Journalist | Clarion",
+        "LiteraBuzz presents a thrilling event celebrating Bollywood! Explore timeless Hindi movies, iconic songs, and your favorite stars through engaging riddles and clues. From classic hits to modern blockbusters, there's something for every fan. Test your Bollywood knowledge and relive magical moments from the silver screen in this fun-filled challenge. Don't miss the fun!",
+      eventName: "LiteraBuzz | Chitrā-Varg",
       rules: [
-        "The participants will be given the story, character descriptions, and the timeline before the event.",
-        "The participants will get to interrogate the suspects, one by one.",
-        "Interrogating a suspect more than one time is not allowed.",
-        "After all interactions, the participants will have to solve the case and find the murderer, with proper justification.",
-      ],
+    "The participants are not allowed to use their mobile phones.",
+    "Only one submission per participant.",
+    "Only individual entries are allowed.",
+    "The answers must be legible for the final scoring.",
+    "Failure to comply with event regulations will result in disqualification."
+  ],
       Registerurl: "#",
     },
     {
@@ -412,16 +399,16 @@ const mainEvents = [
       image:
         "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/breakbeats.webp",
       content:
-        "Breakbeats an underground street dance battle of NIT Rourkela one of the flagship event of Nitrustav. We got the rawest dance throwdown coming with solo battles and crew face-offs. It's all about street styles : Hip-Hop, Popping, Locking, Waacking, Breaking, Krumping, Lite-feet, Afro etc. Bring ya moves, bring ya crew, let's light up the streets where real skills shine.",
-      eventName: "Breakbeats | NU Team",
+        "Break free from the ordinary. Showcase your unique musical style, whether it's a fusion of genres, an experimental sound, or a traditional art form with a modern twist. No backing tracks, just raw talent and live instruments. Come, redefine the soundscape of NIT Rourkela.",
+      eventName: "Beyond the Beats | Heartbeats",
       rules: [
-        "There will be two categories for the event: 1 vs 1 (solo) and Crew vs Crew (group).",
-        "Dance style: Any street dance style like Hip-Hop, Popping, Krumping, Locking, Breaking, Waacking, Afro, Lite-feet, etc.",
-        "There will be 2 rounds for each category.",
-        "Brief for 1 vs 1 (solo) category: In the 1st round (prelims round), the participants will give a freestyle performance for about 1 minute (the music will be played by the DJ randomly). In this round, 16 teams/participants will be selected for the next round (if less than 16 teams/participants then a direct face-off battle will be conducted). In the 2nd round (final round), the selected participants from the 1st round will give a performance for about 40 seconds each (the music will be played by the DJ randomly). This battle will follow a knockout system. The winner will be decided from the final round.",
-        "Rules for 1 vs 1 (solo) category: The competition will have a street dance battle between 2 participants. Participants are not required to bring any props. If necessary, it will be provided by the organisers. Participants must mention their college/crew name during the registration. Vulgarity and obscenity at any point are strictly not allowed. It may lead to immediate disqualification. Violation of any of the above rules will lead to heavy penalties. The decision of the judges shall be final and binding.",
-        "Brief for Crew vs Crew (group) category: In the 1st round (prelims round), the teams will give a crew performance for about 3-5 minutes (the teams should carry their respective tracks in a pen drive). Following which teams will be selected for the next round. In the 2nd round (battle round), the qualified teams will be paired with another team for a face-off. On spot unknown tracks will be played by the DJ 1-3 members from each team will participate for the face-off for a duration of 50 seconds. Winner will be declared based on the performance in the battle round.",
-        "Rules for Crew vs Crew (group) category: One person can stay as a member of only one team. Heavy penalty shall be imposed on both teams if this is violated. Teams may use more than one song in their performance. Usage of props is allowed and should be carried by the teams however organisers hold the discretion of allowing it on stage. Pre-recorded music shall be brought in a pen drive in MP3 format only. Teams must follow the time limit and strictly stick to the allowed styles. Any form of fluid, flame, powders, glitters, heavy or sharp objects that have the possibility of damaging the stage is strictly not allowed. Obscenity of any kind is not allowed. Decorum must be maintained. The decision of judges shall be final and binding.",
+"Performance time limit is of 3 minutes max. Straight 10 marks will be deducted for exceeding the time limit.",
+    "Only 1 minute extra time will be given for mic and instrument setup.",
+    "The performance will be judged on its uniqueness, interaction with the audience, presentation, overall impact, and basic technicalities (like tempo, scale, etc.).",
+    "Top three winners will be chosen at the end based on their performances.",
+    "In case of a tie in marks, a tie-breaker round will be held where performers have to perform on the spot.",
+    "A performer using cuss or vulgar words will be eliminated.",
+    "Uniqueness will be of utmost priority and carries the maximum score."
       ],
       Registerurl: "#",
     },
@@ -431,15 +418,15 @@ const mainEvents = [
       image:
         "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/footloose.webp",
       content:
-        "Anime Warriors, the spotlight is yours to claim! SYNERGY proudly unveils FOOTLOOSE. Open to students of NIT Rourkela and beyond, illuminate the stage as solo performers, dynamic duos or crews. Enlist online, guarantee your soundtrack is free from explicit vibes, and prepare to unleash your dance prowess. Let the rhythm of anime melodies lead your feet in this dance showdown, where glory awaits the boldest dancers!",
-      eventName: "Footloose | Synergy",
+        "Clownfish Tank challenges participants to turn the bizarre into brilliance! Judges provide a wildly absurd idea, and it’s up to participants to pitch it as essential and convincing. With limited preparation time and on-the-spot questions, this event is a hilarious test of creativity, humor, and adaptability. Embrace the ridiculous and wow the judges with your imaginative flair!",
+      eventName: "Clownfish Tank | Hourglass",
       rules: [
-        "RULES OF FOOTLOOSE: The rulebook is designed to ensure fair play, creativity, and sportsmanship throughout the event. All participants are expected to familiarize themselves with these rules to ensure a smooth and enjoyable competition.",
-        "ELIGIBILITY: Footloose is open to students enrolled in NIT Rourkela, and students who are enrolled in an accredited institute. They can participate as individuals, duos or crews.",
-        "REGISTRATION: Registration for FOOTLOOSE needs to be done by the participants before the deadline set before the competition through the official website of NITRUTSAV online.",
-        "MUSIC AND COSTUMES: Music track of each participant should be submitted by them to the event management team before the competition starts. Participants are encouraged to take up appropriate costumes for their performance which accentuates their dance routine.",
-        "CATEGORIES: INDIVIDUALS: Participants must perform a routine of duration between 2-4 minutes. Dance styles ranging from Old school, Hip hop, Popping to New Generation is permitted. Any usage of props should be intimidated to the Event Management team beforehand to ensure smooth flow of the performance and event. DUOS: Participants must perform a routine of duration between 3-5 minutes. Dance styles ranging from Old School, Hip hop, Popping to New generation is permitted. Usage of any props for the duet performance needs to be intimidated to the event management team beforehand. Chemistry between the 2 participants in the duo, synchronization between them will be a crucial point in judging their performance. CREWS: Crews should have minimum 4 members and maximum 25 members. Crew should perform their routine of duration between 6-8 minutes. Incorporation of various styles and good formations will be appreciated. Creativity and synchronization will be a crucial point in the judging criteria. Usage of any props brought by the crew should be intimidated to the event management team beforehand.",
-        "CODE OF CONDUCT: Each participant should maintain decorum in the competition area, should have respect for judges, organizers, fellow participants. Any discrepancy in this arena will lead to disqualification of the participant from the competition.",
+        "Each participant will receive a unique, outlandish idea from the judges.",
+    "Participants will have 1 minute to prepare their pitch based on the given idea and 2 minutes to deliver their pitch, making the absurd idea sound essential with creativity and humor.",
+    "Judges may interrupt with questions during the pitch, pausing the timer while participants respond.",
+    "Pitches must remain respectful, avoiding offensive language or themes, and ideas should be original and spontaneous, building solely on the provided concept.",
+    "Participants can compete individually or in teams of up to three.",
+    "Judging criteria include creativity, humor, and how convincingly the idea is presented."
       ],
       Registerurl: "#",
     },
@@ -449,11 +436,14 @@ const mainEvents = [
       image:
         "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/palette-chitraang.webp",
       content:
-        "Dive into the vibrant realm of 'Palette,' an anime-inspired art exhibition where colors transcend boundaries. Each piece whispers a tale, blending imagination with hues, creating a canvas that echoes the spirit of anime. Immerse yourself in this chromatic symphony and witness the magic of Palette come to life.",
-      eventName: "Palette | Chitraang",
+        "Get ready to shine at NITR’s Got Latent, the ultimate talent competition of our cultural fest! From singing to comedy, magic to dance, showcase your hidden skills and leave your mark. Hosted by the hilarious *Open Mic Club*, this electrifying event promises laughter, prizes, and unforgettable moments. Don’t miss your chance to be a campus star! 🌟",
+      eventName: "NITR's GOT LATENT | Open Mic Club",
       rules: [
-        "Graffiti Competition will be held on the third day of Nitrutsav.",
-        "Rules of competition will be disclosed on spot.",
+        "*Eligibility:* Open to all students of NIT Rourkela and registered students of NITRUTSAV. Solo and group performances are allowed.",
+        "*Registration:* Register online or at designated spots with accurate details before the deadline.",
+        "*Performance:* Acts must be original, family-friendly, and within the time limit (e.g., 1.5 minutes). Participants bring their own props; basic AV support provided.",
+        "*Judging:* Evaluated on originality, creativity, stage presence, and audience engagement by the *Open Mic Club* judges. Decisions are final.",
+        "*Prizes:* Winners get exciting prizes; all participants receive certificates."
       ],
       Registerurl: "#",
     },
@@ -463,9 +453,259 @@ const mainEvents = [
       image:
         "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
       content:
-        'Third Eye presents "Vivid," an enchanting photography exhibition that delves into the extraordinary. Each photograph tells a story, showcasing the photographer\'s commitment to their craft and the vibrant hues of nature. The exhibition resonates with viewers with its vivid storytelling.',
-      eventName: "Vivid | Third Eye",
+        "Embark on AXIOM's thrilling treasure hunt! Solve cryptic clues, uncover QR codes, and race through checkpoints in a battle of wit and speed. Compete solo or in teams of three to claim glory. Sharpen your mind, follo+w the clues, and conquer the challenge. The treasure awaits—let the adventure begin! 🌟🔍",
+      eventName: "Treasure Hunt | AXIOM",
       Registerurl: "#",
+      rules: [
+    "**Participation**: Compete individually or in teams of up to three members. On-spot registration is mandatory.",
+    "**Storyline**: Read and understand the storyline; it forms the foundation for solving clues.",
+    "**Navigation**: Follow the map and clues provided. Scan QR codes at each checkpoint to progress.",
+    "**Tools**: Bring your own pen and paper for note-taking and solving clues.",
+    "**Fair Play**: Seeking assistance from volunteers or external sources is prohibited and results in disqualification.",
+    "**Cheating**: Collaboration between teams or using external help leads to immediate disqualification.",
+    "**Timing**: The event is a race against time; the shortest completion time determines the winner.",
+    "**Disqualification**: Violations of any rules, including seeking unauthorized help or cheating, will result in disqualification."
+  ]
+    },
+    {
+      index: 8,
+      eventId: 89,
+      image:
+        "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "Get ready to get chills down your spine, where the flicker of candles meets the dark unknown, and the ordinary twists into the grotesque and macabre. Buckle your belts for the journey through spine-chilling legends, haunting secrets, and stories that linger longer after the final word is spoken. Each tale will take you deeper into the shadows, the recesses of your mind, where fear and fascination intertwine. Whether you believe in the supernatural or not, tonight, the veil between the real and eerie wanes. So, settle in-- but beware: the stories might just follow you home. Let the nightmares begin.",
+      eventName: "Fear mania.... | Odia Sahitya Samaj",
+      Registerurl: "#",
+      rules: [
+    "The time limit shall not exceed 6 minutes.",
+    "Performance of the participants will be judged by the audience, on a scale of five.",
+    "Languages allowed: English, Hindi, and Odia.",
+    "The story should be bereft of any form of plagiarism, i.e., the story should not have any fragments of any popular horror or non-fiction story.",
+    "There should not be any redundancy in the performance of the participants."
+  ]
+    },
+    {
+      index: 9,
+      eventId: 89,
+      image:
+        "http://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "Rap battle is an event to find, recognize and promote the rap artists and the rap culture amongst the youth. It will serve as a platform for artists to express and flaunt their writing and rapping skills",
+      eventName: "NU Rap Battle | Drill N Bass",
+      Registerurl: "#",
+      rules: [
+    "Qualifiers:",
+    "Each rapper will be allowed a maximum slot of 3 minutes to perform either an original or a cover, where originals will be given more preference.",
+    "Those performing a cover should bring their own beats.",
+    "Rappers are also allowed to play an instrument during their performance. One must bring their own instrument.",
+    "Eliminator:",
+    "Rappers will be set up into brackets randomly and will be pit against competitors for 5-minute rounds.",
+    "Each rapper will be given 5 words and 10 minutes to write an original verse.",
+    "If agreed to by both the rappers, the bracket will be turned into a battle rap.",
+    "All scoring decisions will be made by the judges, and their decision will be deemed final."
+  ]
+    },
+    {
+      index: 10,
+      eventId: 89,
+      image:
+        "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "Experience the art of photography at VIVID, a stunning exhibition by Third Eye. Showcasing captivating photos from the collective talent of Third Eye members, the event features beautifully lit displays and an enchanting ambiance. Explore unique perspectives, admire the creativity behind each photograph, and share your thoughts in our dedicated feedback section. Celebrate the essence of storytelling through the lens!",
+      eventName: "VIVID | Third Eye",
+      Registerurl: "#",
+      rules: [
+    "A dedicated display board will be allocated to each participant, enabling them to showcase their photographs as part of the VIVID exhibition. This initiative ensures that everyone has an equal opportunity to contribute and actively participate in the event.",
+  ]
+    },
+    {
+      index: 11,
+      eventId: 89,
+      image:
+        "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "Footloose – Dance Your Heart Out! Step into the spotlight at Footloose, Nitrutsav's electrifying dance competition! Show off your talent in solos, duos, or crews and battle for ultimate glory. With mesmerizing moves and high-energy performances, this is your chance to shine and leave the crowd in awe. Let your rhythm speak louder than words—join us and own the stage!",
+      eventName: "Footloose | Synergy",
+      Registerurl: "#",
+      rules: [
+    "",
+  ]
+    },
+    {
+      index: 12,
+      eventId: 89,
+      image:
+        "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "ExpA parade throughout the campus with a huge pride flag held at the front. Students hold pride flags and rainbow-painted placards related to pride. Banners for the parade, SAC decoration according to the queer theme, and queer-themed selfie points. All the students throughout the  campus can participate. Post parade and pre parade face painting and painted handprint on a canvas with everyone’s signature. Queer musical session post parade in collaboration with another club in SAC.An empowering and informative workshop that aims to create a safe and inclusive environment for all students, especially incoming freshers, in collaboration with Rainbow Dot, the LGBTQ+ club, and the Institute Counseling Services. This unique event will address the pressing issues of campus safety, and the anxieties of entering college life, and equip attendees with knowledge on how to seek help when needed erience the art of photography at VIVID, a stunning exhibition by Third Eye. Showcasing captivating photos from the collective talent of Third Eye members, the event features beautifully lit displays and an enchanting ambiance. Explore unique perspectives, admire the creativity behind each photograph, and share your thoughts in our dedicated feedback section. Celebrate the essence of storytelling through the lens!",
+      eventName: "Pride March | Rainbow Dot",
+      Registerurl: "#",
+      rules: [
+    "General decorum and discipline is needed to be maintained.",
+  ]
+    },
+    {
+      index: 13,
+      eventId: 89,
+      image:
+        "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "Dive into the dynamic world of Nukkad Natak, where stories ignite change. Showcase your creativity and passion through thought-provoking dialogues and impactful performances. Assemble your team to inspire, engage, and shed light on social issues using drama, humor, or raw emotion. Let the streets echo with your voice—captivate, inspire, and make a difference!",
+      eventName: "NU'KKAD | RITVIC",
+      Registerurl: "#",
+      rules: [
+"Teams should keep the time limit in mind. Exceeding the time limit will lead to disqualification.",
+    "A warning bell will be rung after 30 minutes.",
+    "Mics, microphones, or speakers will not be allowed during the play, even if the teams bring their own.",
+    "Use of any abusive or obscene language is prohibited.",
+    "Usage of props is allowed. Teams have to bring their own props.",
+    "Use of any inflammable or hazardous elements is strictly prohibited.",
+    "The decision of the judges will be final and binding."  ]
+    },
+    {
+      index: 14,
+      eventId: 89,
+      image:
+        "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "The India Quiz, hosted by Quizmaster Samanway Banerjee, immerses participants in the rich cultural and historical landscape of India. Questions span food, music, film, politics, art, and architecture, offering an in-depth exploration of India’s diverse heritage!",
+      eventName: "India Quiz | Inquizzitive",
+      Registerurl: "#",
+      rules: [
+"Participants can participate in teams of 3 or less.",
+    "Cross-institute teams are allowed.",
+    "There will be two rounds in the quiz.",
+    "First round (PRELIMS) will be written, and the questions will appear on the screen.",
+    "Second round (FINALS) will be an interactive round with the top 8 teams from the 1st round battling it out for the podium.",
+    "The decision of the QM is final and binding." ]
+    },
+    {
+      index: 15,
+      eventId: 89,
+      image:
+        "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "The General Quiz, hosted by Quizmaster Berty Ashley, covers a wide range of topics, challenging participants with questions from science, history, geography, current affairs, pop culture, and more. It’s a comprehensive test of general knowledge, encouraging quick thinking across various fields.",
+      eventName: "General Quiz | Inquizzitive",
+      Registerurl: "#",
+      rules: [
+"Participants can participate in teams of 3 or less.",
+    "Cross-institute teams are allowed.",
+    "There will be two rounds in the quiz.",
+    "First round (PRELIMS) will be written, and the questions will appear on the screen.",
+    "Second round (FINALS) will be an interactive round with the top 8 teams from the 1st round battling it out for the podium.",
+    "The decision of the QM is final and binding." ]
+    },
+    {
+      index: 16,
+      eventId: 89,
+      image:
+        "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "The MELAS Quiz, hosted by Quizmaster Berty Ashley, combines knowledge from Music, Entertainment, Literature, Arts, and Sports. It challenges participants to showcase their expertise in pop culture, blending creativity and broad cultural knowledge in an engaging format.",
+      eventName: "MELAS Quiz | Inquizzitive",
+      Registerurl: "#",
+      rules: [
+"Participants can participate in teams of 3 or less.",
+    "Cross-institute teams are allowed.",
+    "There will be two rounds in the quiz.",
+    "First round (PRELIMS) will be written, and the questions will appear on the screen.",
+    "Second round (FINALS) will be an interactive round with the top 8 teams from the 1st round battling it out for the podium.",
+    "The decision of the QM is final and binding." ]
+    },
+    {
+      index: 17,
+      eventId: 89,
+      image:
+        "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "The fifth edition of the National Institute of Technology, Rourkela International Model United Nations (NITR IMUN) will convene on 7-9 February 2025, bringing together future policymakers in a meticulously organized, two-day event to discuss and debate critical global issues.",
+      eventName: "NITRIMUN | Cognizen",
+      Registerurl: "#",
+      rules: [
+    "Rulebook and background guides will be uploaded on 1 January after the selection of executive board members for all committees.",
+  ]
+    },
+    {
+      index: 18,
+      eventId: 89,
+      image:
+        "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "Get ready for Breakbeats, the underground street dance battle at NIT Rourkela's cultural fest Nitrutsav! This year we are featuring two categories: 7 to Smoke (Open Style) and 3 vs 3 (All Style). It’s all about raw street vibes, real skills, and dope energy with styles like Hip-Hop, Popping, Breaking, Krumping, Waacking, Lite-feet, and Afro. Bring the heat, let's make it legendary!",
+      eventName: "Breakbeats | The Mavericks",
+      Registerurl: "#",
+      rules: [
+        {
+          category: "7 to Smoke (Open Style)",
+          details: [
+            {
+              "i) Category Overview": [
+                "Open to all street dance styles (Hip-Hop, Popping, Locking, Breaking, Waacking, House, Afro, and Krump).",
+                "Dancers have to show their freestyle skills to random music mixed by the DJ."
+              ]
+            },
+            {
+              "ii) Prelims Round": [
+                "Each participant performs a freestyle round.",
+                "Judges assess based on foundation, techniques, and musicality.",
+                "Top 8 participants with the highest scores proceed to the battle round."
+              ]
+            },
+            {
+              "iii) Battle Format": [
+                "8 Battlers are ranked sequentially (1 to 8) based on prelim scores.",
+                "Battles will be face-to-face, both have to dance on the same track played by the DJ.",
+                "Winner of each battle earns *1 smoke*; loser steps out, and the next battler steps in to battle with the winner."
+              ]
+            },
+            {
+              "iv) Tie Situations": [
+                "If the judge declares a tie, both battlers receive *0 smokes*, and both leave.",
+                "The next two participants step into the circle for the next battle."
+              ]
+            },
+            {
+              "v) Winning Criteria": [
+                "The first battler to earn *7 smokes* is crowned the champion.",
+                "The battles continue until one dancer achieves the *7 smokes*."
+              ]
+            }
+          ]
+        },
+        {
+          category: "3 vs 3 (All Style)",
+          details: [
+            {
+              "i) Category Overview": [
+                "Each team consists of 3 participants.",
+                "During registration, teams must provide their crew name and the name of their city/state."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      index: 19,
+      eventId: 89,
+      image:
+        "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+      content:
+        "The Cursed Legacy: Embark on a spellbinding adventure in The Cursed Legacy, a treasure hunt by AXIOM, NIT Rourkela. Solve enchanted riddles, decode magical clues, and race through checkpoints to uncover a hidden treasure. With every step, the curse tightens—only the cleverest and quickest will prevail. Dare to claim the legacy and rewrite the tale of magic and mystery.",
+      eventName: "The Cursed Legacy (Treasure Hunt) | AXIOM",
+      Registerurl: "#",
+      rules: [
+        "Participation is open to individuals or teams of up to 3 members, with on-spot registration available.",
+    "Participants must arrive on time to complete the registration process.",
+    "Reading and understanding the storyline is essential as it provides the foundation for solving clues.",
+    "Follow the map and clues provided, and scan QR codes at each checkpoint to proceed.",
+    "Participants should bring their own pen and, if preferred, paper for solving clues or taking notes.",
+    "Seeking help from volunteers, collaborating with other teams, or using external assistance is strictly prohibited.",
+    "The winner is determined by the shortest time taken to complete the treasure hunt.",
+    "Any violation, including seeking assistance, collaboration, or cheating, will result in immediate disqualification."
+
+      ]
     },
   ];
   
@@ -478,7 +718,7 @@ const mainEvents = [
         "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/pottery-workshop-akriti.webp",
       content:
         "This year's NITRUTSAV offers a Clay Workshop, where participants will learn the therapeutic and expressive nature of shaping and molding clay into unique pieces. The workshop provides a relaxed environment for students to socialize and unleash their imagination.",
-      eventName: "Pottery Clay | AKRITI",
+      eventName: "Pottery Workshop | AKRITI",
       rules: [
         "Participants have to bring their water storage container (e.g., water bottle).",
         "Gloves will be provided.",
