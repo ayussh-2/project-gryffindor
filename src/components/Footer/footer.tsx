@@ -165,7 +165,7 @@ export default function Footer() {
             width={422}
             height={96}
             sizes="(max-width: 768px)211px, 422px"
-            src="https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Sponsors/BRANDING-small.png"
+            src="/nitrlogo.svg"
             alt="Bottom Image"
             className=" w-1/2 sm:w-full h-auto mx-auto sm:mt-0 mt-4"
           /> */}
