@@ -58,7 +58,7 @@ const EventHero = () => {
           </div>
 
           <div className={`py-4 relative z-20 text-[#FFF] font-Spirits`}>
-            All in all, NITRUTSAV 2024 is back to embark on a journey that aims
+            All in all, NITRUTSAV 2025 is back to embark on a journey that aims
             to unravel the matrix of imagination, rewrite the code of
             storytelling, and rediscover the magic within
           </div>
