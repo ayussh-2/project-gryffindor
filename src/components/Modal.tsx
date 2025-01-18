@@ -72,8 +72,10 @@ export default function Modal({
                 {/*body*/}
                 <div className="relative p-6  max-h-[80vh] overflow-y-auto my-2 ">
                   <ul className="flex flex-col gap-2">
-                    {rules.map((rule) => (
-                      <li className="flex gap-2 items-start  ">
+                    {rules.map((rule,index) => (
+                      <li
+                      key={index}
+                      className="flex gap-2 items-start  ">
                         <span className=" min-w-2 min-h-2 mt-3 mr-1  bg-white rounded-full"></span>
                         <p>{rule}</p>
                       </li>
