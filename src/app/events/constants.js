@@ -1010,7 +1010,7 @@ const workshops = [
     image: "/Images/akriti clay.png",
     content:
       "Discover the joy of creating at AKRITI's Pottery Clay Workshop during NITRUTSAV! Under the guidance of an expert, explore the art of molding clay into personalized designs. Connect with peers, de-stress, and experience the soothing magic of working with clay in a lively and welcoming setting. Take home your handcrafted masterpiece as a keepsake of this artistic journey—because every creation tells a story!",
-    eventName: "Pottery Workshop | AKRITI",
+    eventName: "Clay Workshop | AKRITI",
     rules: [
       "Participants have to bring their water storage container (e.g., water bottle).",
 
@@ -1055,7 +1055,7 @@ const workshops = [
     image: "/Images/Lumiere.png",
     content:
       "Lumiere celebrates the Cinematics Club's finest creations, featuring aftermovies of Roots, Innovision, Cosmopolitan, and Vriddhi, capturing the essence of NITR’s iconic events. Alongside, a selection of thought-provoking short films showcases the club’s storytelling brilliance. It’s a vibrant journey through the unforgettable moments and narratives that defined our year, brought to life on screen.",
-    eventName: "Lumiere | Cinematics Club",
+    eventName: "Lumiere | Cinematics",
     rules: [
       "Aftermovies of Iconic Events – Experience the highlights of Roots, Innovision, Cosmopolitan, and Vriddhi through stunning visuals that capture their energy and spirit.",
 
@@ -1337,6 +1337,16 @@ const funevents = [
       "The winner is determined by the shortest time taken to complete the treasure hunt.  ",
       "Any violation, including seeking assistance, collaboration, or cheating, will result in immediate disqualification.  ",
     ],
+  },
+  {
+    index: 4,
+    eventId: 83,
+    image: "/Images/knightout.png",
+    content:
+      "Join KnightOut, a thrilling team chess battle promoting inclusivity and teamwork! Teams of two (1 male, 1 female) alternate moves without discussing strategy, creating an exciting challenge. Compete for fantastic prizes and the title of KnightOut Champions! Showcase your skills, embrace diversity, and enjoy the ultimate chess experience. Don’t miss out—register now and make your move!",
+    eventName: "Knightout | Knights Club",
+    Registerurl: "#",
+    rules: ["General decorum and discipline is needed to be maintained."],
   },
 
   // {
