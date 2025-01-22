@@ -63,7 +63,7 @@ const mainEvents = [
     eventId: 58,
     image: "/Images/sdg carnival.png",
     content:
-      "Day 2: 9am-12 Exciting Pictionary Competition with prizes and talkshow. Day 2) 9am -12 . Brainstorming Quiz and Guesstimate with exciting prizes followed by a talkshow . Topic for all will be SDG3 , Good Health & Well-Being. ",
+      "Exciting Pictionary Competition with prizes and talkshow, brainstorming Quiz and Guesstimate with exciting prizes followed by a talkshow . Topic for all will be SDG3 , Good Health & Well-Being. ",
     eventName: "SDG Carnival | SDG Campus Club",
     rules: [
       "Proctoring will be done for all competitions.",
@@ -115,7 +115,7 @@ const mainEvents = [
       "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/fusion-nu-poster.webp",
     content:
       "This competition has two exciting levels! In the first, participants upload a PDF showcasing their original content. The top talents will move on to the grand stage for a live performance, where they’ll compete for exclusive goodies awarded to the top 3. To make it even more special, a renowned poet will judge the finalists. ",
-    eventName: "Poetry Slam | Kalaam - Poetry Club",
+    eventName: "Poetry Slam | Kalaam ",
     rules: [
       "There will be 2 rounds. The poem can be in Hindi or English.",
       "In the first round, participants need to upload their original content in a PDF/DOC format. The writing should be in the exact dialect of the language (Hindi/English).",
@@ -128,7 +128,7 @@ const mainEvents = [
   },
 
   {
-    index: 10,
+    index: 5,
     eventId: 62,
     image: "/Images/MONOACT.png",
     content:
@@ -158,7 +158,7 @@ const mainEvents = [
   },
 
   {
-    index: 11,
+    index: 6,
     eventId: 63,
     image: "/Images/india quiz.png",
     content:
@@ -176,7 +176,7 @@ const mainEvents = [
   },
 
   {
-    index: 12,
+    index: 7,
     eventId: 64,
     image: "/Images/mela quiz.png",
     content:
@@ -194,7 +194,7 @@ const mainEvents = [
   },
 
   {
-    index: 13,
+    index: 8,
     eventId: 65,
     image: "/Images/general quiz.png",
     content:
@@ -212,17 +212,15 @@ const mainEvents = [
   },
 
   {
-    index: 14,
+    index: 9,
     eventId: 66,
     image:
       "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
     content:
-      "The fifth edition of the National Institute of Technology, Rourkela International Model United Nations (NITR IMUN) will convene on 7-9 February 2025, bringing together future policymakers in a meticulously organized, two-day event to discuss and debate critical global issues.",
-    eventName: "NITRIMUN | Cognizen",
+      "Unleash the power of rhythm and creativity at the Beatbox Battle! Watch skilled vocalists transform their voices into dynamic beats, basslines, and sound effects in thrilling one-on-one showdowns. This electrifying event brings together innovation, passion, and the heart of hip-hop culture. Join us for an unforgettable celebration of sound and artistry!",
+    eventName: "BeatBox Battle | Drill N Bass",
     Registerurl: "#",
-    rules: [
-      "Rulebook and background guides will be uploaded on 1 January after the selection of executive board members for all committees.",
-    ],
+    rules: [],
   },
 
   // {
@@ -579,7 +577,7 @@ const flagships = [
     eventId: 69,
     image: "/Images/Battle of Bands.png",
     content:
-      "Join Kalaam for a poetic extravaganza on the final day of Nitrutsav! Featuring captivating performances in Hindi, Urdu, and English, this two-hour event explores diverse themes with soulful expression. Guided by our talented hosts, it promises a vibrant celebration of creativity, language, and artistry. Don’t miss this unforgettable journey of words and emotions!",
+      "Get ready for an electrifying showdown at the Battle of Bands! Talented groups take the stage, competing with powerful performances and captivating original tunes. From rock to blues, each band brings its unique style, fighting for the top spot. Don’t miss this epic night of music, energy, and raw talent!",
     eventName: "Battle of Bands | Team NU",
     Registerurl: "#",
   },
@@ -676,7 +674,8 @@ const flagships = [
     index: 4,
     eventId: 73,
     image: "/Images/fashion.png",
-    content: "",
+    content:
+      "Get ready to witness the essence of style at Fashionista, a spectacular fashion show celebrating creativity and elegance! Watch models grace the runway in stunning designs, from contemporary trends to timeless classics. This event showcases the artistry of fashion, bringing together beauty, innovation, and glamour. Join us for an unforgettable evening of couture and sophistication!",
     eventName: "Fashionista | Fusion",
     rules: [
       "The participants are not allowed to use their mobile phones.",
@@ -692,7 +691,7 @@ const flagships = [
     eventId: 74,
     image: "/Images/perfectly paired 1.png",
     content:
-      "Break free from the ordinary. Showcase your unique musical style, whether it's a fusion of genres, an experimental sound, or a traditional art form with a modern twist. No backing tracks, just raw talent and live instruments. Come, redefine the soundscape of NIT Rourkela.",
+      "Step into a world of love and elegance at Perfectly Paired, a unique fashion show for couples! Witness duos grace the ramp, flaunting coordinated outfits that exude style and chemistry. From timeless classics to modern trends, this event celebrates fashion and togetherness. Join us for an enchanting evening of romance and sophistication!",
     eventName: "Perfectly Paired | Team NU",
     rules: [
       "Performance time limit is of 3 minutes max. Straight 10 marks will be deducted for exceeding the time limit.",
@@ -1021,9 +1020,26 @@ const workshops = [
     ],
     Registerurl: "#",
   },
+
   {
     index: 1,
     eventId: 91,
+    image: "/Images/WorkShop.png",
+    content:
+      "We are thrilled to announce a Hip-Hop Freestyle Dance Workshop with Pradeep, India’s First 4x International Champion and Red Bull DYS World Finalist. Coming all the way from Bangalore, He will share his years of knowledge and experience to elevate your freestyle skills and passion for hip-hop dance.",
+    eventName: "Dance Worshop | Team NU",
+    rules: [
+      "Participants have to bring their water storage container (e.g., water bottle).",
+
+      "Only the first 60 registrations are allowed to participate.",
+      "Everyone will get the pottery wheel only for 25 minutes.",
+      "Whatever participants make will be returned approximately 8 hours later after the material dries.",
+    ],
+    Registerurl: "#",
+  },
+  {
+    index: 2,
+    eventId: 92,
     image: "/Images/VIVID.jpg",
     content:
       "Experience the art of photography at VIVID, a stunning exhibition by Third Eye. Showcasing captivating photos from the collective talent of Third Eye members, the event features beautifully lit displays and an enchanting ambiance. Explore unique perspectives, admire the creativity behind each photograph, and share your thoughts in our dedicated feedback section. Celebrate the essence of storytelling through the lens!",
@@ -1034,8 +1050,8 @@ const workshops = [
     Registerurl: "#",
   },
   {
-    index: 2,
-    eventId: 92,
+    index: 3,
+    eventId: 93,
     image: "/Images/Lumiere.png",
     content:
       "Lumiere celebrates the Cinematics Club's finest creations, featuring aftermovies of Roots, Innovision, Cosmopolitan, and Vriddhi, capturing the essence of NITR’s iconic events. Alongside, a selection of thought-provoking short films showcases the club’s storytelling brilliance. It’s a vibrant journey through the unforgettable moments and narratives that defined our year, brought to life on screen.",
@@ -1258,35 +1274,18 @@ const funevents = [
     eventId: 79,
     image: "/Images/Guess me out.png",
     content:
-      "Kon'nichiwa! Wanna be a detective like Hyouka with your best of friends? Bring out your inner Sherlock. Be Oreki Houtaro and get engaged in guessing words within a limited time frame. Thousands of anime verses you might have encountered will put you on the verge of reckoning. Can you unravel the mysteries together find the missing piece of puzzle?",
+      "Join the exciting “Guess Me Out” event to test your guessing skills and teamwork! In groups, teammates write chits based on a topic, and one member guesses who wrote each. Correct guesses earn points; wrong guesses risk elimination. Enjoy laughter, surprises, and the thrill of competition, with exciting prizes and goodies waiting for the best teams. Don’t miss out!",
     eventName: "Guess Me Out | Hourgalss",
     Registerurl: "#",
     rules: [
-      "(For Non Anime):",
       "Players are divided into groups of 5; within each group, one player is chosen as the guesser.",
-      "Each player (except the guesser) receives a chit of paper, and players write something on their assigned chit that matches the current round's criteria.",
-      "Players secretly fold their chits and place them in a central pile.",
-      "The guesser draws chits from the pile individually; in the meantime, other players can give hints related to that chit.",
-      "For each chit drawn, the guesser must try to identify the player who wrote it based on the information provided.",
-      "The guesser can ask the other players yes/no questions to gather additional clues.",
-      "Once the guesser feels confident, they announce their guess for who wrote the chit.",
-      "If the guess is correct, the guesser scores a point for that round; if the guess is incorrect, the player who wrote the chit is revealed, and negative points will be added.",
+      "Each player (except the guesser) receives a chit of paper, and players write something on their assigned chit that matches the current round's criteria, folding them and placing in central pile",
+      "The guesser starts drawing chits from the pile individually, in the meantime, other players can give hints related to that chit.",
+      "For each chit-drawn, the guesser must try to identify the player who wrote it based on the information provided.",
+      "The guesser can ask the other players yes/no questions to gather additional clues, once feeling confident, they announce their guess for who wrote the chit.",
+      "If the guess is correct, the guesser scores a point for that round; if the guess is incorrect, the player who wrote the chit is revealed, and negative points will be added",
       "This process continues until all the chits have been used or the 5-minute timer runs out.",
       "The team with the most points wins at the game's end.",
-      "Marking scheme:",
-      "If the chit is guessed correctly with one clue, 40 points will be awarded, and points awarded will be 5 points less for every other clue.",
-      "If the guess is wrong, 10 points to be deducted.",
-      "If all four chits are guessed correctly within the stipulated time, a bonus of 50 points will be awarded.",
-      "(For Anime):",
-      "This will be an individual event without any groups.",
-      "The player gets a bowl of chits with dialogues/characteristics of an anime character written on each chit.",
-      "The moment the player picks the first chit, the timer of one-minute starts.",
-      "They are supposed to guess the name of the anime character.",
-      "The player moves on to the next chit as he guesses everything written on the chit he picks and guesses as many chits as they can in one minute.",
-      "Marking scheme:",
-      "Awards 10 points for every correct guess.",
-      "Deducts 5 points for every incorrect guess.",
-      "A bonus of 20 points for completing the entire chit without any incorrect guesses in that chit.",
     ],
   },
   {
@@ -1314,7 +1313,7 @@ const funevents = [
     eventId: 81,
     image: "/Images/pride parade.png",
     content:
-      "A parade throughout the campus with a huge pride flag held at the front. Students hold pride flags and rainbow-painted placards related to pride. Banners for the parade, SAC decoration according to the queer theme, and queer-themed selfie points. All the students throughout the  campus can participate. Post parade and pre parade face painting and painted handprint on a canvas with everyone’s signature. Queer musical session post parade in collaboration with another club in SAC.An empowering and informative workshop that aims to create a safe and inclusive environment for all students, especially incoming freshers, in collaboration with Rainbow Dot, the LGBTQ+ club, and the Institute Counseling Services. This unique event will address the pressing issues of campus safety, and the anxieties of entering college life, and equip attendees with knowledge on how to seek help when needed ",
+      "A campus-wide pride parade featuring a large pride flag, rainbow placards, and themed decorations. Activities include face painting, handprint canvases, and a queer musical session. An empowering workshop with Rainbow Dot and Counseling Services will provide insights on campus safety, inclusivity, and support for freshers, fostering a safe and welcoming environment for all.",
     eventName: "Pride March | Rainbow Dot",
     Registerurl: "#",
     rules: ["General decorum and discipline is needed to be maintained."],
@@ -1326,7 +1325,7 @@ const funevents = [
     image: "/Images/cursed legacy.png",
     content:
       "The Cursed Legacy: Embark on a spellbinding adventure in The Cursed Legacy, a treasure hunt by AXIOM, NIT Rourkela. Solve enchanted riddles, decode magical clues, and race through checkpoints to uncover a hidden treasure. With every step, the curse tightens—only the cleverest and quickest will prevail. Dare to claim the legacy and rewrite the tale of magic and mystery.",
-    eventName: "The Cursed Legacy |",
+    eventName: "The Cursed Legacy | Axiom",
     Registerurl: "#",
     rules: [
       "Participation is open to individuals or teams of up to 3 members, with on-spot registration available. ",
