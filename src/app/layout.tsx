@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
-
+import { inter } from "./font";
 import { AuthProvider } from "@/contexts/auth-context";
 import { ReactLenis } from "@/providers/LenisProvider";
 
@@ -75,7 +75,7 @@ export default function RootLayout({
             <ReactLenis root>
                 <body
                     suppressHydrationWarning={true}
-                    className={` ${Cattedrale.variable}  ${Spirits.variable} overflow-x-hidden  antialiased`}
+                    className={` ${Cattedrale.variable}  ${Spirits.variable} ${inter.variable} overflow-x-hidden  antialiased`}
                 >
                     <Toaster />
                     <AuthProvider>
