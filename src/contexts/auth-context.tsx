@@ -45,6 +45,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
                 email: currentUser.email,
                 id: currentUser.$id,
                 phoneNumber: currentUser.phone,
+                isAdmin: currentUser.labels.includes("admin"),
             });
 
             // eslint-disable-next-line @typescript-eslint/no-unused-vars

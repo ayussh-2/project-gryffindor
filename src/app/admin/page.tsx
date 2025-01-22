@@ -1,5 +1,6 @@
 "use client";
 import { DataTable } from "@/components/DataTable/DataTable";
+import { useAuth } from "@/contexts/auth-context";
 import { RegistrationData } from "@/types/registration";
 import { getAllUsersAndPayments } from "@/utils/appwrite";
 import { createColumnHelper } from "@tanstack/react-table";
@@ -7,6 +8,7 @@ import { format } from "date-fns";
 import { useEffect, useState } from "react";
 
 export default function Page() {
+    const { user, loading } = useAuth();
     const columnHelper = createColumnHelper<RegistrationData>();
     const [userWithPayment, setUserWithPayment] = useState<RegistrationData[]>(
         []
@@ -174,6 +176,15 @@ export default function Page() {
         link.click();
         document.body.removeChild(link);
     };
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (!user?.isAdmin) {
+        window.location.href = "/";
+        return null;
+    }
 
     return (
         <div className="min-h-screen bg-[#040d17] p-2 !font-inter">
