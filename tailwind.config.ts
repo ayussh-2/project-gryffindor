@@ -19,6 +19,7 @@ export default {
                 Cattedrale: ["var(--font-cattedrale)", ...fontFamily.sans],
                 Sholp: ["var(--font-sholp)", ...fontFamily.sans],
                 Spirits: ["var(--font-spirits)", ...fontFamily.sans],
+                inter: ["var(--font-inter)", ...fontFamily.sans],
             },
             keyframes: {
                 "light-cone": {

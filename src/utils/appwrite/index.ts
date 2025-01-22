@@ -98,3 +98,21 @@ export async function getUserPaymentStatus(userId: string) {
         return handleError(error);
     }
 }
+
+export async function getAllUsersAndPayments() {
+    try {
+        const users = await getDocumentByQuery(USERS_COLLECTION_ID, [
+            Query.limit(2000),
+        ]);
+        const payments = await getDocumentByQuery(PAYMENTS_COLLECTION_ID, [
+            Query.limit(2000),
+        ]);
+
+        return handleResponse({
+            users: users.documents,
+            payments: payments.documents,
+        });
+    } catch (error) {
+        return handleError(error);
+    }
+}
