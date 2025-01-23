@@ -17,46 +17,46 @@ const mainEvents = [
   //     "The teams will be given anime or non-anime-related topics based on their choice before the start of the event.",
   //   ],
   // },
-  {
-    index: 0,
-    eventId: 57,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/rap-battle-drillnbass.webp",
-    content:
-      "Welcome to the Rap Battle, where the mic’s the weapon, and the stage is the battleground! Emcees clash with sharp rhymes, heavy punchlines, and unstoppable flows. It’s all about respect, rhythm, and raw talent. This isn’t just a show—it’s hip-hop in its purest, most explosive form. Be there or miss history!",
-    eventName: "Rap Battle | Drill N Bass",
-    Registerurl: "#",
-    rules: [
-      "Registration:",
-      "Participants must register online before the event.",
-      "Limited spots available; first-come, first-served basis.",
-      "Format:",
-      "Three rounds per battle.",
-      "Random selection of beats; contestants adapt on the spot.",
-      "Time limit: 2 minutes per round.",
-      "Judging Criteria:",
-      "Originality and creativity.",
-      "Delivery and stage presence.",
-      "Flow and rhythm.",
-      "Crowd engagement.",
-      "Language:",
-      "English language only.",
-      "Fair Play:",
-      "No use of offensive language or hate speech.",
-      "Respect opponents and judges.",
-      "Any violation results in immediate disqualification.",
-      "Attire:",
-      "Casual, expressive streetwear encouraged.",
-      "Audience Participation:",
-      "Enthusiastic crowd participation welcomed.",
-      "No heckling or disruptive behavior.",
-      "Judges' Decisions:",
-      "Judges' decisions are final.",
-      "Scores based on a point system for each criterion.",
-      "Technical Setup:",
-      "Standard microphone setup provided.",
-    ],
-  },
+  // {
+  //   index: 0,
+  //   eventId: 57,
+  //   image:
+  //     "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/rap-battle-drillnbass.webp",
+  //   content:
+  //     "Welcome to the Rap Battle, where the mic’s the weapon, and the stage is the battleground! Emcees clash with sharp rhymes, heavy punchlines, and unstoppable flows. It’s all about respect, rhythm, and raw talent. This isn’t just a show—it’s hip-hop in its purest, most explosive form. Be there or miss history!",
+  //   eventName: "Rap Battle | Drill N Bass",
+  //   Registerurl: "#",
+  //   rules: [
+  //     "Registration:",
+  //     "Participants must register online before the event.",
+  //     "Limited spots available; first-come, first-served basis.",
+  //     "Format:",
+  //     "Three rounds per battle.",
+  //     "Random selection of beats; contestants adapt on the spot.",
+  //     "Time limit: 2 minutes per round.",
+  //     "Judging Criteria:",
+  //     "Originality and creativity.",
+  //     "Delivery and stage presence.",
+  //     "Flow and rhythm.",
+  //     "Crowd engagement.",
+  //     "Language:",
+  //     "English language only.",
+  //     "Fair Play:",
+  //     "No use of offensive language or hate speech.",
+  //     "Respect opponents and judges.",
+  //     "Any violation results in immediate disqualification.",
+  //     "Attire:",
+  //     "Casual, expressive streetwear encouraged.",
+  //     "Audience Participation:",
+  //     "Enthusiastic crowd participation welcomed.",
+  //     "No heckling or disruptive behavior.",
+  //     "Judges' Decisions:",
+  //     "Judges' decisions are final.",
+  //     "Scores based on a point system for each criterion.",
+  //     "Technical Setup:",
+  //     "Standard microphone setup provided.",
+  //   ],
+  // },
 
   {
     index: 1,
@@ -108,24 +108,24 @@ const mainEvents = [
     ],
     Registerurl: "#",
   },
-  {
-    index: 4,
-    eventId: 61,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/fusion-nu-poster.webp",
-    content:
-      "This competition has two exciting levels! In the first, participants upload a PDF showcasing their original content. The top talents will move on to the grand stage for a live performance, where they’ll compete for exclusive goodies awarded to the top 3. To make it even more special, a renowned poet will judge the finalists. ",
-    eventName: "Poetry Slam | Kalaam ",
-    rules: [
-      "There will be 2 rounds. The poem can be in Hindi or English.",
-      "In the first round, participants need to upload their original content in a PDF/DOC format. The writing should be in the exact dialect of the language (Hindi/English).",
-      "In the second round, the top performers will be invited to perform on stage on our campus. The number of performers to be shortlisted is at the discretion of the judge strictly.",
-      "The top 3 performers will be given goodies.",
-      "Judges' decision shall be final.",
-      "Plagiarism is strictly prohibited and will result in disqualification.",
-    ],
-    Registerurl: "#",
-  },
+  // {
+  //   index: 4,
+  //   eventId: 61,
+  //   image:
+  //     "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/fusion-nu-poster.webp",
+  //   content:
+  //     "This competition has two exciting levels! In the first, participants upload a PDF showcasing their original content. The top talents will move on to the grand stage for a live performance, where they’ll compete for exclusive goodies awarded to the top 3. To make it even more special, a renowned poet will judge the finalists. ",
+  //   eventName: "Poetry Slam | Kalaam ",
+  //   rules: [
+  //     "There will be 2 rounds. The poem can be in Hindi or English.",
+  //     "In the first round, participants need to upload their original content in a PDF/DOC format. The writing should be in the exact dialect of the language (Hindi/English).",
+  //     "In the second round, the top performers will be invited to perform on stage on our campus. The number of performers to be shortlisted is at the discretion of the judge strictly.",
+  //     "The top 3 performers will be given goodies.",
+  //     "Judges' decision shall be final.",
+  //     "Plagiarism is strictly prohibited and will result in disqualification.",
+  //   ],
+  //   Registerurl: "#",
+  // },
 
   {
     index: 5,
@@ -211,17 +211,17 @@ const mainEvents = [
     ],
   },
 
-  {
-    index: 9,
-    eventId: 66,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
-    content:
-      "Unleash the power of rhythm and creativity at the Beatbox Battle! Watch skilled vocalists transform their voices into dynamic beats, basslines, and sound effects in thrilling one-on-one showdowns. This electrifying event brings together innovation, passion, and the heart of hip-hop culture. Join us for an unforgettable celebration of sound and artistry!",
-    eventName: "BeatBox Battle | Drill N Bass",
-    Registerurl: "#",
-    rules: [],
-  },
+  // {
+  //   index: 9,
+  //   eventId: 66,
+  //   image:
+  //     "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivid-thirdeye.webp",
+  //   content:
+  //     "Unleash the power of rhythm and creativity at the Beatbox Battle! Watch skilled vocalists transform their voices into dynamic beats, basslines, and sound effects in thrilling one-on-one showdowns. This electrifying event brings together innovation, passion, and the heart of hip-hop culture. Join us for an unforgettable celebration of sound and artistry!",
+  //   eventName: "BeatBox Battle | Drill N Bass",
+  //   Registerurl: "#",
+  //   rules: [],
+  // },
 
   // {
   //   index: 1,
@@ -1275,7 +1275,7 @@ const funevents = [
     image: "/Images/Guess me out.png",
     content:
       "Join the exciting “Guess Me Out” event to test your guessing skills and teamwork! In groups, teammates write chits based on a topic, and one member guesses who wrote each. Correct guesses earn points; wrong guesses risk elimination. Enjoy laughter, surprises, and the thrill of competition, with exciting prizes and goodies waiting for the best teams. Don’t miss out!",
-    eventName: "Guess Me Out | Hourgalss",
+    eventName: "Guess Me Out | Hourglass",
     Registerurl: "#",
     rules: [
       "Players are divided into groups of 5; within each group, one player is chosen as the guesser.",
