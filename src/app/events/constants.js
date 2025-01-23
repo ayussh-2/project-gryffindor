@@ -23,7 +23,7 @@ const mainEvents = [
     image:
       "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/rap-battle-drillnbass.webp",
     content:
-      "Rap battle is an event to uncover, acknowledge, and celebrate the prowess of rap artists and the vibrant rap culture within the anime community. This event stands as a battleground for talented artists to showcase and flex their lyrical and rapping abilities, providing a dynamic platform for self-expression and skillful prowess!",
+      "Welcome to the Rap Battle, where the mic’s the weapon, and the stage is the battleground! Emcees clash with sharp rhymes, heavy punchlines, and unstoppable flows. It’s all about respect, rhythm, and raw talent. This isn’t just a show—it’s hip-hop in its purest, most explosive form. Be there or miss history!",
     eventName: "Rap Battle | Drill N Bass",
     Registerurl: "#",
     rules: [
@@ -1343,7 +1343,7 @@ const funevents = [
     eventId: 83,
     image: "/Images/knightout.png",
     content:
-      "Join KnightOut, a thrilling team chess battle promoting inclusivity and teamwork! Teams of two (1 male, 1 female) alternate moves without discussing strategy, creating an exciting challenge. Compete for fantastic prizes and the title of KnightOut Champions! Showcase your skills, embrace diversity, and enjoy the ultimate chess experience. Don’t miss out—register now and make your move!",
+      "Step into the Couples Chess Tournament, where strategy and synergy collide! Each team, composed of one boy and one girl, battles it out in an exhilarating Swiss-format competition. Teammates must alternate moves without exchanging a word, pushing their coordination and trust to the limit. In a dramatic twist, the final 30 seconds allow one player to take full control. Ready to showcase your partnership and outsmart the rest? The ultimate chess challenge awaits! ",
     eventName: "Knightout | Knights Club",
     Registerurl: "#",
     rules: ["General decorum and discipline is needed to be maintained."],
