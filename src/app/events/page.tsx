@@ -55,10 +55,10 @@ const page = async () => {
 
   return (
     <>
-      <EventHero/>
-      <div className="min-h-screen ">
+      <EventHero />
+      {/* <div className="min-h-screen ">
         <GuestLectures />
-      </div>
+      </div> */}
       <div className="min-h-screen  ">
         <Flagships />
       </div>
@@ -73,7 +73,7 @@ const page = async () => {
         <Workshop />
       </div>
       <Gallery></Gallery>
-      <Footer/>
+      <Footer />
     </>
   );
 };
