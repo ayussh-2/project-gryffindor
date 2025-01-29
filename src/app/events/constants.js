@@ -260,6 +260,16 @@ const mainEvents = [
     ],
     Registerurl: "#",
   },
+  {
+    index: 12,
+    eventId: 69,
+    image: "/Images/Instagram post - 114.png",
+    content:
+      " Break free from the ordinary. Showcase your unique musical style, whether it's a fusion of genres, an experimental sound, or a traditional art form with a modern twist. No backing tracks, just raw talent and live instruments. Come, redefine the soundscape of NIT Rourkela.",
+    eventName: "Beyond the Beats | HeartBeats ",
+    rules: [],
+    Registerurl: "#",
+  },
 
   // {
   //   index: 9,
@@ -625,7 +635,7 @@ const flagships = [
   {
     index: 0,
     eventId: 69,
-    image: "/Images/Battle of Bands.png",
+    image: "/Images/Battle of Bands (2).png",
     content:
       "Get ready for an electrifying showdown at the Battle of Bands! Talented groups take the stage, competing with powerful performances and captivating original tunes. From rock to blues, each band brings its unique style, fighting for the top spot. Don’t miss this epic night of music, energy, and raw talent!",
     eventName: "Battle of Bands | Team NU",
