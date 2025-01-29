@@ -1975,18 +1975,6 @@ export {
 //       venue: "Venue 1",
 //       rules: ["Rule1", "Rule2"],
 //     },
-//     {
-//       eventId: 26,
-//       eventName: "Pottery Clay | AKRITI",
-//       content:
-//         "This year's NITRUTSAV offers a Clay Workshop, where participants will learn the therapeutic and expressive nature of shaping and molding clay into unique pieces. The workshop provides a relaxed environment for students to socialize and unleash their imagination.",
-//       image:
-//         "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/pottery-workshop-akriti.webp",
-//       type: "WORKSHOP",
-//       date: "2024-01-01T00:00:00.000Z",
-//       time: "2024-01-01T03:30:00.000Z",
-//       venue: "Venue 1",
-//       rules: ["Rule1", "Rule2"],
-//     },
+//
 //   ],
 // };
