@@ -9,14 +9,15 @@ const MERCHANT_BASE_URL = process.env.MERCHANT_BASE_URL;
 const REDIRECT_URL = process.env.PAYMENT_REDIRECT_URI;
 
 export async function POST(request) {
-    const { name, mobileNumber, amount, userId } = await request.json();
+    const { name, mobileNumber, userId } = await request.json();
     const orderId = uuidv4();
+    const amount = 999;
 
     const paymentPayload = {
         merchantId: MERCHANT_ID,
         merchantUserId: name,
         mobileNumber: mobileNumber,
-        amount: amount*100,
+        amount: amount * 100,
         merchantTransactionId: orderId,
         redirectUrl: `${REDIRECT_URL}/?id=${orderId}&userId=${userId}`,
         redirectMode: "POST",
