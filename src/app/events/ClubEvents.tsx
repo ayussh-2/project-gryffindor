@@ -16,7 +16,7 @@ const ClubEvents = () => {
       <Carousel
         //registeredEvents={registeredEvents}
         slides={clubevents}
-        heading={"Club Events"}
+        heading={"Club Performances"}
         //userId={userId}
       ></Carousel>
     </div>
