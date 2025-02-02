@@ -1134,7 +1134,7 @@ const workshops = [
     image: "/Images/Palette (1).png",
     content:
       "Palette Fusion is a three-day celebration of creativity and innovation! Participate in Art Date by painting portraits face-to-face, unleash your imagination with finger dab painting in Finger Dab, and craft wonders from waste in Trash Treasure. Whether you're a pro or a beginner, Palette Fusion offers a fun-filled artistic experience for everyone. Join us!",
-    eventName: "Palette Fusion| Chitraang",
+    eventName: "Palette | Chitraang",
     rules: [],
     Registerurl: "#",
   },
@@ -1424,7 +1424,7 @@ const funevents = [
     eventId: 84,
     image: "/Images/Riddle (1).png",
     content:
-      "Engaging and interactive treasure hunt that encourages participation, promotes the Home and Hope Exhibition",
+      "This will be a treasure hunt event with three check posts where we will have a fun activity at each of them and after finishing them they will get a clue for the next checkpoint and the final checkpoint will be near the Home and Hope Exhibition. This way we can ensure a maximum crowd near the exhibition.",
     eventName: "Riddles of Hope | Rotaract",
     Registerurl: "#",
     rules: ["General decorum and discipline is needed to be maintained."],
@@ -1618,7 +1618,7 @@ const clubevents = [
   {
     index: 1,
     eventId: 122,
-    image: "/Images/Kaarvaan.png",
+    image: "/Images/karvaan square_.png",
     content:
       "Join Kalaam for a poetic extravaganza on the final day of Nitrutsav! Featuring captivating performances in Hindi, Urdu, and English, this two-hour event explores diverse themes with soulful expression. Guided by our talented hosts, it promises a vibrant celebration of creativity, language, and artistry. Don’t miss this unforgettable journey of words and emotions!",
     eventName: "Karvaan 4.0 | Kalaam",
