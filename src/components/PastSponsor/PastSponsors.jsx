@@ -2,28 +2,47 @@ import SponsorCard from "./sponsorCard";
 
 const sponsors = [
   {
-    imageSrc: "/Images/ahp prod.jpeg",
+    imageSrc: "/Sponsors/Bastian_20250205_091640_0000 2.png",
     altText: "Cuts & Creations",
   },
   {
-    imageSrc: "/Images/AK.jpeg",
+    imageSrc: "/Sponsors/image 85.png",
     altText: "ICICI Bank",
   },
   {
-    imageSrc: "/Images/Bolt Final.png",
+    imageSrc: "/Sponsors/image 86.png",
     altText: "Bank of India",
   },
   {
-    imageSrc: "/Images/gift Fairy.jpeg",
+    imageSrc: "/Sponsors/image 87.png",
     altText: "SBI",
   },
-  { imageSrc: "/Images/handshake.jpeg", altText: "Hideaway" },
+  { imageSrc: "/Sponsors/image 88.png", altText: "Hideaway" },
   {
-    imageSrc: "/Images/gym.png",
+    imageSrc: "/Sponsors/image 90.png",
     altText: "Nirvaana",
   },
-  { imageSrc: "/Images/Tikkaway final.png", altText: "Vanix" },
-  { imageSrc: "/Images/VIP.png", altText: "Vanix" },
+  { imageSrc: "/Sponsors/image 93.png", altText: "Vanix" },
+  { imageSrc: "/Sponsors/image 94.png", altText: "Vanix" },
+  { imageSrc: "/Sponsors/image 95.png", altText: "Vanix" },
+  { imageSrc: "/Sponsors/image 96.png", altText: "Vanix" },
+  {
+    imageSrc: "/Sponsors/Screenshot 2025-02-05 at 12.21.50 AM 1.png",
+    altText: "Vanix",
+  },
+  {
+    imageSrc: "/Sponsors/Screenshot 2025-02-05 at 12.28.50 AM 1.png",
+    altText: "Vanix",
+  },
+  {
+    imageSrc: "/Sponsors/Screenshot 2025-02-05 at 12.39.15 AM 1.png",
+    altText: "Vanix",
+  },
+  {
+    imageSrc: "/Sponsors/Screenshot 2025-02-05 at 12.44.13 AM 1.png",
+    altText: "Vanix",
+  },
+  { imageSrc: "/Sponsors/Screenshot_20250205_101300 1.png", altText: "Vanix" },
 ];
 
 const PastSponsors = () => {
@@ -42,7 +61,7 @@ const PastSponsors = () => {
             color: "#CBFFFF",
           }}
         >
-          PAST SPONSORS
+          OTHER SPONSORS
         </h2>
       </div>
       {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 p-4 max-w-7xl mx-auto">

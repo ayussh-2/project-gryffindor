@@ -58,23 +58,23 @@ const mainEvents = [
   //   ],
   // },
 
-  {
-    index: 1,
-    eventId: 58,
-    image: "/Images/sdg carnival.png",
-    content:
-      "Exciting Pictionary Competition with prizes and talkshow, brainstorming Quiz and Guesstimate with exciting prizes followed by a talkshow . Topic for all will be SDG3 , Good Health & Well-Being. ",
-    eventName: "SDG Carnival | SDG Campus Club",
-    rules: [
-      "Proctoring will be done for all competitions.",
-      "No cheating or electronic devices are allowed.",
-      "Individual participation is only allowed.",
-      "There'll be star marked questions in all competitions.",
-      "Winners will be decided from star marked questions in case of a draw.",
-      "QM's decision will be final.",
-    ],
-    Registerurl: "#",
-  },
+  // {
+  //   index: 1,
+  //   eventId: 58,
+  //   image: "/Images/sdg carnival.png",
+  //   content:
+  //     "Exciting Pictionary Competition with prizes and talkshow, brainstorming Quiz and Guesstimate with exciting prizes followed by a talkshow . Topic for all will be SDG3 , Good Health & Well-Being. ",
+  //   eventName: "SDG Carnival | SDG Campus Club",
+  //   rules: [
+  //     "Proctoring will be done for all competitions.",
+  //     "No cheating or electronic devices are allowed.",
+  //     "Individual participation is only allowed.",
+  //     "There'll be star marked questions in all competitions.",
+  //     "Winners will be decided from star marked questions in case of a draw.",
+  //     "QM's decision will be final.",
+  //   ],
+  //   Registerurl: "#",
+  // },
 
   {
     index: 2,
@@ -1171,103 +1171,96 @@ const guestLectures = [
   {
     index: 0,
     eventId: 93,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/abhilash.webp",
+    image: "/Images/SHARIB HASMI IG post.png",
     content:
-      "Step into a journey of laughter and storytelling as Pantomime presents Abhilash Thapliyal, a seasoned actor, radio jockey and host. Widely recognized for his contributions, including an iconic role of 'SK Sir' in TVF's \"Aspirants\", Roxy in Faadu and the antagonist in Blurr, Abhilash's brilliance and stage charisma shines through. Join us for an evening of entertainment and insight on 11th of February as Pantomime brings to you the wit and wisdom of the very versatile Abhilash Thapliyal in a laughter-packed event.",
-    eventName: "Abhilash Thapliyal | Pantomime",
+      "Sharib Hashmi, known for his iconic JK Talpade role in The Family Man, is set to captivate NIT Rourkela with his charm, wit, and versatility!",
+    eventName: "Sharib Hashmi",
     Registerurl: "#",
   },
   {
     index: 1,
     eventId: 94,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/anushka.webp",
+    image: "/Images/VIVEK SAMTANI IG post.png",
     content:
-      "Hailing from a small town in Uttar Pradesh to being a prominent figure in the 'City of Dreams', Pantomime brings to you, Anushka Kaushik, popularly known as Vidhi Gupta from the web series Crash Course, Suruchi Dwivedi from Ghar Vaapasi, and many more characters that have a special place in our hearts. Join us for a ride full of laughter, fun and interaction with the one only Anushka Kaushik. Catch her on 10th February at 3:30pm for all the gup-shup and a wholesome evening filled with Anushka's enticing chirpiness, vibe and energy!",
-    eventName: "Anushka Kaushik | Pantomime",
+      "Get ready to smile! Vivek Samtani’s adorable wit will brighten your day. Catch a sneak peek of his humor and enjoy a performance full of laughter! ",
+    eventName: "Vivek Samtani",
     Registerurl: "#",
   },
   {
     index: 2,
     eventId: 95,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/medha.webp",
+    image: "/Images/RUCHIKA LOHIYA IG post.png",
     content:
-      "Medha Deshmukh Bhaskaran is a microbiologist and has written articles on various subjects for leading newspapers in India and the Gulf. She has authored various books, namely, Challenging Destiny, Prescription of Life, Frontiers- a relentless battle between Aurangzeb and Shivaji, Life and death of Sambhaji, and her latest work, Up against darkness. Her book, Challenging destiny has achieved a tag of national bestseller and was nominated in two categories in Raymond Crossword Book Awards, 2017. Due to demand, most of her books have been translated to Marathi and Hindi, along with audiobooks. She has authored some of the most famous works on Shivaji, Sambhaji, and their lives. Join us on 10th February for an enchanting session presented to you by Clarion at 12 noon at PPA.",
-    eventName: "Medha Bhaskaran | Clarion",
+      "Experience an enchanting evening with Ruchika Lohiya at NITRUTSAV 2025! Her storytelling, poetry, and music will weave magic, stir emotions, and bring every verse to life.",
+    eventName: "Ruchika Lohiya",
     Registerurl: "#",
   },
   {
     index: 3,
     eventId: 96,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/ilena.webp",
+    image: "/Images/BHOOMIKA DAS IG post.png",
     content:
-      "Renowned first Odissi dancer of foreign descent, Padma Shri Ileana Citaristi, celebrated for her exceptional contributions to Indian classical dance, will grace the inaugural ceremony of Nitrutsav 2024 on 9th February. With a career spanning decades, Citaristi has garnered international acclaim, seamlessly blending tradition with commitment in her performances. Don't miss this opportunity to witness the captivating artistry of a Padma Shri awardee at Nitrutsav 2024 brought to you by Nrityunjay.",
-    eventName: "Padma Shri Ileana Citaristi | Nrityunjay",
+      "Experience the mesmerizing moves of Bhoomika Dash at NITRUTSAV 2025! Her passionate and graceful performance will leave you spellbound. Don’t miss this dance spectacle!",
+    eventName: "Bhoomika Dash",
     Registerurl: "#",
   },
   {
     index: 4,
     eventId: 97,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/piyush.webp",
+    image: "/Images/ASHWAM THARTHARE IG post.png",
     content:
-      "Piyush Sharma, an alumnus of IIT Bombay with a degree in Civil Engineering, transitioned from structural blueprints to the art of humour post-graduation. His comedic craftsmanship, in stark contrast to his engineering roots, leaves no one unscathed. Witness Piyush's unbridled wit at Nitrutsav 2024, brought to you by Open Mic Club on 10th February at 4:30pm, BBA as he takes the stage to construct a laughter-filled evening that defies the norms of civility and engineering precision.",
-    eventName: "Piyush Sharma | OMC",
+      "Witness mind-bending magic with Ashwam Tharthare at NITRUTSAV 2025!  Experience mesmerizing illusions and a reality-defying performance you can’t miss. Get ready for the extraordinary!",
+    eventName: "Ashwam Tharthare",
     Registerurl: "#",
   },
   {
     index: 5,
     eventId: 98,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/vivek.webp",
+    image: "/Images/ayush panda......png",
     content:
-      "Vivek Desai, a modern mentalist, magician, and illusionist, demonstrates mastery of the mystical arts. Renowned for his captivating skills, Desai is set to enchant the audience at Nitrutsav 2024 on 10th February at 1:30pm. Prepare to be spellbound as he seamlessly combines modern mystique with unparalleled showmanship in a performance that transcends conventional magical realms",
-    eventName: "Vivek Desai | NU Team",
+      "Ayush Panda is set to rock NITRUTSAV 2025! Get ready for a sensational musical evening filled with soulful melodies and electrifying energy. Don’t miss this unforgettable performance!",
+    eventName: "Ayush Panda ",
     Registerurl: "#",
   },
-  {
-    index: 6,
-    eventId: 99,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/anurag-guest.webp",
-    content:
-      "Anurag Halder, an acclaimed vocalist is set to grace the first pronight of Nitrutsav 2024 with an electrifying live performance, promising an exhilarating experience. With his dynamic stage presence, let's witness an enchanting evening of soul-stirring performance. Join us on the 9th of February at DTS from 8pm onwards.",
-    eventName: "Anurag Halder | NU Team",
-    Registerurl: "#",
-  },
-  {
-    index: 7,
-    eventId: 101,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/nidhi.webp",
-    content:
-      'Nidhi Narwal, a renowned poet, storyteller, and performer is known as the "Jazbaati Ladki" to her fans as she stands out for her simplicity, evident in her craft. Hailing from Haryana, Nidhi\'s dreams have fueled her journey. Catch her on 11th February for an unforgettable experience of heartfelt expressions brought to you by Kalaam.',
-    eventName: "Nidhi Narwal | Kalaam",
-    Registerurl: "#",
-  },
-  {
-    index: 8,
-    eventId: 102,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/abhishekmishra.webp",
-    content:
-      "Abhishek Mishra, the distinguished Executive Editor and Faculty at Drishti IAS is renowned as an interviewer for UPSC exam preparation. Embrace this opportunity to enhance your UPSC journey with the guidance of an esteemed mentor, ensuring a comprehensive and rewarding learning experience. Join him on 10th February at 10am, BBA brought to you by Aspirants. Don't miss the opportunity to attend and grab complimentary study materials from Drishti IAS.",
-    eventName: "Abhishek Mishra | Aspirants",
-    Registerurl: "#",
-  },
-  {
-    index: 9,
-    eventId: 103,
-    image:
-      "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/prakruti.webp",
-    content:
-      "Prakruti Mishra, a distinguished Indian actress renowned for her contributions to Odia film industry and Hindi television, has also been a participant of MTV Ace of Space Season 2. She is all set to grace the event of Fashionista, organised by Fusion, as an esteemed judge. Her presence will add a touch of glamour and expertise, underscoring the event's commitment to recognizing and celebrating exceptional styling and fashion",
-    eventName: "Prakruti Mishra | Fusion",
-    Registerurl: "#",
-  },
+  // {
+  //   index: 6,
+  //   eventId: 99,
+  //   image: "/Images/NAYAB MIDHA IG post.png",
+  //   content:
+  //     "Get ready to immerse yourself in the magic of spoken word as Nayab Midha takes you on a poetic journey like no other. Her soulful verses and captivating presence will leave you spellbound!",
+  //   eventName: "Nayab Midha | Team NU",
+  //   Registerurl: "#",
+  // },
+  // {
+  //   index: 7,
+  //   eventId: 101,
+  //   image:
+  //     "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/nidhi.webp",
+  //   content:
+  //     'Nidhi Narwal, a renowned poet, storyteller, and performer is known as the "Jazbaati Ladki" to her fans as she stands out for her simplicity, evident in her craft. Hailing from Haryana, Nidhi\'s dreams have fueled her journey. Catch her on 11th February for an unforgettable experience of heartfelt expressions brought to you by Kalaam.',
+  //   eventName: "Nidhi Narwal | Kalaam",
+  //   Registerurl: "#",
+  // },
+  // {
+  //   index: 8,
+  //   eventId: 102,
+  //   image:
+  //     "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/abhishekmishra.webp",
+  //   content:
+  //     "Abhishek Mishra, the distinguished Executive Editor and Faculty at Drishti IAS is renowned as an interviewer for UPSC exam preparation. Embrace this opportunity to enhance your UPSC journey with the guidance of an esteemed mentor, ensuring a comprehensive and rewarding learning experience. Join him on 10th February at 10am, BBA brought to you by Aspirants. Don't miss the opportunity to attend and grab complimentary study materials from Drishti IAS.",
+  //   eventName: "Abhishek Mishra | Aspirants",
+  //   Registerurl: "#",
+  // },
+  // {
+  //   index: 9,
+  //   eventId: 103,
+  //   image:
+  //     "https://sacnitrkl.blr1.cdn.digitaloceanspaces.com/WW-Miscellaneous/Sakura-Events-Main/prakruti.webp",
+  //   content:
+  //     "Prakruti Mishra, a distinguished Indian actress renowned for her contributions to Odia film industry and Hindi television, has also been a participant of MTV Ace of Space Season 2. She is all set to grace the event of Fashionista, organised by Fusion, as an esteemed judge. Her presence will add a touch of glamour and expertise, underscoring the event's commitment to recognizing and celebrating exceptional styling and fashion",
+  //   eventName: "Prakruti Mishra | Fusion",
+  //   Registerurl: "#",
+  // },
 ];
 //Fun Events
 const funevents = [
@@ -1636,6 +1629,38 @@ const clubevents = [
   },
 ];
 
+const proShows = [
+  {
+    index: 0,
+    eventId: 121,
+    image: "/Images/NAYAB MIDHA IG post (1).png",
+    content:
+      "Nayab Midha is set to grace NITRUTSAV 2025! Get ready for a mesmerizing evening of soulful poetry and captivating storytelling. Don’t miss this enchanting spoken word experience!",
+    eventName: "Day 1 | Nayab Midha",
+    Registerurl: "#",
+  },
+
+  {
+    index: 1,
+    eventId: 122,
+    image: "/Images/leading drops.png",
+    content:
+      "Leading Drops is set to rock NITRUTSAV 2025! Get ready for an electrifying performance filled with energy, passion, and unforgettable music. Don’t miss this sensational proshow! ",
+    eventName: "Day 2 | Leading Drops",
+    Registerurl: "#",
+  },
+
+  {
+    index: 2,
+    eventId: 123,
+    image: "/Images/Instagram post abc - 72.png",
+    content:
+      "Anand Bhaskar is set to light up NITRUTSAV 2025! Get ready for an electrifying proshow filled with soulful melodies and high-energy vibes. Don’t miss this unforgettable musical night! ",
+    eventName: "Day 3 | Anand Bhaskar Collective ",
+    Registerurl: "#",
+  },
+];
+
 export {
   mainEvents,
   flagships,
@@ -1643,6 +1668,7 @@ export {
   guestLectures,
   funevents,
   clubevents,
+  proShows,
 };
 // export const events = {
 //   MAIN: [
