@@ -7,6 +7,7 @@ import ParallaxScene from "@/components/Herosection/HeroSection";
 import PastSponsors from "@/components/PastSponsor/PastSponsors";
 import Footer from "@/components/Footer/footer";
 import TitleSponsor from "@/components/TitleSponsor/TitleSponsor";
+import AssociateSponsor from "@/components/AssociateSponsor/AssociateSponsor";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <AboutUs />
       <Events />
       <TitleSponsor />
+      <AssociateSponsor />
       <PastSponsors />
       <Faq />
       <Footer />

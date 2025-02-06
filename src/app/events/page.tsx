@@ -10,6 +10,7 @@ import FunEvents from "./FunEvents";
 import Workshop from "./Workshop";
 import Footer from "@/components/Footer/footer";
 import ClubEvents from "./ClubEvents";
+import ProShows from "./ProShows";
 
 //import { GET as getRegisterdEvents } from "@/app/api/events/get-registered/route";
 
@@ -57,9 +58,12 @@ const page = async () => {
   return (
     <>
       <EventHero />
-      {/* <div className="min-h-screen ">
+      <div className="min-h-screen ">
         <GuestLectures />
-      </div> */}
+      </div>
+      <div className="min-h-screen ">
+        <ProShows />
+      </div>
       <div className="min-h-screen  ">
         <Flagships />
       </div>
