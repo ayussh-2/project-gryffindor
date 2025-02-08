@@ -10,7 +10,6 @@ import Image from "next/image";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { user } = useAuth();
 
     return (
         <>
@@ -24,37 +23,35 @@ const Navbar = () => {
                     <div className="h-14 w-full items-center grid">
                         <div className="hidden md:block min-w-full">
                             <div className="flex items-center justify-between w-full">
-                                {[
-                                    "Home",
-                                    "About us",
-                                    "Sponsors",
-                                    "FAQs",
-                                ].map((item, index) => (
-                                    <Link
-                                        key={index}
-                                        href={
-                                            item === "Home"
-                                                ? "/"
-                                                : `#${item
-                                                      .toLowerCase()
-                                                      .replace(" ", "-")}`
-                                        }
-                                        className="text-white hover:text-[#CBFFFF] transition-colors tracking-wide duration-200 font-medium text-lg"
-                                    >
-                                        {item}
-                                    </Link>
-                                ))}
+                                {["Home", "About us", "Sponsors", "FAQs"].map(
+                                    (item, index) => (
+                                        <Link
+                                            key={index}
+                                            href={
+                                                item === "Home"
+                                                    ? "/"
+                                                    : `#${item
+                                                          .toLowerCase()
+                                                          .replace(" ", "-")}`
+                                            }
+                                            className="text-white hover:text-[#CBFFFF] transition-colors tracking-wide duration-200 font-medium text-lg"
+                                        >
+                                            {item}
+                                        </Link>
+                                    )
+                                )}
                                 <Link
-                                    href={'/events'}
-                                    className="text-white hover:text-[#CBFFFF] transition-colors tracking-wide duration-200 font-medium text-lg">
-                                        Events
+                                    href={"/events"}
+                                    className="text-white hover:text-[#CBFFFF] transition-colors tracking-wide duration-200 font-medium text-lg"
+                                >
+                                    Events
                                 </Link>
-                                <Link
+                                {/* <Link
                                     href={user ? "/profile" : "/login"}
                                     className="text-white hover:text-[#CBFFFF] transition-colors tracking-wide duration-200 font-medium text-lg"
                                 >
                                     {user ? "Profile" : "Login"}
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                         <div className="flex items-center justify-between h-full w-full md:hidden">

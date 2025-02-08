@@ -250,12 +250,13 @@ const Registration: React.FC = () => {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center md:px-4 bg-reg relative">
-            <h1 className="text-5xl md:text-7xl font-bold text-center mb-8 text-[#003955] font-Cattedrale">
-                User Registration
+            <h1 className="text-2xl md:text-4xl font-bold text-center mb-8 text-[#003955] font-Cattedrale">
+                Registerations have been close.
+                <br /> See you all next year.
             </h1>
             {/* <Bats /> */}
 
-            {renderContent()}
+            {/* {renderContent()} */}
         </div>
     );
 };
